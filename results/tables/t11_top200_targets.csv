@@ -1,0 +1,201 @@
+rank,customer_id,segment,recency_days,frequency,monetary_gbp,churn_prob,priority_score,action,expected_net_value
+1,15098,Loyal,82,3,39916.5,0.3786,15111.5993,Loyalty tier upgrade + curated cross-sell bundle (association rules),520.906
+2,15749,At-risk,135,1,21535.9,0.5279,11368.6889,Win-back voucher + personal outreach; highest priority,389.9041
+3,12590,At-risk,111,1,9341.26,0.4569,4268.1244,Win-back voucher + personal outreach; highest priority,141.3844
+4,12415,Champions,13,9,77680.26,0.0403,3128.1678,VIP retention call + early access to new collections (no discount),101.4859
+5,18102,Champions,26,20,92167.14,0.0309,2849.7846,VIP retention call + early access to new collections (no discount),91.7425
+6,12409,Potential,82,1,6207.08,0.4408,2735.933,Onboarding nurture + second-purchase voucher to build habit,87.7577
+7,14646,Champions,5,30,118081.92,0.0213,2518.7255,VIP retention call + early access to new collections (no discount),80.1554
+8,17450,Champions,8,17,64961.3,0.0388,2518.5795,VIP retention call + early access to new collections (no discount),80.1503
+9,12931,Champions,1,8,30657.3,0.076,2329.3365,VIP retention call + early access to new collections (no discount),73.5268
+10,12435,At-risk,167,1,3978.99,0.5437,2163.3373,Win-back voucher + personal outreach; highest priority,67.7168
+11,12688,Potential,13,1,4873.81,0.4237,2065.0879,Onboarding nurture + second-purchase voucher to build habit,64.2781
+12,14088,Champions,28,6,17962.98,0.1148,2062.281,VIP retention call + early access to new collections (no discount),64.1798
+13,13135,At-risk,96,1,3096.0,0.6281,1944.5097,Win-back voucher + personal outreach; highest priority,60.0578
+14,17396,Loyal,48,4,4386.3,0.4213,1847.9529,Loyalty tier upgrade + curated cross-sell bundle (association rules),56.6784
+15,12477,Champions,0,2,6478.08,0.2701,1749.6963,VIP retention call + early access to new collections (no discount),53.2394
+16,12378,Potential,29,1,4008.62,0.4279,1715.4435,Onboarding nurture + second-purchase voucher to build habit,52.0405
+17,12744,Loyal,44,2,6068.06,0.2812,1706.2188,Loyalty tier upgrade + curated cross-sell bundle (association rules),51.7177
+18,17511,Champions,14,14,37818.61,0.043,1625.9216,VIP retention call + early access to new collections (no discount),48.9073
+19,12557,Loyal,58,2,4963.84,0.3216,1596.5413,Loyalty tier upgrade + curated cross-sell bundle (association rules),47.8789
+20,16684,Champions,33,12,24071.52,0.0663,1596.2674,VIP retention call + early access to new collections (no discount),47.8694
+21,17949,Champions,0,25,43147.6,0.0361,1555.6926,VIP retention call + early access to new collections (no discount),46.4492
+22,13081,Champions,43,3,11402.51,0.1359,1549.629,VIP retention call + early access to new collections (no discount),46.237
+23,15769,Champions,1,14,31674.64,0.0485,1536.4791,VIP retention call + early access to new collections (no discount),45.7768
+24,16532,Potential,35,1,2606.4,0.5869,1529.614,Onboarding nurture + second-purchase voucher to build habit,45.5365
+25,16303,Potential,15,1,3209.15,0.4734,1519.2086,Onboarding nurture + second-purchase voucher to build habit,45.1723
+26,14156,Champions,14,28,58890.1,0.0256,1504.8258,VIP retention call + early access to new collections (no discount),44.6689
+27,16182,Loyal,30,2,4019.0,0.3644,1464.4499,Loyalty tier upgrade + curated cross-sell bundle (association rules),43.2557
+28,12432,Potential,72,2,3316.66,0.4374,1450.8682,Onboarding nurture + second-purchase voucher to build habit,42.7804
+29,15786,Potential,14,1,3147.64,0.4574,1439.7591,Onboarding nurture + second-purchase voucher to build habit,42.3916
+30,16041,Potential,41,2,2739.8,0.5249,1438.184,Onboarding nurture + second-purchase voucher to build habit,42.3364
+31,15502,Loyal,23,2,5026.13,0.2848,1431.473,Loyalty tier upgrade + curated cross-sell bundle (association rules),42.1016
+32,16984,Potential,30,1,3213.19,0.4382,1408.1801,Onboarding nurture + second-purchase voucher to build habit,41.2863
+33,17404,Champions,27,6,14121.24,0.0966,1363.7191,VIP retention call + early access to new collections (no discount),39.7302
+34,12830,Champions,34,4,5204.0,0.2522,1312.4516,VIP retention call + early access to new collections (no discount),37.9358
+35,15032,At-risk,156,1,2188.5,0.5892,1289.4927,Win-back voucher + personal outreach; highest priority,37.1322
+36,12753,Champions,35,3,7295.08,0.1746,1273.727,VIP retention call + early access to new collections (no discount),36.5804
+37,12451,At-risk,118,1,2388.31,0.5278,1260.5984,Win-back voucher + personal outreach; highest priority,36.1209
+38,13802,Loyal,38,2,3629.68,0.3431,1245.4,Loyalty tier upgrade + curated cross-sell bundle (association rules),35.589
+39,13694,Champions,7,29,35141.48,0.0343,1204.1457,VIP retention call + early access to new collections (no discount),34.1451
+40,12754,Loyal,135,2,2965.17,0.3855,1143.1389,Loyalty tier upgrade + curated cross-sell bundle (association rules),32.0099
+41,17597,At-risk,113,1,2044.37,0.5524,1129.2639,Win-back voucher + personal outreach; highest priority,31.5242
+42,13316,Loyal,31,2,3535.18,0.319,1127.6748,Loyalty tier upgrade + curated cross-sell bundle (association rules),31.4686
+43,14680,Champions,21,8,15912.28,0.0699,1112.4941,VIP retention call + early access to new collections (no discount),30.9373
+44,13340,Champions,5,5,9229.54,0.12,1107.2176,VIP retention call + early access to new collections (no discount),30.7526
+45,13952,Loyal,117,2,3251.07,0.3376,1097.6324,Loyalty tier upgrade + curated cross-sell bundle (association rules),30.4171
+46,14286,At-risk,142,1,2050.08,0.5234,1072.957,Win-back voucher + personal outreach; highest priority,29.5535
+47,15372,Potential,37,1,2007.4,0.5341,1072.1443,Onboarding nurture + second-purchase voucher to build habit,29.5251
+48,16152,At-risk,168,1,1829.04,0.5782,1057.5706,Win-back voucher + personal outreach; highest priority,29.015
+49,16333,Champions,23,14,11860.72,0.089,1055.8895,VIP retention call + early access to new collections (no discount),28.9561
+50,17857,Champions,9,10,11565.38,0.0901,1042.0493,VIP retention call + early access to new collections (no discount),28.4717
+51,12939,Loyal,38,2,2680.8,0.3815,1022.857,Loyalty tier upgrade + curated cross-sell bundle (association rules),27.8
+52,17107,Champions,55,3,6332.61,0.159,1006.8507,VIP retention call + early access to new collections (no discount),27.2398
+53,16422,Champions,7,25,21785.41,0.0455,990.8943,VIP retention call + early access to new collections (no discount),26.6813
+54,15838,Champions,8,10,12918.5,0.076,982.157,VIP retention call + early access to new collections (no discount),26.3755
+55,14459,Potential,55,1,1837.92,0.53,974.1068,Onboarding nurture + second-purchase voucher to build habit,26.0937
+56,15311,Champions,12,37,32137.04,0.0299,962.1086,VIP retention call + early access to new collections (no discount),25.6738
+57,16253,At-risk,155,1,1700.4,0.5646,960.12,Win-back voucher + personal outreach; highest priority,25.6042
+58,16029,Champions,7,30,24618.22,0.039,959.1504,VIP retention call + early access to new collections (no discount),25.5703
+59,12678,Champions,0,4,7085.55,0.1346,953.8165,VIP retention call + early access to new collections (no discount),25.3836
+60,12798,Potential,70,1,1607.04,0.59,948.1963,Onboarding nurture + second-purchase voucher to build habit,25.1869
+61,13523,At-risk,99,2,1802.29,0.5239,944.1548,Win-back voucher + personal outreach; highest priority,25.0454
+62,14911,Champions,5,80,54893.07,0.017,932.542,VIP retention call + early access to new collections (no discount),24.639
+63,13344,At-risk,177,1,1656.15,0.5587,925.3092,Win-back voucher + personal outreach; highest priority,24.3858
+64,17553,Potential,29,1,1487.6,0.6198,922.0121,Onboarding nurture + second-purchase voucher to build habit,24.2704
+65,12758,Loyal,16,2,2791.59,0.3292,919.1021,Loyalty tier upgrade + curated cross-sell bundle (association rules),24.1686
+66,16126,Loyal,1,2,2815.35,0.3226,908.2038,Loyalty tier upgrade + curated cross-sell bundle (association rules),23.7871
+67,14277,At-risk,112,1,1629.03,0.5571,907.6071,Win-back voucher + personal outreach; highest priority,23.7662
+68,16902,Potential,16,1,1706.88,0.5293,903.4094,Onboarding nurture + second-purchase voucher to build habit,23.6193
+69,16698,Loyal,126,2,1998.0,0.4518,902.7589,Loyalty tier upgrade + curated cross-sell bundle (association rules),23.5966
+70,13815,Potential,72,1,1767.74,0.5096,900.7636,Onboarding nurture + second-purchase voucher to build habit,23.5267
+71,14145,Champions,56,3,2851.2,0.3134,893.6737,VIP retention call + early access to new collections (no discount),23.2786
+72,12424,Potential,62,2,1760.96,0.5037,886.9974,Onboarding nurture + second-purchase voucher to build habit,23.0449
+73,13324,Loyal,103,5,2688.39,0.3276,880.6687,Loyalty tier upgrade + curated cross-sell bundle (association rules),22.8234
+74,12406,Potential,83,1,1621.25,0.5361,869.1052,Onboarding nurture + second-purchase voucher to build habit,22.4187
+75,12749,Loyal,30,3,2755.23,0.3125,860.8967,Loyalty tier upgrade + curated cross-sell bundle (association rules),22.1314
+76,16180,Champions,0,8,10254.18,0.0835,856.322,VIP retention call + early access to new collections (no discount),21.9713
+77,16938,Loyal,79,2,2118.45,0.4035,854.7816,Loyalty tier upgrade + curated cross-sell bundle (association rules),21.9174
+78,17426,Loyal,75,3,3279.23,0.26,852.7008,Loyalty tier upgrade + curated cross-sell bundle (association rules),21.8445
+79,16671,Potential,64,1,1382.88,0.6156,851.2414,Onboarding nurture + second-purchase voucher to build habit,21.7934
+80,14298,Champions,23,22,23767.94,0.0357,848.2162,VIP retention call + early access to new collections (no discount),21.6876
+81,12770,At-risk,110,1,1351.45,0.621,839.308,Win-back voucher + personal outreach; highest priority,21.3758
+82,14566,Potential,10,1,1432.0,0.583,834.8525,Onboarding nurture + second-purchase voucher to build habit,21.2198
+83,13798,Champions,7,30,17064.84,0.0482,822.9545,VIP retention call + early access to new collections (no discount),20.8034
+84,17686,Loyal,20,4,2996.74,0.2739,820.9267,Loyalty tier upgrade + curated cross-sell bundle (association rules),20.7324
+85,13572,At-risk,105,1,1384.25,0.591,818.1245,Win-back voucher + personal outreach; highest priority,20.6344
+86,14936,Champions,8,3,5072.88,0.1609,816.4266,VIP retention call + early access to new collections (no discount),20.5749
+87,13850,Potential,29,1,1595.48,0.5105,814.4655,Onboarding nurture + second-purchase voucher to build habit,20.5063
+88,13555,At-risk,101,2,1590.05,0.5113,813.0162,Win-back voucher + personal outreach; highest priority,20.4556
+89,16013,Champions,9,22,14216.54,0.057,809.8559,VIP retention call + early access to new collections (no discount),20.345
+90,17706,Champions,0,8,7138.65,0.1119,798.906,VIP retention call + early access to new collections (no discount),19.9617
+91,12653,Potential,48,1,1430.75,0.5547,793.6493,Onboarding nurture + second-purchase voucher to build habit,19.7777
+92,13027,Champions,13,5,5472.0,0.1443,789.8487,VIP retention call + early access to new collections (no discount),19.6447
+93,18079,Loyal,26,2,2206.18,0.3564,786.3273,Loyalty tier upgrade + curated cross-sell bundle (association rules),19.5215
+94,14842,At-risk,91,1,1378.48,0.5695,785.0522,Win-back voucher + personal outreach; highest priority,19.4768
+95,14101,Champions,42,3,3100.36,0.2522,781.7603,VIP retention call + early access to new collections (no discount),19.3616
+96,15251,Champions,6,7,7452.12,0.1039,773.9214,VIP retention call + early access to new collections (no discount),19.0872
+97,16692,At-risk,156,1,1117.5,0.6844,764.8092,Win-back voucher + personal outreach; highest priority,18.7683
+98,17444,Loyal,51,2,2389.1,0.3194,763.1434,Loyalty tier upgrade + curated cross-sell bundle (association rules),18.71
+99,14049,Loyal,58,2,2216.66,0.342,758.1616,Loyalty tier upgrade + curated cross-sell bundle (association rules),18.5357
+100,12818,At-risk,161,1,1182.08,0.641,757.6939,Win-back voucher + personal outreach; highest priority,18.5193
+101,16705,Champions,44,6,4573.6,0.1648,753.5601,VIP retention call + early access to new collections (no discount),18.3746
+102,12705,Loyal,58,3,3232.52,0.2315,748.3259,Loyalty tier upgrade + curated cross-sell bundle (association rules),18.1914
+103,12980,Champions,57,5,4539.96,0.1648,748.1652,VIP retention call + early access to new collections (no discount),18.1858
+104,12766,Loyal,49,2,2142.77,0.349,747.785,Loyalty tier upgrade + curated cross-sell bundle (association rules),18.1725
+105,12405,Potential,48,1,1390.39,0.5361,745.4506,Onboarding nurture + second-purchase voucher to build habit,18.0908
+106,14258,Champions,51,5,5100.14,0.146,744.7721,VIP retention call + early access to new collections (no discount),18.067
+107,12444,Loyal,21,2,2347.27,0.3161,742.0825,Loyalty tier upgrade + curated cross-sell bundle (association rules),17.9729
+108,15089,Potential,8,2,1677.23,0.4418,740.9539,Onboarding nurture + second-purchase voucher to build habit,17.9334
+109,14016,Champions,61,3,3587.47,0.2058,738.3588,VIP retention call + early access to new collections (no discount),17.8426
+110,14154,At-risk,139,2,1345.62,0.5468,735.769,Win-back voucher + personal outreach; highest priority,17.7519
+111,15061,Champions,27,19,13903.67,0.0528,734.5786,VIP retention call + early access to new collections (no discount),17.7103
+112,15665,Loyal,68,2,2222.21,0.3284,729.8321,Loyalty tier upgrade + curated cross-sell bundle (association rules),17.5441
+113,14105,At-risk,139,1,1266.23,0.5723,724.7142,Win-back voucher + personal outreach; highest priority,17.365
+114,15065,Loyal,64,2,2085.09,0.3476,724.678,Loyalty tier upgrade + curated cross-sell bundle (association rules),17.3637
+115,14930,Loyal,8,3,2362.96,0.3047,720.0967,Loyalty tier upgrade + curated cross-sell bundle (association rules),17.2034
+116,15125,Champions,13,12,10795.48,0.0667,720.008,VIP retention call + early access to new collections (no discount),17.2003
+117,13124,At-risk,152,1,1260.15,0.5695,717.6972,Win-back voucher + personal outreach; highest priority,17.1194
+118,15791,At-risk,104,1,1223.24,0.586,716.8294,Win-back voucher + personal outreach; highest priority,17.089
+119,17353,Potential,29,2,1740.0,0.4112,715.5437,Onboarding nurture + second-purchase voucher to build habit,17.044
+120,13098,Champions,13,15,13574.48,0.0526,714.4394,VIP retention call + early access to new collections (no discount),17.0054
+121,12731,Champions,44,6,7077.92,0.1004,710.5603,VIP retention call + early access to new collections (no discount),16.8696
+122,13373,Loyal,58,2,2055.58,0.3445,708.1984,Loyalty tier upgrade + curated cross-sell bundle (association rules),16.7869
+123,14226,Loyal,110,2,1692.0,0.4139,700.393,Loyalty tier upgrade + curated cross-sell bundle (association rules),16.5138
+124,12901,Champions,8,19,11639.47,0.0601,699.1495,VIP retention call + early access to new collections (no discount),16.4702
+125,12560,Potential,43,1,1292.31,0.5383,695.6647,Onboarding nurture + second-purchase voucher to build habit,16.3483
+126,12769,At-risk,138,1,1143.6,0.6032,689.8085,Win-back voucher + personal outreach; highest priority,16.1433
+127,13089,Champions,0,45,23389.28,0.0294,688.7102,VIP retention call + early access to new collections (no discount),16.1049
+128,12668,At-risk,159,1,1156.8,0.5953,688.6952,Win-back voucher + personal outreach; highest priority,16.1043
+129,14952,At-risk,106,4,1350.78,0.5093,688.0078,Win-back voucher + personal outreach; highest priority,16.0803
+130,18133,At-risk,112,1,931.5,0.7349,684.5722,Win-back voucher + personal outreach; highest priority,15.96
+131,13113,Champions,13,15,8184.23,0.0834,682.5721,VIP retention call + early access to new collections (no discount),15.89
+132,14828,Loyal,96,2,1557.76,0.437,680.6999,Loyalty tier upgrade + curated cross-sell bundle (association rules),15.8245
+133,13869,Loyal,23,2,2197.64,0.3092,679.4603,Loyalty tier upgrade + curated cross-sell bundle (association rules),15.7811
+134,17152,Loyal,94,3,1689.5,0.3988,673.8301,Loyalty tier upgrade + curated cross-sell bundle (association rules),15.5841
+135,13224,Potential,51,1,1212.26,0.5515,668.6061,Onboarding nurture + second-purchase voucher to build habit,15.4012
+136,13722,Loyal,31,3,2375.41,0.2798,664.6487,Loyalty tier upgrade + curated cross-sell bundle (association rules),15.2627
+137,12700,Loyal,56,2,1951.05,0.3387,660.8296,Loyalty tier upgrade + curated cross-sell bundle (association rules),15.129
+138,14062,Champions,12,5,4705.4,0.1399,658.4636,VIP retention call + early access to new collections (no discount),15.0462
+139,16766,At-risk,173,2,1145.6,0.5721,655.3798,Win-back voucher + personal outreach; highest priority,14.9383
+140,12539,At-risk,162,1,1085.99,0.597,648.283,Win-back voucher + personal outreach; highest priority,14.6899
+141,17381,Champions,19,15,9696.19,0.0668,647.6646,VIP retention call + early access to new collections (no discount),14.6683
+142,14001,At-risk,132,1,1007.9,0.6388,643.8307,Win-back voucher + personal outreach; highest priority,14.5341
+143,14245,Loyal,119,2,1693.45,0.3781,640.3478,Loyalty tier upgrade + curated cross-sell bundle (association rules),14.4122
+144,12484,Loyal,3,2,2183.98,0.2916,636.884,Loyalty tier upgrade + curated cross-sell bundle (association rules),14.2909
+145,12354,At-risk,132,1,1079.4,0.5892,635.9386,Win-back voucher + personal outreach; highest priority,14.2579
+146,16398,Loyal,54,2,1705.8,0.3721,634.6925,Loyalty tier upgrade + curated cross-sell bundle (association rules),14.2142
+147,17133,Champions,90,3,2478.79,0.256,634.6163,VIP retention call + early access to new collections (no discount),14.2116
+148,15123,At-risk,106,1,1069.47,0.5924,633.5297,Win-back voucher + personal outreach; highest priority,14.1735
+149,13209,Champions,28,3,3725.88,0.1699,632.8902,VIP retention call + early access to new collections (no discount),14.1512
+150,12456,Loyal,31,2,1825.4,0.3458,631.286,Loyalty tier upgrade + curated cross-sell bundle (association rules),14.095
+151,15004,Potential,47,1,1220.38,0.5115,624.2678,Onboarding nurture + second-purchase voucher to build habit,13.8494
+152,16133,Champions,1,21,9988.36,0.0624,623.5616,VIP retention call + early access to new collections (no discount),13.8247
+153,15333,At-risk,108,1,1028.56,0.6055,622.748,Win-back voucher + personal outreach; highest priority,13.7962
+154,13334,At-risk,90,1,1071.4,0.5785,619.8481,Win-back voucher + personal outreach; highest priority,13.6947
+155,12359,Potential,89,1,1109.32,0.5584,619.4719,Onboarding nurture + second-purchase voucher to build habit,13.6815
+156,12626,Champions,12,4,3193.9,0.1927,615.456,VIP retention call + early access to new collections (no discount),13.541
+157,13791,Loyal,27,2,1516.0,0.4049,613.8963,Loyalty tier upgrade + curated cross-sell bundle (association rules),13.4864
+158,13235,At-risk,112,1,1031.07,0.5939,612.3396,Win-back voucher + personal outreach; highest priority,13.4319
+159,16053,Potential,22,1,1124.19,0.5443,611.923,Onboarding nurture + second-purchase voucher to build habit,13.4173
+160,13851,Potential,28,1,1106.96,0.5506,609.4948,Onboarding nurture + second-purchase voucher to build habit,13.3323
+161,13384,Loyal,28,2,1755.84,0.3469,609.0357,Loyalty tier upgrade + curated cross-sell bundle (association rules),13.3163
+162,12514,At-risk,167,1,1017.68,0.5964,606.9924,Win-back voucher + personal outreach; highest priority,13.2447
+163,17416,Champions,9,5,5294.49,0.1145,606.2632,VIP retention call + early access to new collections (no discount),13.2192
+164,16652,Champions,9,5,4525.87,0.1336,604.6479,VIP retention call + early access to new collections (no discount),13.1627
+165,15505,Champions,13,3,2091.14,0.288,602.1528,VIP retention call + early access to new collections (no discount),13.0753
+166,12397,Potential,35,1,1109.81,0.5418,601.3472,Onboarding nurture + second-purchase voucher to build habit,13.0472
+167,15069,Potential,79,1,1109.53,0.5414,600.7252,Onboarding nurture + second-purchase voucher to build habit,13.0254
+168,15494,Potential,21,1,1119.88,0.5342,598.2433,Onboarding nurture + second-purchase voucher to build habit,12.9385
+169,17723,Champions,27,6,3276.4,0.182,596.4602,VIP retention call + early access to new collections (no discount),12.8761
+170,15267,Loyal,55,2,1407.76,0.4227,594.9902,Loyalty tier upgrade + curated cross-sell bundle (association rules),12.8247
+171,14769,Champions,8,4,5413.85,0.1093,591.7253,VIP retention call + early access to new collections (no discount),12.7104
+172,12428,Champions,20,7,6076.92,0.0972,590.9536,VIP retention call + early access to new collections (no discount),12.6834
+173,15416,Champions,55,3,3144.33,0.1879,590.7428,VIP retention call + early access to new collections (no discount),12.676
+174,13883,Loyal,118,4,1742.78,0.3389,590.7034,Loyalty tier upgrade + curated cross-sell bundle (association rules),12.6746
+175,16839,Champions,9,16,7982.95,0.074,590.3564,VIP retention call + early access to new collections (no discount),12.6625
+176,14918,Loyal,15,2,1610.15,0.3655,588.5085,Loyalty tier upgrade + curated cross-sell bundle (association rules),12.5978
+177,18080,At-risk,142,1,841.5,0.6992,588.3974,Win-back voucher + personal outreach; highest priority,12.5939
+178,16940,Potential,69,1,1110.68,0.5295,588.1273,Onboarding nurture + second-purchase voucher to build habit,12.5845
+179,15093,Loyal,16,2,1423.89,0.4125,587.4179,Loyalty tier upgrade + curated cross-sell bundle (association rules),12.5596
+180,13709,Champions,1,4,2464.51,0.2379,586.4276,VIP retention call + early access to new collections (no discount),12.525
+181,17386,Loyal,13,3,1541.4,0.38,585.7415,Loyalty tier upgrade + curated cross-sell bundle (association rules),12.501
+182,13658,At-risk,104,1,933.3,0.6273,585.5032,Win-back voucher + personal outreach; highest priority,12.4926
+183,16083,Potential,0,1,979.64,0.5964,584.2586,Onboarding nurture + second-purchase voucher to build habit,12.4491
+184,18092,Champions,19,4,2739.64,0.2131,583.6921,VIP retention call + early access to new collections (no discount),12.4292
+185,14700,Loyal,89,2,1541.1,0.3774,581.5713,Loyalty tier upgrade + curated cross-sell bundle (association rules),12.355
+186,14626,Loyal,22,2,1571.29,0.3697,580.9172,Loyalty tier upgrade + curated cross-sell bundle (association rules),12.3321
+187,14031,Champions,26,8,5632.57,0.103,579.9444,VIP retention call + early access to new collections (no discount),12.2981
+188,13771,Loyal,99,2,1464.85,0.3958,579.8071,Loyalty tier upgrade + curated cross-sell bundle (association rules),12.2932
+189,13437,Champions,29,3,2024.25,0.2837,574.3558,VIP retention call + early access to new collections (no discount),12.1025
+190,15367,Loyal,145,2,1416.18,0.4053,573.9846,Loyalty tier upgrade + curated cross-sell bundle (association rules),12.0895
+191,15482,Loyal,65,2,1379.86,0.4157,573.6295,Loyalty tier upgrade + curated cross-sell bundle (association rules),12.077
+192,12381,Potential,19,1,1028.74,0.5575,573.5505,Onboarding nurture + second-purchase voucher to build habit,12.0743
+193,16656,Champions,20,7,4858.68,0.1178,572.2287,VIP retention call + early access to new collections (no discount),12.028
+194,14267,Loyal,62,3,1516.24,0.3763,570.522,Loyalty tier upgrade + curated cross-sell bundle (association rules),11.9683
+195,13934,At-risk,163,1,922.1,0.6167,568.6273,Win-back voucher + personal outreach; highest priority,11.902
+196,14442,At-risk,104,1,914.24,0.6219,568.5414,Win-back voucher + personal outreach; highest priority,11.8989
+197,12370,At-risk,174,1,938.39,0.603,565.851,Win-back voucher + personal outreach; highest priority,11.8048
+198,17677,Champions,0,14,8955.4,0.0632,565.6453,VIP retention call + early access to new collections (no discount),11.7976
+199,15834,Loyal,65,3,1780.72,0.3172,564.9144,Loyalty tier upgrade + curated cross-sell bundle (association rules),11.772
+200,14535,Loyal,27,2,1652.81,0.3412,563.9637,Loyalty tier upgrade + curated cross-sell bundle (association rules),11.7387

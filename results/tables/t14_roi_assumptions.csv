@@ -1,0 +1,23 @@
+assumption,value,rationale
+p_churn_targeted,0.669,model precision at top-10% risk on the T2 out-of-time cohort (share of targeted who churn)
+realised_churn_rate_priority_list,0.31,observed churn rate of the 200 priority targets on T2 (validation of the priority list)
+mean_predicted_churn_priority_list,0.3483,average predicted churn probability inside the priority list
+save_rate_base,0.1,share of contacted churners actually retained; scenario range 5%-15%
+contact_cost_gbp_base,8.0,blended email/SMS + agent time per customer; scenario range GBP 5-12
+gross_margin_base,0.35,margin on retained revenue; scenario range 30%-35%
+n_targets,200,pilot campaign size (top-N priority list)
+expected_churners,133.8,n_targets x p_churn_targeted
+expected_saves,13.4,expected_churners x save_rate
+value_per_saved_gbp,2645.58,avg monetary of targeted customers x gross margin
+gross_benefit_gbp,35399.89,expected_saves x value_per_saved
+campaign_cost_gbp,1600.0,n_targets x contact_cost
+net_expected_value_gbp,33799.89,gross_benefit - campaign cost (base scenario)
+roi_pct,2112.5,net / campaign cost x 100 (base scenario)
+random_targeting_net_gbp,1925.76,"same scenario applied to 200 randomly chosen T2 customers (avg value, cohort churn rate)"
+random_targeting_roi_pct,120.4,net / cost x 100 for random targeting
+break_even_save_rate_pct,0.452,save rate at which the targeted campaign breaks even
+priority_score,predicted churn probability x monetary,expected value at risk; ranks who to contact first
+data_caveat,no campaign/response history in the dataset,"ROI is a transparent scenario analysis, not measured uplift"
+scenario_pessimistic,save 5% / cost GBP 12.00 / margin 30%,"targeted net GBP 12,771 (ROI 532%); random net GBP -889 (ROI -37%)"
+scenario_base,save 10% / cost GBP 8.00 / margin 35%,"targeted net GBP 33,800 (ROI 2112%); random net GBP 1,926 (ROI 120%)"
+scenario_optimistic,save 15% / cost GBP 5.00 / margin 35%,"targeted net GBP 52,100 (ROI 5210%); random net GBP 4,289 (ROI 429%)"

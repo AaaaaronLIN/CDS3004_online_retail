@@ -1,0 +1,4 @@
+scenario,save_rate,contact_cost_gbp,margin,p_churn_targeted,n_targets,targeted_expected_churners,targeted_expected_saves,targeted_value_per_saved_gbp,targeted_gross_benefit_gbp,targeted_cost_gbp,targeted_net_gbp,targeted_roi_pct,random_expected_churners,random_expected_saves,random_value_per_saved_gbp,random_gross_benefit_gbp,random_net_gbp,random_roi_pct,net_uplift_gbp
+pessimistic,0.05,12.0,0.3,0.669,200,133.8,6.7,2267.64,15171.38,2400.0,12771.38,532.1,79.1,4.0,382.04,1511.04,-888.96,-37.0,13660.34
+base,0.1,8.0,0.35,0.669,200,133.8,13.4,2645.58,35399.89,1600.0,33799.89,2112.5,79.1,7.9,445.72,3525.76,1925.76,120.4,31874.13
+optimistic,0.15,5.0,0.35,0.669,200,133.8,20.1,2645.58,53099.83,1000.0,52099.83,5210.0,79.1,11.9,445.72,5288.64,4288.64,428.9,47811.19
