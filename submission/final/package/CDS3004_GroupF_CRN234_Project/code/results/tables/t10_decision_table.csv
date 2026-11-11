@@ -1,7 +1,0 @@
-segment,n,avg_monetary,avg_churn_prob,action,expected_churners,expected_customers_saved,value_per_saved,expected_value,cost,net,roi_pct
-Champions,755,3293.01,0.1836,VIP retention call + early access to new collections (no discount),138.6,13.9,1152.55,15976.47,6040.0,9936.47,164.5
-Loyal,582,900.8,0.4243,Loyalty tier upgrade + curated cross-sell bundle (association rules),246.9,24.7,315.28,7785.61,4656.0,3129.61,67.2
-Potential,520,480.34,0.6254,Onboarding nurture + second-purchase voucher to build habit,325.2,32.5,168.12,5467.36,4160.0,1307.36,31.4
-At-risk,535,481.24,0.6768,Win-back voucher + personal outreach; highest priority,362.1,36.2,168.43,6098.79,4280.0,1818.79,42.5
-Hibernating,417,142.64,0.7234,Low-cost reactivation email only (no discount; protect margin),301.7,30.2,49.92,1506.0,3336.0,-1830.0,-54.9
-TOTAL,2809,1273.48,0.4893,all segments (same base scenario),1374.5,137.5,267.89,36834.23,22472.0,14362.23,63.9

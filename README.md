@@ -5,6 +5,7 @@ An agent-assisted data-mining project that turns twelve months of raw retail tra
 **Course:** CDS3004 Data Mining — Group Project (22%) and Group Presentation (8%), Lingnan University, School of Data Science, 2026/27 Term 1
 **Instructor:** Prof. Daoyuan Wu
 **Team:** Group F — Member A, Member B, Member C, Member D, Member E
+**Public repository:** <https://github.com/AaaaaronLIN/CDS3004_online_retail>
 **Report:** `report/REPORT.md` (exported to PDF for submission) · **Slides:** `slides/SLIDES.md`
 
 ---

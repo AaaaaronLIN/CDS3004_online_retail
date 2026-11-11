@@ -1,3 +1,0 @@
-cohort,f1_opt_threshold,f1_at_opt,precision_at_opt,recall_at_opt,capacity_threshold
-T1_test,0.2665,0.7221,0.5913,0.9272,0.7382
-T2_oot,0.2665,0.6417,0.487,0.9406,0.7368

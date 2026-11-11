@@ -1,3 +1,0 @@
-cohort,n_customers,churn_rate,as_of,feature_window,label_window,role
-T1,2716,0.5044,2011-05-31,2010-12-01..2011-05-31,2011-06-01..2011-08-31,model development (train/val/test)
-T2,2809,0.3955,2011-08-31,2011-03-01..2011-08-31,2011-09-01..2011-11-30,out-of-time validation + decision cohort

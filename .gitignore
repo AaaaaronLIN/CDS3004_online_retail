@@ -12,9 +12,8 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 
-# ---- submissions (rebuilt from repo) ----
-submission/final/*.zip
-submission/final/*.pdf
+# ---- local build outputs (final PDF/PPTX/ZIP are assembled outside the repo) ----
+submission/final/
 
 # keep results/ committed: figures, tables and metrics.json are the
 # single source of truth for every number in the report and slides.

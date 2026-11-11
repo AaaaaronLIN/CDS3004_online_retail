@@ -1,5 +1,0 @@
-stage,n_features,val_pr_auc,val_roc_auc,note
-all_features,16,0.6966,0.7514,baseline: every engineered feature
-correlation_filter,15,0.6973,0.7513,removed |r|>0.9 duplicates
-mutual_info_top12,12,0.7032,0.7457,"MI ranking, top 12"
-rfe_top10,10,0.7036,0.7468,"RFE logistic regression, top 10"

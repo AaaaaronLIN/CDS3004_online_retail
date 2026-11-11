@@ -1,8 +1,0 @@
-decision,rows_affected,rows_remaining,rationale
-Raw dataset as extracted,0,541909,"UCI Online Retail, 541,909 transaction lines"
-Drop rows with missing CustomerID,135080,406829,cannot be attributed to a customer; guest sales are excluded from customer analytics
-Drop cancelled invoices,8905,397924,"credit notes, not purchases; retained separately as the returns ledger"
-Drop Quantity <= 0,0,397924,returns / stock adjustments inside non-cancelled invoices
-Drop UnitPrice <= 0,40,397884,"free items, manual overrides and data-entry errors"
-Drop non-product / service StockCodes,1547,396337,"postage, discounts, bank charges, test SKUs would pollute baskets"
-Drop exact duplicate rows,5187,391150,duplicated log lines would double-count baskets

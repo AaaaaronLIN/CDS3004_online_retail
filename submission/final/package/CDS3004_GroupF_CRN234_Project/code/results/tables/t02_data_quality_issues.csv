@@ -1,8 +1,0 @@
-issue,count,pct_of_rows,decision
-Missing CustomerID,135080,24.93,Drop from customer analysis; kept in raw file (measured bias below)
-Exact duplicate rows,5268,0.97,Drop all but the first occurrence
-Cancelled invoices ('C' prefix),9288,1.71,Drop from purchase base; kept as a separate returns ledger
-Negative Quantity (returns/adjustments),10624,1.96,Drop from purchase base; used to build return_rate
-Zero or negative UnitPrice,2517,0.46,"Drop (free items, price overrides, errors)"
-Non-product / service StockCodes,2916,0.54,"Drop (POST, D, M, C2, DOT, PADS, BANK CHARGES, CRUK, S, AMAZONFEE, B, ADJUST, TEST...)"
-Missing Description,1454,0.27,"Fill with 'UNKNOWN'; affects product labels only, not modelling"

@@ -1,9 +1,0 @@
-column,dtype,non_null,missing,example_value,note
-InvoiceNo,str,541909,0,536365,invoice identifier; a leading 'C' marks a cancellation / credit note
-StockCode,str,541909,0,85123A,"SKU; contains non-product service codes (POST, D, M, BANK CHARGES, ...)"
-Description,object,540455,1454,WHITE HANGING HEART T-LIGHT HOLDER,"free-text product name; 1,454 missing values"
-Quantity,int64,541909,0,6,units on the line; negative values are returns / adjustments
-InvoiceDate,datetime64[us],541909,0,2010-12-01 08:26:00,timestamp of the invoice line
-UnitPrice,float64,541909,0,2.55,unit price in GBP; non-positive values are free items or errors
-CustomerID,float64,406829,135080,17850.0,customer identifier; missing for ~24.9% of lines (guest checkouts)
-Country,str,541909,0,United Kingdom,customer country (United Kingdom dominates)
