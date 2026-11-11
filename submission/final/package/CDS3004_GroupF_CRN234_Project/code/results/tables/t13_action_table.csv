@@ -1,0 +1,6 @@
+segment,action,target_count,expected_churners,expected_saves,gross_benefit_gbp,campaign_cost_gbp,net_expected_value_gbp
+Champions,VIP retention call + early access to new collections (no discount),755,138.6,13.9,15976.47,6040.0,9936.47
+Loyal,Loyalty tier upgrade + curated cross-sell bundle (association rules),582,246.9,24.7,7785.61,4656.0,3129.61
+Potential,Onboarding nurture + second-purchase voucher to build habit,520,325.2,32.5,5467.36,4160.0,1307.36
+At-risk,Win-back voucher + personal outreach; highest priority,535,362.1,36.2,6098.79,4280.0,1818.79
+Hibernating,Low-cost reactivation email only (no discount; protect margin),417,301.7,30.2,1506.0,3336.0,-1830.0

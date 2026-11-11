@@ -1,0 +1,6 @@
+segment,n,share_pct,recency_days,frequency,monetary,avg_basket,avg_items_per_invoice,distinct_products,distinct_months,tenure_days,avg_gap_days,std_gap_days,revenue_last90_ratio,weekend_share,avg_unit_price,max_invoice_value,return_rate,is_uk_share,actual_churn_rate
+Champions,755,26.88,25.89,6.55,3293.01,439.38,21.0,84.24,3.94,216.3,37.49,16.46,1.64,0.13,3.03,873.3,0.03,0.905,0.1219
+Loyal,582,20.72,55.99,2.29,900.8,397.37,21.99,43.23,2.08,182.22,70.35,0.78,2.53,0.15,4.02,556.55,0.02,0.895,0.3351
+Potential,520,18.51,42.71,1.15,480.34,435.32,27.08,29.42,1.05,79.73,1.89,0.04,10.0,0.12,2.94,452.2,0.01,0.875,0.4962
+At-risk,535,19.05,137.66,1.07,481.24,460.02,24.04,25.0,1.0,167.94,0.19,0.0,0.07,0.11,3.42,468.43,0.02,0.903,0.5589
+Hibernating,417,14.85,98.82,1.26,142.64,119.19,5.31,6.12,1.16,149.29,6.14,0.47,3.95,0.13,5.07,126.35,0.04,0.945,0.6403

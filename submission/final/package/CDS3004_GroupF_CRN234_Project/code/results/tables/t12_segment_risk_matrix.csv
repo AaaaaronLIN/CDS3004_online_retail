@@ -1,0 +1,6 @@
+segment,n,avg_monetary,avg_churn_prob,avg_priority,risk_tier
+Champions,755,3293.01,0.1836,354.69,Low
+Loyal,582,900.8,0.4243,352.93,Medium
+Potential,520,480.34,0.6254,276.12,High
+At-risk,535,481.24,0.6768,303.67,High
+Hibernating,417,142.64,0.7234,98.75,High
