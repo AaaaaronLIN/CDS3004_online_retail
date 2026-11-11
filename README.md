@@ -7,6 +7,7 @@ An agent-assisted data-mining project that turns twelve months of raw retail tra
 **Team:** Group F — Member A, Member B, Member C, Member D, Member E
 **Public repository:** <https://github.com/AaaaaronLIN/CDS3004_online_retail>
 **Report:** `report/REPORT.md` (exported to PDF for submission) · **Slides:** `slides/SLIDES.md`
+**Teammates start here:** [`ONBOARDING.md`](ONBOARDING.md) — clone, set your git identity, run the notebook, first commit.
 
 ---
 
