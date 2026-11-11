@@ -154,6 +154,8 @@ git add . && git commit -m "…" && git push   # 收工前
 | **D** | 关联规则与相似度负责人 | S3、S7：距离度量、lookalike、相似商品、FP-Growth、holdout 验证 | `t03`、`t04_lookalikes`、`t05_similar_products`、`t09_top_rules`、`t10_association_rules`、`f10`–`f11`；report §7–§8 | 9、10 | 核对 5,441 / 5,402 / median 12.174 / 593 条 |
 | **E** | 集成、决策与仓库负责人 | S8–S9：T2 打分、segment×risk、优先级、ROI、指标汇总、仓库与提交 | `t10_decision`–`t15`、`f12`–`f13`、README、CONTRIBUTIONS、提交清单；report §1/§3/§9–§10/§13 | 1–3、5、11、13–14 | 复算 ROI 三档 + 盈亏平衡率 |
 
+**Host 速成包**：如果 E 由组长担任，先看 [`HOST-BRIEF.md`](HOST-BRIEF.md)（12 个必背数字、8 个高频追问、30 分钟学习路径、答辩流程与交接模板）。
+
 **认领建议**：按兴趣最快；有人编程弱就配一个强的同组；**E 这块必须有一个人负责**（集成/ROI/仓库/提交，工作量不小但最容易出彩）。
 
 ---
