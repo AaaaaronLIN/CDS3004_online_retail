@@ -10,7 +10,7 @@
 | Name and student ID | [full name] / [student ID]*(fill only in the submitted copy if required by the course; labels are fine otherwise)* |
 | Role in the project | [see `CONTRIBUTIONS.md`] |
 | Tools, harnesses and models used | [e.g. DeepSeek Harness + deepseek-flash; ChatGPT + GPT-5; Claude Code + Sonnet; VS Code Copilot] |
-| Repository | `https://github.com/<org>/<repo>` |
+| Repository | `https://github.com/AaaaaronLIN/CDS3004_online_retail` |
 | Date range covered | [YYYY-MM-DD] to [YYYY-MM-DD] |
 | Commits covered | [hash range or list] |
 | Public link(s) | [share URL(s), or "local transcript in raw/"] |

@@ -20,7 +20,7 @@
 - From transactions to a customer operating system
 - What should we do on Monday morning, for which customers, with what offer?
 - CDS3004 Data Mining · Group F · 19 November 2026
-- Public repository: `github.com/GITHUB-USERNAME/cds3004-online-retail` (QR code bottom-right)
+- Public repository: `github.com/AaaaaronLIN/CDS3004_online_retail` (QR code bottom-right)
 
 **Visual:** clean title card; no data figure. Team name, course, one-line promise.
 

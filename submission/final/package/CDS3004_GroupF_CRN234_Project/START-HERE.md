@@ -9,7 +9,7 @@
 
 - Group ID: **Group F** (report cover, slide deck, README, contribution table)
 - CRN: **234** (file names, submission checklist)
-- Repository URL: `https://github.com/GITHUB-USERNAME/cds3004-online-retail`
+- Repository URL: `https://github.com/AaaaaronLIN/CDS3004_online_retail`
   → **replace `GITHUB-USERNAME` once you create the repo** (5 files: report, slides, README, contribution table, this file)
 - Member names: still **Member A–E** — fill them in the contribution table and slides when known
   (report §11 Table 20, `CONTRIBUTIONS.md`, `slides/SLIDES.md` speaker lines, and the file names in `agent-trajectories/`)

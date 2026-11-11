@@ -93,7 +93,7 @@
 ## 5. Manual fields (not in the pipeline)
 
 - `[GROUP-ID]` and member names/student IDs: title page and Table 20 of REPORT.md; CONTRIBUTIONS.md; agent-logs files; slides.
-- Public repository URL: REPORT.md title page and README.md (`https://github.com/<organisation>/<repository>`).
+- Public repository URL: REPORT.md title page and README.md (`https://github.com/AaaaaronLIN/CDS3004_online_retail`).
 - Presentation duration and PPT deadline: confirm with the course announcement/TA (assumed 10 min + Q&A and 2026-11-19).
 - Agent trajectory links: `agent-logs/LINKS.md` and each `agent-logs/MemberX_agent-trajectory.md`; replace `[commit]` tokens in EXAMPLE_member1.md with real hashes.
 

@@ -7,7 +7,7 @@
 **Instructor:** Prof. Daoyuan Wu
 **Team:** Group F — Member A, Member B, Member C, Member D, Member E
 **Submission date:** 6 December 2026
-**Repository:** `https://github.com/GITHUB-USERNAME/cds3004-online-retail` (public)
+**Repository:** `https://github.com/AaaaaronLIN/CDS3004_online_retail` (public)
 
 ---
 

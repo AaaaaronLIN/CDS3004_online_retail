@@ -207,7 +207,7 @@ def title_slide(prs, s, total, descr):
     add_text(slide, Inches(0.9), Inches(5.35), Inches(6.6), Inches(0.4),
              "Group F  ·  Thursday 19 November 2026", 13, LIGHT)
     add_text(slide, Inches(0.9), Inches(5.75), Inches(9), Inches(0.35),
-             "Public repository: github.com/<org>/<repo>", 10.5,
+             "Public repository: github.com/AaaaaronLIN/CDS3004_online_retail", 10.5,
              RGBColor(0x9F, 0xB6, 0xCC))
     footer(slide, 1, total, course="Lingnan University  ·  School of Data Science")
     set_notes(slide, s["notes"])

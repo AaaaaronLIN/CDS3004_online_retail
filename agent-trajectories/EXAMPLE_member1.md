@@ -10,7 +10,7 @@
 | Name and student ID | [Member A full name] / [student ID] |
 | Role in the project | Data and quality lead — audit, cleaning funnel, temporal snapshots |
 | Tools, harnesses and models used | DeepSeek Harness + `deepseek-flash` (main); ChatGPT + GPT-5 (one brainstorming session) |
-| Repository | `https://github.com/<org>/<repo>` |
+| Repository | `https://github.com/AaaaaronLIN/CDS3004_online_retail` |
 | Date range covered | 2026-10-20 to 2026-11-10 |
 | Commits covered | `[commit]` … `[commit]` |
 | Public link(s) | [DeepSeek Harness session export in `agent-logs/raw/MemberA_2026-10-27.md`] |
