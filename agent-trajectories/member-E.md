@@ -16,7 +16,7 @@
 | # | Date | Task / goal | Prompt used (short) | Agent proposal (2–5 sentences) | Human decision (accepted / rejected / changed + why) | Verification (command, number, comparison) | Artifact / commit |
 |---|---|---|---|---|---|---|---|
 | 0 | 2026-11-11 | Group scaffold: reproducible pipeline + report + deck | "Design and implement the full CDS3004 pipeline on UCI Online Retail and verify it runs top-to-bottom" | Agent produced notebook, 23 figures, 29 tables, metrics JSON, report draft, 20-slide deck | **Group decision:** accepted as scaffold, not final work; each member must verify their module (tasks below) | Notebook executed twice from a clean kernel: 0 errors, identical metrics.json (only runtime_sec differs) | scaffold commit |
-| 1 | | | | | | | |
+| 1 | 2026-11-14 | Reproduce the pipeline end-to-end; ROI-assumption sensitivity experiment | "Run the notebook; change base to save_rate 5%, contact cost GBP 12, margin 30%; re-run S8 and report the change" | Agent explained where to edit and what to expect | Accepted as a controlled experiment, repository restored afterwards | PIPELINE COMPLETE in 28.1s; T2 OOT AUC 0.7392; net GBP 33,799.89 -> 12,771.38 (ROI 532.1%); `git restore notebooks results` | commit |
 | 2 | | | | | | | |
 | 3 | | | | | | | |
 
