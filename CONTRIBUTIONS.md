@@ -26,7 +26,7 @@
 | **Huang Hao Lin (4455930)** | Association rules and similarity lead | Apply different data-mining techniques for various data (LO3) | Notebook S3 and S7 (distance metrics, lookalikes, similar products, FP-Growth mining, holdout validation); `t03_distance_metrics.csv`, `t04_lookalikes.csv`, `t05_similar_products.csv`, `t09_top_rules.csv`, `t10_association_rules.csv`; figures `f10`, `f11`; report §7–§8 | 9–10 | Notebook S3/S7 cells, `results/tables/t03*`, `t04_lookalikes.csv`, `t05_similar_products.csv`, `t09_top_rules.csv`, `t10_association_rules.csv`, `f10*`, `f11*`, report §7–§8 |
 | **LIN Xiaotong (4589755)** | Integration, decision framework and repository lead | Problem definition (with team); solution design (with team); interpret results correctly and critically (LO7); deliver learnt models for decision making (LO7); presentation and repository compliance | Notebook S8–S9 (T2 scoring, segment × risk matrix, priority list, ROI scenarios, metrics/ARTIFACTS generation), README, CONTRIBUTIONS, submission checklist, agent-log templates; `t10_decision_table.csv`, `t11_top200_targets.csv`, `t12_segment_risk_matrix.csv`, `t13_action_table.csv`, `t14_roi_assumptions.csv`, `t15_priority_list_summary.csv`; figures `f12`, `f13`; report §1, §3, §9–§10, §13 | 1–3, 7, 16–17, 19–20 | `README.md`, `CONTRIBUTIONS.md`, notebook S8–S9 cells, `results/tables/t10*`–`t15*`, `f12*`, `f13*`, report §1/§3/§9–§13, `agent-logs/README.md`, `submission/*` |
 
-Rubric items 1 (problem definition) and 2 (solution design) are team-owned: Member E drafts, but all five review and sign off. Rubric item 6 (data visualisation) is distributed across Members A–E as shown; the presentation and report make the distribution explicit.
+Rubric items 1 (problem definition) and 2 (solution design) are team-owned: LIN Xiaotong drafts, but all five review and sign off. Rubric item 6 (data visualisation) is distributed across the five members as shown; the presentation and report make the distribution explicit.
 
 ## 3. Commit and trajectory evidence (course requirement)
 
@@ -56,14 +56,14 @@ The course estimates each student's workload roughly from **GitHub commits** and
 | Feature engineering, segmentation, profiles | Weng Zhi Chao | Slides 8–10 |
 | Churn modelling, evaluation, error analysis | Lim Man Tung Marcus | Slides 11–13 |
 | Association rules and similarity | Huang Hao Lin | Slides 14–15 |
-| Timekeeper / slide operator | Member A (backup Member D) | Holds the timer; signals at 30 s before each slide budget |
+| Timekeeper / slide operator | Patten Lai (backup Huang Hao Lin) | Holds the timer; signals at 30 s before each slide budget |
 | Backup presenter for any slide | every member | Each member knows the whole deck in case of illness |
 
 ## 5. Cross-checks before submission
 
 | Check | Owner |
 |---|---|
-| Every member has ≥3 meaningful commits spread over ≥2 weeks | Member E |
+| Every member has ≥3 meaningful commits spread over ≥2 weeks | LIN Xiaotong |
 | Every member has a complete trajectory file and (if used) a working public link | Member D (collects), each member (writes) |
 | Names and student IDs appear in the report, this file, and the PDF | Member E |
 | Report/slides/README numbers match `results/metrics.json` after the fill step | Member C |
