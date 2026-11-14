@@ -147,12 +147,14 @@
 
 **Section:** 03 · METHOD
 **Cumulative timing:** 5:45–6:35 (50 s) · **Speaker:** Member E
-**Layout:** text
+**Layout:** timeline
 
 **On-slide bullets**
 - Prepare (S0–S4): audit, clean, snapshot, engineer and select 16 → 10 behavioural features.
 - Model (S5–S7): segment customers, predict 90-day churn, mine cross-sell rules, compare similarity metrics.
 - Decide (S8–S9): combine segment × risk × offer into a capacity-bounded target list, with ROI scenarios and a full artefact log.
+
+**Timeline:** Prepare::S0–S4 · audit, clean, snapshot, features | Model::S5–S7 · segment, predict, mine, compare | Decide::S8–S9 · score, rank, cost, decide
 
 **Takeaway:** One notebook, ten stages, reproducible in about thirty seconds — the analysis is the artefact.
 

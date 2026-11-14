@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "backend": "native",
+  "rasterEngine": "libreoffice",
+  "source": "saved",
+  "inputPath": "/Users/aronlin/Documents/deepseek-harness/default-workspace/cds3004-project/submission/final/CDS3004_GroupF_CRN234_Slides.pptx",
+  "sourceSha256": "6df0a467fd159968642b0aca56a9c290e1148dfd75c6160398f8ea634a30ef9b",
+  "dpi": 144,
+  "pageCount": 20,
+  "images": [
+    {
+      "index": 1,
+      "page": 7,
+      "path": "/Users/aronlin/Documents/deepseek-harness/default-workspace/cds3004-project/.dsh-office.1uXgXtB2/render/page-0001.png",
+      "width": 1920,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720.0666666666667
+      },
+      "byteLength": 147770
+    },
+    {
+      "index": 2,
+      "page": 20,
+      "path": "/Users/aronlin/Documents/deepseek-harness/default-workspace/cds3004-project/.dsh-office.1uXgXtB2/render/page-0002.png",
+      "width": 1920,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 720.0666666666667
+      },
+      "byteLength": 109881
+    }
+  ],
+  "missingFonts": []
+}

@@ -161,7 +161,7 @@ def tb(slide, x, y, w, h, text, size, color, bold=False, italic=False,
 
 
 def bullets(slide, x, y, w, h, items, size=17, color=GREY, bullet_color=TEAL,
-            space=9):
+            space=9, head_color=INK):
     box = slide.shapes.add_textbox(x, y, w, h)
     tf = box.text_frame
     tf.word_wrap = True
@@ -177,7 +177,7 @@ def bullets(slide, x, y, w, h, items, size=17, color=GREY, bullet_color=TEAL,
         r.font.name = FONT
         if ":" in item and len(item.split(":", 1)[0]) < 46:
             head, tail = item.split(":", 1)
-            for txt, bold, col in ((head + ":", True, INK), (tail, False, color)):
+            for txt, bold, col in ((head + ":", True, head_color), (tail, False, color)):
                 rr = p.add_run()
                 rr.text = txt
                 rr.font.size = Pt(size)
@@ -418,7 +418,7 @@ def closing_slide(prs, s, total):
        s["title"], 34, WHITE, bold=True)
     bullets(slide, Inches(0.9), Inches(2.85), Inches(11.3), Inches(2.9),
             s["bullets"], size=16, color=RGBColor(0xD5, 0xE0, 0xEA),
-            bullet_color=RGBColor(0x4F, 0xC3, 0xB8), space=10)
+            bullet_color=RGBColor(0x4F, 0xC3, 0xB8), space=10, head_color=WHITE)
     tb(slide, Inches(0.9), Inches(6.35), Inches(11), Inches(0.35),
        "Thank you — questions welcome.", 15, RGBColor(0xB9, 0xC8, 0xD8), italic=True)
     footer(slide, total, total)
