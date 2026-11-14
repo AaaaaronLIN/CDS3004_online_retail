@@ -11,7 +11,7 @@
 - CRN: **234** (file names, submission checklist)
 - Repository URL: `https://github.com/AaaaaronLIN/CDS3004_online_retail`
   → **replace `GITHUB-USERNAME` once you create the repo** (5 files: report, slides, README, contribution table, this file)
-- Member names: still **Member A–E** — fill them in the contribution table and slides when known
+- Member names + student IDs: filled in (LIN Xiaotong 4589755, Patten Lai 4001777, Weng Zhi Chao 4589896, Lim Man Tung Marcus 4592996, Huang Hao Lin 4455930)
   (report §11 Table 20, `CONTRIBUTIONS.md`, `slides/SLIDES.md` speaker lines, and the file names in `agent-trajectories/`)
 
 ---
@@ -73,7 +73,7 @@ git push -u origin main
 ## 3. Do these 6 things today (about 90 minutes)
 
 1. Create the public repo with the settings above and push (§1).
-2. Fill member names (search `Member A` … `Member E`).
+2. Confirm each member's GitHub username is added as a collaborator, and each member pushes their own commit.
 3. **Run the notebook yourself**: `jupyter nbconvert --to notebook --execute --inplace notebooks/CDS3004_Project.ipynb`
    (or upload `Online_Retail.xlsx` to Colab → Run all).
 4. Ask the TA: exact talk duration (10 min? Q&A?), PPT upload deadline, English or Cantonese.

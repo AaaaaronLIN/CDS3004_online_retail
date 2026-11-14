@@ -70,11 +70,13 @@ python3 -m jupyter nbconvert --to notebook --execute --inplace notebooks/CDS3004
 
 | 成员 | 负责模块 | 先改哪里 | 第一次 commit 示例 |
 |---|---|---|---|
-| Member A | 问题定义 / 报告统稿 / PPT | `report/REPORT.md` | `docs(report): tighten problem definition` |
-| Member B | 数据清洗与快照（S1–S2） | `notebooks/CDS3004_Project.ipynb` | `feat(data): verify cleaning funnel and snapshot coverage` |
-| Member C | 聚类 + 相似度 + 图表（S3, S5） | notebook + `results/figures/` | `feat(seg): document K choice with stability evidence` |
-| Member D | 特征工程 + 分类评估（S4, S6） | notebook | `exp(eval): compare feature sets on validation PR-AUC` |
-| Member E | 关联规则 + 决策层（S7–S8） | notebook + `results/tables/` | `feat(decision): churn-conditional campaign value` |
+| 成员 | 负责模块 | 先改哪里 | 第一次 commit 示例 |
+|---|---|---|---|
+| Patten Lai（A） | 数据清洗与快照（S1–S2） | `notebooks/CDS3004_Project.ipynb`、`data/` | `feat(data): verify cleaning funnel and snapshot coverage` |
+| Weng Zhi Chao（B） | 特征工程 + 分层（S3–S5） | notebook + `results/figures/` | `feat(seg): document K choice with stability evidence` |
+| Lim Man Tung Marcus（C） | 流失模型 + 评估（S6） | notebook + `results/tables/` | `exp(eval): threshold at top-20 percent` |
+| Huang Hao Lin（D） | 关联规则 + 相似度（S3, S7） | notebook + `results/tables/` | `feat(rules): validate rules on later holdout` |
+| LIN Xiaotong（E, Host） | 集成 + 决策 + 仓库（S8–S9） | notebook S8–S9、`README.md`、提交清单 | `feat(decision): churn-conditional campaign value` |
 
 提交：
 
@@ -142,7 +144,7 @@ git add . && git commit -m "…" && git push   # 收工前
 
 # 5 人分工（建议版，还没定谁做哪块就按这个认领）
 
-> **现在还只是 Member A–E 占位，不代表已经分好。** 组内商量后，把名字填进 3 处即可：
+> **名字已经填好**（见上表）。如果组内想换人，只需改 3 处：
 > `CONTRIBUTIONS.md`、`report/REPORT.md`（Table 21）、`slides/SLIDES.md`（每页 `**Speaker:**` 行 + 开头 Speakers 那段）；
 > 并把 `agent-trajectories/member-X.md` 的文件名/标题改成自己的名字。改完告诉组长，组长统一重出 PDF/PPT。
 
@@ -164,7 +166,7 @@ git add . && git commit -m "…" && git push   # 收工前
 
 ## 每个人接下来 7 天的具体步骤
 
-> 下面的 Member A–E 换成你的名字。通用第一步（clone、设置身份、跑通 notebook）见本文第 0–6 节。
+> 下面按真实姓名给出；通用第一步（clone、设置身份、跑通 notebook）见本文第 0–6 节。
 
 ### Patten Lai — 数据与质量
 - **今天（30 分钟）**：跑 S1–S2；核对 24.93%（135,080 行）、匿名交易占收入 13.57%、取消单 9,288、非商品 2,916、重复行 5,268；T1=2,716 人（流失率 0.5044）、T2=2,809 人（0.3955）。

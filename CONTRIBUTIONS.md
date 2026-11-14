@@ -64,11 +64,11 @@ The course estimates each student's workload roughly from **GitHub commits** and
 | Check | Owner |
 |---|---|
 | Every member has ≥3 meaningful commits spread over ≥2 weeks | LIN Xiaotong |
-| Every member has a complete trajectory file and (if used) a working public link | Member D (collects), each member (writes) |
-| Names and student IDs appear in the report, this file, and the PDF | Member E |
-| Report/slides/README numbers match `results/metrics.json` after the fill step | Member C |
-| Notebook runs from a fresh kernel and regenerates every artifact | Member C |
-| ZIP built, checked and uploaded | Member E (second check by any member) |
+| Every member has a complete trajectory file and (if used) a working public link | Huang Hao Lin (collects), each member (writes) |
+| Names and student IDs appear in the report, this file, and the PDF | LIN Xiaotong |
+| Report/slides/README numbers match `results/metrics.json` after the fill step | Lim Man Tung Marcus |
+| Notebook runs from a fresh kernel and regenerates every artifact | Lim Man Tung Marcus |
+| ZIP built, checked and uploaded | LIN Xiaotong (second check by any member) |
 | Everyone reads the final PDF and slides and confirms their own contribution line | all members |
 
 ## 6. Sign-off
@@ -77,8 +77,8 @@ By signing, each member confirms that the contribution descriptions above are ac
 
 | Member | Signature / confirmation (name) | Date |
 |---|---|---|
-| Member A | | |
-| Member B | | |
-| Member C | | |
-| Member D | | |
-| Member E | | |
+| Patten Lai | | |
+| Weng Zhi Chao | | |
+| Lim Man Tung Marcus | | |
+| Huang Hao Lin | | |
+| LIN Xiaotong | | |
