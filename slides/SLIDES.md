@@ -7,16 +7,15 @@
 
 > This plan is the single source of truth for the deck (`CDS3004_GroupF_CRN234_Slides.pptx`) and the
 > speaker cue cards (`CDS3004_GroupF_CRN234_CueCards.pdf`). Timings are cumulative and sum to 19:40,
-> leaving a 20-second buffer inside the 20:00 limit. Speaker labels are placeholders until the team
-> finalises names.
+> leaving a 20-second buffer inside the 20:00 limit. Speaker assignments are final and balanced to about four minutes each.
 
 | Speaker | Slides | Speaking time |
 |---|---|---|
-| LIN Xiaotong | 1, 2, 3, 7, 16, 17, 19, 20 | 6:25 |
-| Patten Lai | 4, 5, 6, 18 | 4:15 |
-| Weng Zhi Chao | 8, 9, 10 | 3:30 |
-| Lim Man Tung Marcus | 11, 12, 13 | 3:30 |
-| Huang Hao Lin | 14, 15 | 2:00 |
+| LIN Xiaotong | 1, 2, 3, 19, 20 | 3:55 |
+| Patten Lai | 4, 5, 6, 18 | 3:55 |
+| Weng Zhi Chao | 7, 8, 9, 10 | 3:55 |
+| Lim Man Tung Marcus | 11, 12, 13 | 4:00 |
+| Huang Hao Lin | 14, 15, 16, 17 | 3:55 |
 | **Total** | **1–20** | **19:40** |
 
 ---
@@ -35,7 +34,7 @@
 ## Slide 2 — The answer first: four linked models, one action list
 
 **Section:** 00 · EXECUTIVE SUMMARY
-**Cumulative timing:** 0:15–1:25 (70 s) · **Speaker:** LIN Xiaotong
+**Cumulative timing:** 0:15–1:50 (95 s) · **Speaker:** LIN Xiaotong
 **Layout:** kpi
 
 **On-slide bullets**
@@ -57,7 +56,7 @@
 ## Slide 3 — One retailer, one year of transactions: four decisions, not one model
 
 **Section:** 01 · THE QUESTION
-**Cumulative timing:** 1:25–2:25 (60 s) · **Speaker:** LIN Xiaotong
+**Cumulative timing:** 1:50–2:55 (65 s) · **Speaker:** LIN Xiaotong
 **Layout:** text
 
 **On-slide bullets**
@@ -77,7 +76,7 @@
 ## Slide 4 — One in four transaction lines has no customer ID — cleaning decides who can be analysed
 
 **Section:** 02 · DATA
-**Cumulative timing:** 2:25–3:35 (70 s) · **Speaker:** Patten Lai
+**Cumulative timing:** 2:55–4:00 (65 s) · **Speaker:** Patten Lai
 **Layout:** wide
 
 **On-slide bullets**
@@ -98,7 +97,7 @@
 ## Slide 5 — Every cleaning decision is logged, because each one changes the answer
 
 **Section:** 02 · DATA
-**Cumulative timing:** 3:35–4:35 (60 s) · **Speaker:** Patten Lai
+**Cumulative timing:** 4:00–4:55 (55 s) · **Speaker:** Patten Lai
 **Layout:** table
 
 **On-slide bullets**
@@ -125,7 +124,7 @@
 ## Slide 6 — Two snapshots, one rule: never let the label see the future
 
 **Section:** 02 · DATA
-**Cumulative timing:** 4:35–5:45 (70 s) · **Speaker:** Patten Lai
+**Cumulative timing:** 4:55–5:50 (55 s) · **Speaker:** Patten Lai
 **Layout:** timeline
 
 **On-slide bullets**
@@ -146,7 +145,7 @@
 ## Slide 7 — The system has three layers: prepare, model, decide
 
 **Section:** 03 · METHOD
-**Cumulative timing:** 5:45–6:35 (50 s) · **Speaker:** LIN Xiaotong
+**Cumulative timing:** 5:50–6:35 (45 s) · **Speaker:** Weng Zhi Chao
 **Layout:** timeline
 
 **On-slide bullets**
@@ -167,7 +166,7 @@
 ## Slide 8 — From 16 behavioural signals we keep 10 — a small but measurable gain
 
 **Section:** 03 · METHOD
-**Cumulative timing:** 6:35–7:45 (70 s) · **Speaker:** Weng Zhi Chao
+**Cumulative timing:** 6:35–7:40 (65 s) · **Speaker:** Weng Zhi Chao
 **Layout:** kpi
 
 **On-slide bullets**
@@ -188,7 +187,7 @@
 ## Slide 9 — K=5 is not the silhouette maximum — it is the stable, actionable choice
 
 **Section:** 04 · SEGMENTATION
-**Cumulative timing:** 7:45–8:55 (70 s) · **Speaker:** Weng Zhi Chao
+**Cumulative timing:** 7:40–8:45 (65 s) · **Speaker:** Weng Zhi Chao
 **Layout:** wide
 
 **On-slide bullets**
@@ -209,7 +208,7 @@
 ## Slide 10 — Five segments, five different conversations
 
 **Section:** 04 · SEGMENTATION
-**Cumulative timing:** 8:55–10:05 (70 s) · **Speaker:** Weng Zhi Chao
+**Cumulative timing:** 8:45–9:45 (60 s) · **Speaker:** Weng Zhi Chao
 **Layout:** table
 
 **On-slide bullets**
@@ -236,7 +235,7 @@
 ## Slide 11 — Three model families; logistic regression wins on validation, not on glamour
 
 **Section:** 05 · PREDICTION
-**Cumulative timing:** 10:05–11:15 (70 s) · **Speaker:** Lim Man Tung Marcus
+**Cumulative timing:** 9:45–11:00 (75 s) · **Speaker:** Lim Man Tung Marcus
 **Layout:** table
 
 **On-slide bullets**
@@ -261,7 +260,7 @@
 ## Slide 12 — The number to quote is the out-of-time one: AUC 0.739 and 1.69× top-decile lift
 
 **Section:** 05 · PREDICTION
-**Cumulative timing:** 11:15–12:35 (80 s) · **Speaker:** Lim Man Tung Marcus
+**Cumulative timing:** 11:00–12:35 (95 s) · **Speaker:** Lim Man Tung Marcus
 **Layout:** wide
 
 **On-slide bullets**
@@ -282,7 +281,7 @@
 ## Slide 13 — Where the model fails — and why we accept it
 
 **Section:** 05 · PREDICTION
-**Cumulative timing:** 12:35–13:35 (60 s) · **Speaker:** Lim Man Tung Marcus
+**Cumulative timing:** 12:35–13:45 (70 s) · **Speaker:** Lim Man Tung Marcus
 **Layout:** side
 
 **On-slide bullets**
@@ -303,7 +302,7 @@
 ## Slide 14 — Cross-sell: 5,441 rules, but only 593 are business-grade
 
 **Section:** 06 · CROSS-SELL
-**Cumulative timing:** 13:35–14:45 (70 s) · **Speaker:** Huang Hao Lin
+**Cumulative timing:** 13:45–14:50 (65 s) · **Speaker:** Huang Hao Lin
 **Layout:** wide
 
 **On-slide bullets**
@@ -324,7 +323,7 @@
 ## Slide 15 — Lookalike customers and substitute products for the sparse and the new
 
 **Section:** 06 · CROSS-SELL
-**Cumulative timing:** 14:45–15:35 (50 s) · **Speaker:** Huang Hao Lin
+**Cumulative timing:** 14:50–15:35 (45 s) · **Speaker:** Huang Hao Lin
 **Layout:** side
 
 **On-slide bullets**
@@ -345,7 +344,7 @@
 ## Slide 16 — Decision layer: value × risk becomes a 200-customer pilot
 
 **Section:** 07 · DECISION
-**Cumulative timing:** 15:35–16:35 (60 s) · **Speaker:** LIN Xiaotong
+**Cumulative timing:** 15:35–16:30 (55 s) · **Speaker:** Huang Hao Lin
 **Layout:** side
 
 **On-slide bullets**
@@ -366,7 +365,7 @@
 ## Slide 17 — Targeted versus random: GBP 14.8k–33.8k net, break-even at a 0.45% save rate
 
 **Section:** 07 · DECISION
-**Cumulative timing:** 16:35–17:55 (80 s) · **Speaker:** LIN Xiaotong
+**Cumulative timing:** 16:30–17:40 (70 s) · **Speaker:** Huang Hao Lin
 **Layout:** wide
 
 **On-slide bullets**
@@ -387,7 +386,7 @@
 ## Slide 18 — What we will not claim — and what we would do next
 
 **Section:** 08 · LIMITATIONS
-**Cumulative timing:** 17:55–18:50 (55 s) · **Speaker:** Patten Lai
+**Cumulative timing:** 17:40–18:40 (60 s) · **Speaker:** Patten Lai
 **Layout:** text
 
 **On-slide bullets**
@@ -407,7 +406,7 @@
 ## Slide 19 — Agent-assisted, but human-verified
 
 **Section:** 09 · PROCESS
-**Cumulative timing:** 18:50–19:20 (30 s) · **Speaker:** LIN Xiaotong
+**Cumulative timing:** 18:40–19:15 (35 s) · **Speaker:** LIN Xiaotong
 **Layout:** text
 
 **On-slide bullets**
@@ -425,7 +424,7 @@
 
 ## Slide 20 — What to remember
 
-**Cumulative timing:** 19:20–19:40 (20 s) · **Speaker:** LIN Xiaotong
+**Cumulative timing:** 19:15–19:40 (25 s) · **Speaker:** LIN Xiaotong
 **Layout:** closing
 
 **On-slide bullets**

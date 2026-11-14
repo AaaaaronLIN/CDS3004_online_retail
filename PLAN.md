@@ -130,10 +130,10 @@
 | 成员 | 角色 | 负责模块 / rubric 项 | 代码与文件区域 | 答辩 slide | 必备留痕 |
 |---|---|---|---|---|---|
 | **Patten Lai** | 数据与质量负责人 | 数据采集/加载、缺失与噪声处理（L05）、数据可视化（数据部分） | notebook S1–S2、`data/` | 4–6 数据、18 局限 | ≥3 commit + 轨迹 |
-| **Weng Zhi Chao** | 特征工程与分层负责人 | 特征选择（L05）、高级特征变换（L05）、可视化（特征/分层部分） | notebook S3–S5、`results/figures/` f02–f08 | 8 特征、9–10 分层 | 同上 |
+| **Weng Zhi Chao** | 特征工程与分层负责人 | 特征选择（L05）、高级特征变换（L05）、可视化（特征/分层部分） | notebook S3–S5、`results/figures/` f02–f08 | 7 pipeline、8 特征、9–10 分层 | 同上 |
 | **Lim Man Tung Marcus** | 流失建模与评估负责人 | 模型学习（L04）、评估方法（L06） | notebook S6、t08/t09、f07–f09 | 11–13 流失模型与评估 | 同上 |
-| **Huang Hao Lin** | 关联规则与相似度负责人 | 不同数据用不同挖掘技术（L03） | notebook S3/S7、t03/t04/t05/t09/t10、f10–f11 | 14 关联规则、15 相似度 | 同上 |
-| **LIN Xiaotong（Host）** | 集成、决策与仓库负责人 | 问题定义/方案设计（与全组）、解读结果（L07）、决策交付（L07）、提交合规 | notebook S8–S9、t10_decision–t15、f12–f13、README | 1–3 开场、7 总览、16–17 决策/ROI、19–20 贡献/收尾 | 同上 |
+| **Huang Hao Lin** | 关联规则与相似度负责人 | 不同数据用不同挖掘技术（L03） | notebook S3/S7、t03/t04/t05/t09/t10、f10–f11 | 14–15 规则/相似度、16–17 决策/ROI | 同上 |
+| **LIN Xiaotong（Host）** | 集成、决策与仓库负责人 | 问题定义/方案设计（与全组）、解读结果（L07）、决策交付（L07）、提交合规 | notebook S8–S9、t10_decision–t15、f12–f13、README | 1–3 开场、19–20 过程/收尾 | 同上 |
 
 **每人硬性要求**（工作量和评分都靠这个）：
 1. **≥3 次有意义的 commit**（`feat(seg): ...`、`fix(eval): ...`，禁止 `update` / `123` 这类空提交）；
@@ -145,11 +145,11 @@
 
 | 讲者 | 幻灯片 | 时长 |
 |---|---|---|
-| LIN Xiaotong（Host） | 1–3、7、16–17、19–20 | 6:25 |
-| Patten Lai | 4–6、18 | 4:15 |
-| Weng Zhi Chao | 8–10 | 3:30 |
-| Lim Man Tung Marcus | 11–13 | 3:30 |
-| Huang Hao Lin | 14–15 | 2:00 |
+| LIN Xiaotong（Host） | 1–3、19–20 | 3:55 |
+| Patten Lai | 4–6、18 | 3:55 |
+| Weng Zhi Chao | 7–10 | 3:55 |
+| Lim Man Tung Marcus | 11–13 | 4:00 |
+| Huang Hao Lin | 14–17 | 3:55 |
 | **合计** | **1–20** | **19:40**（20:00 内，留 20 秒缓冲） |
 
 ---

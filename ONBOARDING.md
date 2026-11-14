@@ -151,10 +151,10 @@ git add . && git commit -m "…" && git push   # 收工前
 | 成员 | 角色 | 负责模块（notebook 章节） | 主要文件 / 产物 | 答辩页 | 今天第一件事 |
 |---|---|---|---|---|---|
 | **Patten Lai** | 数据与质量负责人 | S1–S2：数据审计、清洗、退货台账、T1/T2 快照 | `t02_data_quality_issues`、`t03_cleaning_decisions`、`t02_cohort_summary`、`f01`；report §2 | 4–6、18（局限） | 跑 S1–S2，记录 24.93%、135,080、13.57% |
-| **Weng Zhi Chao** | 特征工程与分层负责人 | S4–S5（+S3 距离支撑）：16 特征、相关性/MI/RFE、K-means、分层画像 | `t04`–`t07`、`f02`–`f08`；report §4–§5 | 8–10 | 读 `t05b_feature_evidence.csv`，核对 0.6966→0.7036 |
+| **Weng Zhi Chao** | 特征工程与分层负责人 | S4–S5（+S3 距离支撑）：16 特征、相关性/MI/RFE、K-means、分层画像 | `t04`–`t07`、`f02`–`f08`；report §4–§5 | 7–10 | 读 `t05b_feature_evidence.csv`，核对 0.6966→0.7036 |
 | **Lim Man Tung Marcus** | 流失建模与评估负责人 | S6：三模型、70/15/15、5 折 CV、验证集选型、双阈值、时间外验证、lift | `t08`、`t09_lift_deciles`、`s06_threshold_analysis`、`f07`–`f09`；report §6 | 11–13 | 核对 CV/T1/T2 三组 AUC 与 lift 1.6916 |
-| **Huang Hao Lin** | 关联规则与相似度负责人 | S3、S7：距离度量、lookalike、相似商品、FP-Growth、holdout 验证 | `t03`、`t04_lookalikes`、`t05_similar_products`、`t09_top_rules`、`t10_association_rules`、`f10`–`f11`；report §7–§8 | 14–15 | 核对 5,441 / 5,402 / median 12.174 / 593 条 |
-| **LIN Xiaotong（Host）** | 集成、决策与仓库负责人 | S8–S9：T2 打分、segment×risk、优先级、ROI、指标汇总、仓库与提交 | `t10_decision`–`t15`、`f12`–`f13`、README、CONTRIBUTIONS、提交清单；report §1/§3/§9–§10/§13 | 1–3、7、16–17、19–20 | 复算 ROI 三档 + 盈亏平衡率 |
+| **Huang Hao Lin** | 关联规则与相似度负责人 | S3、S7：距离度量、lookalike、相似商品、FP-Growth、holdout 验证 | `t03`、`t04_lookalikes`、`t05_similar_products`、`t09_top_rules`、`t10_association_rules`、`f10`–`f11`；report §7–§8 | 14–17 | 核对 5,441 / 5,402 / median 12.174 / 593 条 |
+| **LIN Xiaotong（Host）** | 集成、决策与仓库负责人 | S8–S9：T2 打分、segment×risk、优先级、ROI、指标汇总、仓库与提交 | `t10_decision`–`t15`、`f12`–`f13`、README、CONTRIBUTIONS、提交清单；report §1/§3/§9–§10/§13 | 1–3、19–20 | 复算 ROI 三档 + 盈亏平衡率 |
 
 **Host 速成包**：[`HOST-BRIEF.md`](HOST-BRIEF.md)（12 个必背数字、答辩流程）· [`HOST-REPRO.md`](HOST-REPRO.md)（30 分钟复现 + 3 个受控实验）· [`slides/QandA-TABLE.md`](slides/QandA-TABLE.md)（分模块 Q&A 表）。
 
@@ -184,7 +184,7 @@ git add . && git commit -m "…" && git push   # 收工前
 - **本周三个任务**：① 复现特征选择漏斗；② **为 K=5 做辩护**（答辩必问）；③ 比较 cosine/manhattan/euclidean（0.3283/0.2183/0.1844）
 - **改什么文件**：notebook S3–S5、`t04`–`t07`、`f02`–`f08`、`report/REPORT.md` §4–§5
 - **commit 示例**：`feat(seg): document K choice with stability evidence`, `exp(feat): compare selection stages`
-- **答辩讲**：Slides 8–10
+- **答辩讲**：Slides 7–10
 - **完成判据**：能解释“为什么不是 K=2（silhouette 最高）”
 
 ### Lim Man Tung Marcus — 流失建模与评估
@@ -200,7 +200,7 @@ git add . && git commit -m "…" && git push   # 收工前
 - **本周三个任务**：① 解释为什么不报 mean lift 28.1957；② 手算一条规则的 holdout lift；③ 核对 lookalike 客户与相似商品示例
 - **改什么文件**：notebook S3/S7、`t03`、`t04_lookalikes`、`t05_similar_products`、`t09_top_rules`、`t10_association_rules`、`f10`–`f11`、`report/REPORT.md` §7–§8
 - **commit 示例**：`feat(rules): validate rules on later holdout`, `docs(sim): lookalike examples`
-- **答辩讲**：Slides 14–15
+- **答辩讲**：Slides 14–17（规则、相似度、决策矩阵、ROI；16–17 与 Host 配合）
 - **完成判据**：能解释“高 lift 为什么可能是假象”“相似度怎么用于冷启动”
 
 ### LIN Xiaotong — 集成、决策与仓库
@@ -208,7 +208,7 @@ git add . && git commit -m "…" && git push   # 收工前
 - **本周三个任务**：① 重算 ROI 三档并给判断；② 核对 t12/t13 与报告 §9 一致性；③ 走一遍 `SUBMISSION-CHECKLIST.md` 找缺口
 - **改什么文件**：notebook S8–S9、`t10_decision`–`t15`、`f12`–`f13`、`README.md`、`CONTRIBUTIONS.md`、`submission/`
 - **commit 示例**：`feat(decision): churn-conditional campaign value`, `chore(repo): submission checklist gaps`
-- **答辩讲**：Slides 1–3、7、16–17、19–20
+- **答辩讲**：Slides 1–3、19–20
 - **完成判据**：能解释“为什么 ROI 用保守口径”“为什么随机投放不划算”
 
 ---
@@ -217,15 +217,13 @@ git add . && git commit -m "…" && git push   # 收工前
 
 | 时间 | 讲者 | 幻灯片 |
 |---|---|---|
-| 0:00–2:25 | LIN Xiaotong | 1–3 标题/摘要/问题框架 |
-| 2:25–5:45 | Patten Lai | 4–6 数据、清洗、时间快照 |
-| 5:45–6:35 | LIN Xiaotong | 7 pipeline |
-| 6:35–10:05 | Weng Zhi Chao | 8–10 特征、分层、画像 |
-| 10:05–13:35 | Lim Man Tung Marcus | 11–13 模型、评估、错误分析 |
-| 13:35–15:35 | Huang Hao Lin | 14–15 关联规则、相似度 |
-| 15:35–17:55 | LIN Xiaotong | 16–17 决策矩阵、ROI |
-| 17:55–18:50 | Patten Lai | 18 局限 |
-| 18:50–19:40 | LIN Xiaotong | 19–20 过程与收尾 |
+| 0:00–2:55 | LIN Xiaotong | 1–3 标题/摘要/问题框架 |
+| 2:55–5:50 | Patten Lai | 4–6 数据、清洗、时间快照 |
+| 5:50–9:45 | Weng Zhi Chao | 7–10 pipeline、特征、分层、画像 |
+| 9:45–13:45 | Lim Man Tung Marcus | 11–13 模型、评估、错误分析 |
+| 13:45–17:40 | Huang Hao Lin | 14–17 规则、相似度、决策矩阵、ROI |
+| 17:40–18:40 | Patten Lai | 18 局限 |
+| 18:40–19:40 | LIN Xiaotong | 19–20 过程与收尾 |
 
 > 时长已确认：**20 分钟，不含 Q&A**。若老师临时调整，组长告诉我，我按实际时长重排。
 

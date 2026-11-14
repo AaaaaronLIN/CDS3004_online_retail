@@ -85,5 +85,5 @@
 | Patten Lai | A1, A3, A4 |
 | Weng Zhi Chao | B1, B4, B5 |
 | Lim Man Tung Marcus | C1, C2, C5 |
-| Huang Hao Lin | D1, D2, D3 |
-| LIN Xiaotong (Host) | E2, E4, F1, F3 — plus all of A–D at summary level |
+| Huang Hao Lin | D1, D2, D3 — plus E2, E4 (presents slides 16–17 with the Host) |
+| LIN Xiaotong (Host) | E1, E3, E5, E6, F1–F5 — plus all of A–D at summary level |
