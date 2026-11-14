@@ -3,7 +3,9 @@ data/*.xlsx
 data/*.zip
 data/*.csv
 
-# ---- local tooling / caches ----
+# ---- local tooling / caches (incl. LibreOffice preview renders) ----
+.dsh-office.*/
+.dsh-office/
 .deps/
 .cache/
 __pycache__/
