@@ -34,7 +34,7 @@ The unit of analysis is the customer at a fixed as-of date; the horizon is 90 da
 
 ### 1.2 Stakeholders and constraints
 
-Four stakeholders need different things. CRM and marketing need a ranked contact list within campaign capacity. E-commerce operations need an interpretable picture of which segments drive revenue and which are decaying. Finance needs the assumptions behind any expected-value claim so it can challenge them. The data team needs reproducible, leakage-free code that re-runs on new data. The constraints shape every later choice: one 12-month transaction extract with no demographics, consent or campaign-response data, and a substantial share of anonymous transactions; a single retailer in a single market; a CPU-only environment expected to run the notebook in well under ten minutes; and English-language, fully reproducible deliverables. The assumed presentation duration is 10 minutes plus Q&A and must be confirmed with the course announcement or TA.
+Four stakeholders need different things. CRM and marketing need a ranked contact list within campaign capacity. E-commerce operations need an interpretable picture of which segments drive revenue and which are decaying. Finance needs the assumptions behind any expected-value claim so it can challenge them. The data team needs reproducible, leakage-free code that re-runs on new data. The constraints shape every later choice: one 12-month transaction extract with no demographics, consent or campaign-response data, and a substantial share of anonymous transactions; a single retailer in a single market; a CPU-only environment expected to run the notebook in well under ten minutes; and English-language, fully reproducible deliverables. The presentation is 20 minutes excluding Q&A, confirmed with the course.
 
 ### 1.3 Alternative framings considered
 
@@ -462,13 +462,13 @@ Five members delivered the project with clearly separated ownership. Table 21 ma
 
 | Member | Primary role | Rubric items owned (22% rubric) | Code and artifact areas | Report sections | Slides |
 |---|---|---|---|---|---|
-| Member A | Data and quality lead | Collect/load data, handle missing and noisy data (LO5); visualisation | Data audit, cleaning funnel, snapshots; `t02_data_quality_issues`, `t03_cleaning_decisions`, `f01_data_quality_overview` | §2, Appendix A | 4–5 |
-| Member B | Feature engineering and segmentation lead | Feature selection (LO5); feature transformation (LO5); visualisation | 16 features, selection funnel, K-means; `t04_feature_dictionary`, `t05_feature_selection`, `t06_cluster_metrics`, `t07_segment_profiles`, `f02`–`f08` | §4–§5 | 6–7 |
-| Member C | Churn modelling and evaluation lead | Learn models (LO4); evaluate performance (LO6) | Three classifiers, CV, held-out and out-of-time evaluation, thresholds, lift; `t08_model_metrics`, `t09_lift_deciles`, `f07`–`f09` | §6 | 8 |
-| Member D | Association rules and similarity lead | Apply different data-mining techniques (LO3) | FP-Growth and holdout validation, metric comparison, lookalikes, similar products; `t03_distance_metrics`, `t04_lookalikes`, `t05_similar_products`, `t09_top_rules`, `t10_association_rules`, `f10`, `f11` | §7–§8 | 9–10 |
-| Member E | Integration, decision framework and repository lead | Problem definition; solution design; interpretation (LO7); deliver models; presentation and repository compliance | Segment × risk matrix, priority list, ROI, README, agent-log templates; `t12`, `t13`, `t11`, `t15`, `f12`, `f13` | §1, §3, §9–§10, §13 | 1–3, 11–14 |
+| Member A | Data and quality lead | Collect/load data, handle missing and noisy data (LO5); visualisation | Data audit, cleaning funnel, snapshots; `t02_data_quality_issues`, `t03_cleaning_decisions`, `f01_data_quality_overview` | §2, Appendix A | 4–6, 18 |
+| Member B | Feature engineering and segmentation lead | Feature selection (LO5); feature transformation (LO5); visualisation | 16 features, selection funnel, K-means; `t04_feature_dictionary`, `t05_feature_selection`, `t06_cluster_metrics`, `t07_segment_profiles`, `f02`–`f08` | §4–§5 | 8–10 |
+| Member C | Churn modelling and evaluation lead | Learn models (LO4); evaluate performance (LO6) | Three classifiers, CV, held-out and out-of-time evaluation, thresholds, lift; `t08_model_metrics`, `t09_lift_deciles`, `f07`–`f09` | §6 | 11–13 |
+| Member D | Association rules and similarity lead | Apply different data-mining techniques (LO3) | FP-Growth and holdout validation, metric comparison, lookalikes, similar products; `t03_distance_metrics`, `t04_lookalikes`, `t05_similar_products`, `t09_top_rules`, `t10_association_rules`, `f10`, `f11` | §7–§8 | 14–15 |
+| Member E | Integration, decision framework and repository lead | Problem definition; solution design; interpretation (LO7); deliver models; presentation and repository compliance | Segment × risk matrix, priority list, ROI, README, agent-trajectory templates; `t12`, `t13`, `t11`, `t15`, `f12`, `f13` | §1, §3, §9–§10, §13 | 1–3, 7, 16–17, 19–20 |
 
-Each member also writes and verifies their own sections, commits to their own files or branch so the GitHub history reflects the workload, and maintains a personal trajectory under `agent-logs/` (§12). Workload is assessed from commits and trajectories, and ownership is structured so every member has substantive, visible work in both.
+Each member also writes and verifies their own sections, commits to their own files or branch so the GitHub history reflects the workload, and maintains a personal trajectory under `agent-trajectories/` (§12). Workload is assessed from commits and trajectories, and ownership is structured so every member has substantive, visible work in both.
 
 ---
 
@@ -501,7 +501,7 @@ Six checks were applied, with evidence in the per-member trajectories:
 
 ### 12.3 Kept and rejected outputs
 
-The logs record rejected proposals, because that is what demonstrates human judgement. Typical rejections included over-engineered models the data could not support, metrics that would have overstated performance (accuracy on an imbalanced label; lift computed on the test set rather than held out), and cleaning rules that silently dropped most of the data without reporting it. Agent-generated text was edited for accuracy; agent-generated code was retained only after review and a successful re-run. `agent-logs/` contains a README explaining the evidence standard, a per-person template and a filled example; each member keeps `agent-logs/MemberX_agent-trajectory.md`.
+The logs record rejected proposals, because that is what demonstrates human judgement. Typical rejections included over-engineered models the data could not support, metrics that would have overstated performance (accuracy on an imbalanced label; lift computed on the test set rather than held out), and cleaning rules that silently dropped most of the data without reporting it. Agent-generated text was edited for accuracy; agent-generated code was retained only after review and a successful re-run. `agent-trajectories/` contains a README explaining the evidence standard, a per-person template and a filled example; each member keeps `agent-logs/MemberX_agent-trajectory.md`.
 
 ---
 

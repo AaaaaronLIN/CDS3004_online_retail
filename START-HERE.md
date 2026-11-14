@@ -55,10 +55,12 @@ git push -u origin main
 | `code/results/` | 23 figures, 29 tables, `metrics.json`, `metrics_extra.json`, `ARTIFACTS.md` | done |
 | `report/CDS3004_GroupF_CRN234_Report.pdf` | 19-page submission report | done (names pending) |
 | `report/REPORT.md` | Markdown source, regenerate with `code/tools/build_pdf.py` | done |
-| `slides/CDS3004_GroupF_CRN234_Slides.pptx` | 14-slide deck, 9:35, notes on every slide | done (names pending) |
-| `slides/SLIDES.md` | Slide plan, speaker script, timings, Q&A | done |
+| `slides/CDS3004_GroupF_CRN234_Slides.pptx` | 20-slide deck, 19:40, notes on every slide | done (names pending) |
+| `slides/SLIDES.md` | 20-minute slide plan, speaker script, timings | done |
 | `slides/CDS3004_GroupF_CRN234_CueCards.pdf` | One-page-per-slide speaker cards | done |
-| `slides/QA-DRILL.md` | 20 likely examiner questions + answer points | done |
+| `slides/QandA-TABLE.md` | Per-section Q&A table (27 likely questions + hostile questions) | done |
+| `HOST-BRIEF.md` | Host cheat sheet: 12 numbers, 5 decisions, 8 answers, 30-minute study plan | done |
+| `HOST-REPRO.md` | Reproduction guide: run it yourself in 30 min, 3 controlled experiments, reset instructions | done |
 | `agent-trajectories/member-A..E.md` | Per-person trajectory skeleton with verification tasks | **you fill them** |
 | `project-management/PLAN.md` | Day-by-day plan to 19 Nov / 6 Dec | done |
 | `project-management/RUBRIC-MATRIX.md` | Every rubric item → evidence | done |

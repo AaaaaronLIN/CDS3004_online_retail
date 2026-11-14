@@ -1,355 +1,452 @@
-# CDS3004 Group Presentation — Slide-by-Slide Plan
+# CDS3004 Group Presentation — 20-Minute Slide Plan
 
-**Project:** From Transactions to a Customer Operating System — An Agent-Assisted Data Mining Study of Online Retail Customer Behaviour
+**Project:** From Transactions to a Customer Operating System
 **Course:** CDS3004 Data Mining, Lingnan University, 2026/27 Term 1 — Group Presentation (8%)
 **Team:** Group F — Member A, Member B, Member C, Member D, Member E
-**Presentation date:** Thursday 19 November 2026 (confirm room, time and order with the course announcement)
-**Duration:** 10 minutes + Q&A. **This duration is an assumption and must be confirmed with the TA or the course announcement before rehearsing the final timings.**
+**Presentation date:** Thursday 19 November 2026 · **Duration:** 20 minutes, excluding Q&A (confirmed)
 
-**Total planned speaking time: 9:35, leaving 25 seconds of buffer inside the 10:00 limit.** Times are cumulative, measured from the moment the speaker starts slide 1. Rehearse with a timer; if the talk must be shortened, cut slide 9 (rules detail) first, then slide 10.
+> This plan is the single source of truth for the deck (`CDS3004_GroupF_CRN234_Slides.pptx`) and the
+> speaker cue cards (`CDS3004_GroupF_CRN234_CueCards.pdf`). Timings are cumulative and sum to 19:40,
+> leaving a 20-second buffer inside the 20:00 limit. Speaker labels are placeholders until the team
+> finalises names.
 
-**Speakers:** Member E opens and closes (slides 1–3, 5, 11–14); Member A presents data (slide 4); Member B presents features and segmentation (slides 6–7); Member C presents churn (slide 8); Member D presents rules and similarity (slides 9–10); all five participate in Q&A. Each speaker should stand, use the clicker, and hand over with a one-sentence bridge.
-
----
-
-## Slide 1 — Title and hook
-
-**Cumulative timing:** 0:00–0:35 (35 s) · **Speaker:** Member E
-
-**On-slide bullets**
-- From transactions to a customer operating system
-- What should we do on Monday morning, for which customers, with what offer?
-- CDS3004 Data Mining · Group F · 19 November 2026
-- Public repository: `github.com/AaaaaronLIN/CDS3004_online_retail` (QR code bottom-right)
-
-**Visual:** clean title card; no data figure. Team name, course, one-line promise.
-
-**Speaker notes (≈78 words):** "Good morning. Every retailer records every transaction, yet most still cannot answer a simple operational question: of my thousands of customers, who is about to leave, what should I offer them, and who should my team call first on Monday? Over the next ten minutes we show how we turned twelve months of raw retail transactions into a customer operating system — one joined-up analysis that ends not in a chart, but in a ranked, budget-bounded action list."
-
-**Presentation rubric focus:** gains/holds attention (opening question); clarity of speech.
-
----
-
-## Slide 2 — Agenda
-
-**Cumulative timing:** 0:35–1:00 (25 s) · **Speaker:** Member E
-
-**On-slide bullets**
-- Data and quality → features → segmentation
-- Churn prediction and validation → association rules → similarity
-- One integrated decision framework, with honest limits
-- Agent-assisted workflow and contributions
-
-**Visual:** three-column agenda strip (Data / Models / Decisions); progress indicator at the bottom of every subsequent slide.
-
-**Speaker notes (≈60 words):** "We follow the project's logic rather than the syllabus order. First, the data and the cleaning decisions that shape everything else. Second, the models: segmentation, churn, rules and similarity. Third, the decision layer that combines them and the limitations we want you to challenge. Each section is owned by a different team member, so you will hear from most of us."
-
-**Presentation rubric focus:** clear, logically organised content (agenda sets the structure explicitly).
-
----
-
-## Slide 3 — The question and the framing
-
-**Cumulative timing:** 1:00–1:50 (50 s) · **Speaker:** Member E
-
-**On-slide bullets**
-- Business question: who are our customers, who will leave, what to offer, whom to call?
-- Stakeholders: CRM, e-commerce, finance, data team
-- Alternatives considered: RFM-only; CLV regression; basket-only
-- Why integrated: one decision needs risk × value × action × capacity
-
-**Visual:** simple four-question diagram converging into one "priority target list" box; optional mini table of the three rejected framings.
-
-**Speaker notes (≈84 words):** "We deliberately did not start from a technique. We started from four decisions the business actually makes. Segmentation answers who they are, churn answers who is leaving, rules answer what to offer, similarity helps where segments are sparse. Any one of these alone produces a report; together they produce a decision. We considered an RFM-only study and a spend-prediction model, and rejected both as standalone framings — the first is static, the second cannot be validated without campaign data. The integration is the contribution."
-
-**Presentation rubric focus:** clear, logically organised content; relevance to the problem.
-
----
-
-## Slide 4 — Data and data quality
-
-**Cumulative timing:** 1:50–2:40 (50 s) · **Speaker:** Member A
-
-**On-slide bullets**
-- UCI Online Retail: 541,909 lines, 8 fields, Dec 2010–Dec 2011
-- Missing `CustomerID`: 24.9267% of lines
-- Returns, cancellations, admin codes, duplicates → logged decisions
-- Two temporal snapshots, not one random split
-- Bias caveat: anonymous lines = 13.572% of revenue
-
-**Visual:** `f01_data_quality_overview` (data-quality overview) with the audit table `t02_data_quality_issues` and cleaning log `t03_cleaning_decisions` cropped to five rows on the right.
-
-**Speaker notes (≈86 words):** "The data is one year of real line items from a UK online retailer — 541,909 rows, with all the mess that implies. About 24.9267% of lines have no customer ID, so they cannot enter a customer snapshot at all. Returns and cancellations are real behaviour, not errors, so we keep them as a feature but remove them from spend. Every decision is counted in the audit log. And we flag the bias up front: the anonymous lines we drop carry 13.572% of revenue, so our customer-level conclusions describe identified customers only."
-
-**Presentation rubric focus:** effective use of tools (clean, legible figure); clarity; body language and eye contact with audience.
-
----
-
-## Slide 5 — Pipeline design
-
-**Cumulative timing:** 2:40–3:25 (45 s) · **Speaker:** Member E
-
-**On-slide bullets**
-- Ten notebook sections (S0 setup + S1–S9), each writing a reproducible artifact
-- T1 (2011-05-31) trains and evaluates churn; T2 (2011-08-31) is the out-of-time decision cohort
-- 90-day churn label; features strictly before the as-of date
-- Transforms and selection are refit inside each training fold — no leakage
-- Decision layer joins segment × risk × action under a capacity limit
-
-**Visual:** horizontal S0–S9 pipeline diagram, colour-coded data / models / decision; or Table 5 from the report rendered as a slide.
-
-**Speaker notes (≈84 words):** "This is the whole system on one line. S0 is setup and S1 is the data-quality funnel; S2 builds the temporal snapshots; S3 compares distance metrics; S4 engineers and selects features. S5 to S7 are the modelling components: segmentation, churn and association rules. S8 is the decision framework that joins them, and S9 writes the metrics, artifact index and reproducibility checks. The critical design choice is the temporal split: T1 develops and tests the model, T2 is locked away until the end and opened exactly once."
-
-**Presentation rubric focus:** solution design clarity; logical flow; use of a single organising visual.
-
----
-
-## Slide 6 — Feature engineering and leakage control
-
-**Cumulative timing:** 3:25–4:10 (45 s) · **Speaker:** Member B
-
-**On-slide bullets**
-- Nine families: RFM, monetary structure, basket, breadth, engagement, rhythm, momentum, behaviour, context
-- Heavy tails → log1p; continuous features z-scored; transforms live inside sklearn pipelines
-- Selection: correlation filter (|r| > 0.9) → mutual information → RFE
-- 10 of 16 features retained; validation PR-AUC improves
-- Leakage guard: transforms refit on every training fold; T2 never used
-
-**Visual:** `f08_feature_importance` (permutation importance) beside `f02_feature_distributions` (cropped), with the selection-funnel numbers from `t05_feature_selection` as caption.
-
-**Speaker notes (≈86 words):** "RFM features are only the starting point. We add basket size, breadth, rhythm, momentum and returns so that a loyal low-spend customer is distinguishable from a lapsing high-spend one. Spend is heavy-tailed, so we log-transform and scale inside scikit-learn pipelines, which means every fold refits its own transforms. Selection is a documented three-stage funnel from 16 to 10 features. The important honest note: permutation importance is led by basket size, return rate and momentum, and recency_days was dropped by RFE — a caveat we state in the report."
-
-**Presentation rubric focus:** clear, logically organised content; appropriate use of charts.
-
----
-
-## Slide 7 — Customer segmentation
-
-**Cumulative timing:** 4:10–5:05 (55 s) · **Speaker:** Member B
-
-**On-slide bullets**
-- K-means on the T2 decision cohort — descriptive, in-sample, not predictive
-- K chosen from 4–6 by elbow + silhouette + bootstrap ARI + a minimum-segment-size rule
-- K = 5, silhouette 0.3279, ARI 0.9699
-- Five named segments: Champions, Loyal, Potential, At-risk, Hibernating
-- Silhouette is highest at smaller K; K = 5 is chosen for stability and actionable size
-
-**Visual:** `f04_elbow_silhouette` (K diagnostics) and `f05_segment_profiles` (profile heatmap) side by side.
-
-**Speaker notes (≈90 words):** "We cluster the T2 decision cohort — the customers we would act on — and we are explicit that this is descriptive, in-sample, not a predictive model. K is chosen from 4 to 6 using inertia, silhouette, bootstrap stability and a rule that every segment must exceed 10% of the base. K equals 5, with ARI 0.9699 and silhouette 0.3279. Honesty point: silhouette is actually highest at smaller K, but K = 2 is too coarse for a five-tier action framework and K = 4 is far less stable under resampling. We chose K = 5 for stability, meaningful size and business interpretability."
-
-**Presentation rubric focus:** gains/holds attention (counter-intuitive point about small segments); clarity.
-
----
-
-## Slide 8 — Churn prediction: CV, held-out and out-of-time
-
-**Cumulative timing:** 5:05–6:15 (70 s) · **Speaker:** Member C
-
-**On-slide bullets**
-- Three models: logistic regression, decision tree, random forest; selected on validation PR-AUC
-- 5-fold CV → 70/15/15 T1 train/val/test → out-of-time T2 (opened once)
-- Selected model: logistic regression; out-of-time ROC-AUC 0.7392
-- Top-decile lift 1.6916×; RF is the non-linear benchmark and importance source
-- Two thresholds: F1-optimal and top-10% capacity; pilot list capped at 200
-
-**Visual:** `f07_cv_model_comparison` (cross-validated comparison) and `f08_roc_test_oot` (held-out and out-of-time ROC) together, with the top-decile lift from `f09_lift_curve` as a callout; highlight the selected model and the out-of-time number.
-
-**Speaker notes (≈92 words):** "This is the slide that must be honest. We compare three models and report three levels of evidence: cross-validation, a held-out slice of T1, and the out-of-time cohort T2. Model selection uses validation PR-AUC only, never the test set — and the winner is logistic regression, not the more glamorous forest. Its out-of-time ROC-AUC is 0.7392, and at the top decile it captures 1.6916 times the churners of random contact. The random forest is kept as a non-linear benchmark and as the source of permutation importance. The pilot campaign then contacts only the top 200 priority customers."
-
-**Presentation rubric focus:** clear content; effective use of tools (two complementary charts, not four); pace — this is the densest slide, so speak slowly.
-
----
-
-## Slide 9 — Association rules: what to offer
-
-**Cumulative timing:** 6:15–6:55 (40 s) · **Speaker:** Member D
-
-**On-slide bullets**
-- FP-Growth mined on Dec 2010–Jul 2011 invoices; validated on Aug–Dec 2011 holdout
-- 5441 rules retained; 5402 evaluated out of time
-- Median holdout lift 12.174; 99.8% keep lift > 1 and 99.4% keep lift > 2
-- Business filter (support ≥ 1%, lift ≥ 2): 593 rules; top pair REGENCY TEACUP, lift 16.4
-- Caveat: top-by-lift rules are rare colour/size variants, so lift overstates incremental cross-sell
-
-**Visual:** `f10_association_rules` (support vs lift, size = confidence, colour = holdout lift) plus the business-filtered rules from `t10b_business_rules`.
-
-**Speaker notes (≈92 words):** "Association rules answer the 'what should we offer' question, but only if they are validated. We mine with FP-Growth on invoices from December to July, then re-test every rule on a later holdout period the miner never saw — August to December. Of 5441 retained rules, 5402 were evaluated out of time: median holdout lift 12.174, and 99.8% keep lift above one. We do not headline the mean lift because rare colour-variant pairs inflate it. Instead we apply a business filter — support at least 1%, lift at least 2 — leaving 593 actionable rules such as GREEN REGENCY TEACUP to ROSES REGENCY TEACUP."
-
-**Presentation rubric focus:** clarity; logical content; pace (short slide, do not overrun).
-
----
-
-## Slide 10 — Similarity and lookalikes
-
-**Cumulative timing:** 6:55–7:30 (35 s) · **Speaker:** Member D
-
-**On-slide bullets**
-- Compare Euclidean, cosine and Manhattan on silhouette and kNN label agreement
-- Selected metric: `cosine` (highest silhouette, near-tied agreement)
-- Lookalikes for seed expansion and cold-start scoring
-- Similar products for long-tail cross-sell and bundles
-- Similar ≠ responsive: similarity is a description, not a cause
-
-**Visual:** `t04_lookalikes` and `t05_similar_products` as cropped example tables, with the metric comparison from `t03_distance_metrics`.
-
-**Speaker notes (≈80 words):** "Similarity does two jobs. For customers, nearest neighbours expand a seed group of Champions and give a provisional segment to brand-new customers before enough history exists for the churn model. For products, similarity covers long-tail items that association rules cannot reach because they lack co-occurrence support. We compared Euclidean, cosine and Manhattan on two pieces of evidence — silhouette and kNN label agreement — and selected cosine, which has the highest silhouette while agreement is near-tied. The honest caveat: a lookalike customer is not automatically a responsive one."
-
-**Presentation rubric focus:** clarity; content relevance; maintaining momentum into the decision section.
-
----
-
-## Slide 11 — Integrated decision framework and business impact
-
-**Cumulative timing:** 7:30–8:30 (60 s) · **Speaker:** Member E
-
-**On-slide bullets**
-- Segment × risk matrix = where value and risk coincide
-- Priority = predicted churn probability × monetary value
-- Pilot: top 200 customers (7.12% of T2)
-- Conservative validated ROI: net GBP 14802.58 (ROI 925.16%); model-precision GBP 33799.89 is an optimistic bound
-- Random-200 baseline nets GBP 1925.76; model value is the GBP 31874.13 uplift — a scenario, not measured uplift
-
-**Visual:** `f12_segment_risk_matrix` (bubble chart) beside the action table `t13_action_table`, the three-scenario comparison `t16_targeting_comparison`, and `f13_roi_sensitivity`.
-
-**Speaker notes (≈94 words):** "This is the payoff. Each customer sits in a segment and a risk tier, and the action table says what to do: VIP call, loyalty upgrade, nurture, win-back, or low-cost reactivation. Priority is predicted churn probability times monetary value. The pilot contacts the top 200 customers, the top 7.12% of the cohort. Lead with the conservative number: using the churn rate actually observed in the priority list, net expected value is GBP 14802.58, ROI 925.16%. The model-precision figure GBP 33799.89 is an optimistic bound. Random-200 nets just GBP 1925.76, so the value is the GBP 31874.13 uplift. ROI is a scenario analysis, not measured uplift; the dataset contains no campaign history."
-
-**Presentation rubric focus:** gains/holds attention (the business punchline); clarity; appropriate use of tools.
-
----
-
-## Slide 12 — Limitations and what we would do next
-
-**Cumulative timing:** 8:30–9:00 (30 s) · **Speaker:** Member A
-
-**On-slide bullets**
-- Anonymous-customer bias: 13.572% of revenue excluded
-- 90-day churn label is a proxy; T2 season differs from T1; clustering is descriptive
-- Rule lift inflated by rare colour/size variants; recency_days dropped by RFE
-- No campaign data: ROI is a scenario (validated net GBP 14802.58; optimistic GBP 33799.89)
-- Next: survival analysis, uplift testing, longer history
-
-**Visual:** text slide with five short limitation cards; no chart (deliberate pause before closing).
-
-**Speaker notes (≈86 words):** "We want to be judged on what we can defend. The customer-level view misses 13.572% of revenue, so every rate describes identified customers. The 90-day label is a proxy, our out-of-time cohort covers a different season, and the segmentation is descriptive rather than predictive. Some top association rules pair colour variants of the same product, so their lift overstates cross-sell, and recency_days was dropped by RFE. Most importantly, we predict inactivity, not response: the ROI is a scenario with a conservative validated figure, not measured uplift."
-
-**Presentation rubric focus:** clear content; critical interpretation; body language and tone (confident, not defensive).
-
----
-
-## Slide 13 — Contributions and agent-assisted workflow
-
-**Cumulative timing:** 9:00–9:20 (20 s) · **Speaker:** Member E
-
-**On-slide bullets**
-- Five roles, each owning rubric items and commits (Member A–E)
-- Human–agent loop: define → propose → review → implement → verify
-- Every agent output verified by re-run, recomputation and code review
-- Per-person trajectories in `agent-logs/`
-
-**Visual:** contribution table (5 rows: role, rubric items, key artifacts); small loop diagram of the human–agent workflow.
-
-**Speaker notes (≈70 words):** "Five members, five clear ownership areas, visible in the commit history and in our individual agent trajectories. We used agents throughout, but every output passed a human gate: the notebook was re-run from a clean kernel, headline numbers were recomputed independently, and agent diffs were reviewed before merge. The logs record what the agent proposed and what we changed — including the proposals we rejected. That workflow is documented in the repository and in the report."
-
-**Presentation rubric focus:** instructor-defined role and appropriate dress (all members visible and introduced); clarity.
-
----
-
-## Slide 14 — Closing and Q&A
-
-**Cumulative timing:** 9:20–9:35 (15 s) · **Speaker:** Member E
-
-**On-slide bullets**
-- One joined-up system: segment, predict, recommend, prioritise
-- From 541,909 transactions to a defensible action list
-- Public repository and full report in the QR code
-- Questions welcome
-
-**Visual:** single takeaway sentence, repository QR code, team names and contact.
-
-**Speaker notes (≈62 words):** "So: from 541,909 raw transactions to a ranked, budget-bounded action list, with every model validated on a future cohort and every assumption written down. The value is not any single chart — it is the integration, and the honesty about what the data cannot tell us. All code, figures and our agent-use logs are in the public repository. Thank you — we are happy to take your questions."
-
-**Presentation rubric focus:** appropriate time allocation (finish on time); clarity; gains/holds attention to the end.
-
----
-
-## Timing summary
-
-| # | Slide | Speaker | Duration | Cumulative |
-|---|---|---|---|---|
-| 1 | Title and hook | Member E | 0:35 | 0:35 |
-| 2 | Agenda | Member E | 0:25 | 1:00 |
-| 3 | Question and framing | Member E | 0:50 | 1:50 |
-| 4 | Data and data quality | Member A | 0:50 | 2:40 |
-| 5 | Pipeline design | Member E | 0:45 | 3:25 |
-| 6 | Feature engineering | Member B | 0:45 | 4:10 |
-| 7 | Segmentation | Member B | 0:55 | 5:05 |
-| 8 | Churn results | Member C | 1:10 | 6:15 |
-| 9 | Association rules | Member D | 0:40 | 6:55 |
-| 10 | Similarity and lookalikes | Member D | 0:35 | 7:30 |
-| 11 | Decision framework and impact | Member E | 1:00 | 8:30 |
-| 12 | Limitations | Member A | 0:30 | 9:00 |
-| 13 | Contributions and agent workflow | Member E | 0:20 | 9:20 |
-| 14 | Closing and Q&A | Member E | 0:15 | **9:35** |
-
-**Speaking total 9:35; 25 s buffer before the 10:00 limit.** If the confirmed duration is shorter (for example 8 minutes), cut slide 10 and trim slide 9, then reduce slides 2 and 13 to a single sentence. If the confirmed duration is longer, restore the backup slides B2 and B4.
-
----
-
-## Mapping to the 8% presentation rubric
-
-| Rubric item (weight) | How this plan satisfies it | Slides |
+| Speaker | Slides | Speaking time |
 |---|---|---|
-| Appropriate time allocation and pace (1%) | Fixed per-slide budget summing to 9:35, 25 s buffer, one timer and one timekeeper; dense slide 8 speaks slowly | All; summary table above |
-| Clear, logically organised and relevant content (2%) | Explicit agenda; data → methods → decision → limits arc; each slide answers one question; leads with the business question, not the algorithm | 2–12 |
-| Effective use of presentation tools (1%) | One primary visual per slide, no chart walls; two-up only where comparison is the point; consistent theme, large fonts, slide numbers and progress indicator | 4–11 |
-| Good body language, eye contact, appropriate voice tone (1%) | One standing speaker per section; hand-over at slide boundaries so the speaker can face the audience; notes are prompts, not a script to read | All |
-| Gains/holds attention (1%) | Opening operational question; the "small segment, large value" counter-intuition; the ROI scenario framing; the honesty moment on limitations | 1, 7, 11, 12 |
-| Instructor-defined role and appropriate dress (1%) | All five introduced on slides 1/13; formal/smart attire; presenter roles match the contribution table | 1, 13 |
-| Clarity of speech and accuracy of grammar/pronunciation (1%) | English-only script; short sentences; terminology defined on first use (lift, silhouette, ARI, FP-Growth); rehearsal with a non-specialist listener | All |
+| Member E | 1, 2, 3, 7, 16, 17, 19, 20 | 6:25 |
+| Member A | 4, 5, 6, 18 | 4:15 |
+| Member B | 8, 9, 10 | 3:30 |
+| Member C | 11, 12, 13 | 3:30 |
+| Member D | 14, 15 | 2:00 |
+| **Total** | **1–20** | **19:40** |
 
 ---
 
-## Backup slides (not presented; available for Q&A)
+## Slide 1 — From transactions to a customer operating system
 
-1. **B1 — Data-quality audit and cleaning log.** Full `t02_data_quality_issues` and `t03_cleaning_decisions` tables with every issue class, count and treatment; answers "how exactly did you clean?"
-2. **B2 — Full model metrics.** `t08_model_metrics` for all three models on T1 test and T2 out-of-time, with the selected model shaded; answers "show me the numbers".
-3. **B3 — Threshold and error analysis.** `f09_confusion_and_threshold` plus `s06_threshold_analysis.csv`: confusion matrix at the F1-optimal threshold, precision/recall versus contact volume, and both the F1-optimal and top-10% capacity thresholds; answers "how did you choose the cut-off?".
-4. **B4 — Association-rule holdout detail.** `t10b_business_rules` (business-filtered top rules) and `t10_association_rules` in full, including per-rule holdout support and lift, plus the pruning rules; answers "which rules survived and why".
-5. **B5 — Similarity metric comparison.** `t03_distance_metrics` and `t04_lookalikes` in full, including silhouette and kNN label agreement that justify the selected metric; answers "why this metric?".
-6. **B6 — ROI assumptions and sensitivity.** `t14_roi_assumptions`, `t16_targeting_comparison` and `f13_roi_sensitivity` for the targeted versus random campaign across pessimistic, base and optimistic scenarios; answers "how fragile is the business case?".
+**Cumulative timing:** 0:00–0:15 (15 s) · **Speaker:** Member E
+**Layout:** title
 
----
+**On-slide bullets**
 
-## Likely Q&A and concise answers
-
-**Q1. Why 90 days for churn, and what if it were 60 or 180?**
-A: The 90-day window matches a quarterly retention cycle and gives enough time to distinguish a quiet month from real attrition. It is a business definition, not a statistical constant; a shorter window labels more customers as churned and a longer window fewer. The pipeline is parameterised, so the window can be changed and the models refitted without touching the code structure.
-
-**Q2. Why K-means rather than GMM, DBSCAN or hierarchical clustering?**
-A: The segmentation must be stable and easy to explain to a CRM team. K-means on standardised, selected features gives compact centroids, fast assignment of new customers and a clean story. GMM adds soft assignments we cannot use operationally; DBSCAN's density assumption does not hold across a customer base with very different engagement levels; hierarchical clustering offers no advantage at this scale and is less stable to report. We also check stability with bootstrap ARI, which is the property that matters for deployment.
-
-**Q3. Is the ROI real, or did you just make up assumptions?**
-A: The ROI is explicitly a scenario. Every input is a stated planning assumption — cost per contact, retention rate, margin — and all are in the report's table. We do not claim a measured return, because the data has no campaign-response history; estimating incremental uplift requires an A/B test. The value of the calculation is that it makes the business case auditable and shows what would have to be true for the campaign to pay off.
-
-**Q4. You dropped anonymous customers — doesn't that invalidate the analysis?**
-A: It limits the scope, and we say so: anonymous lines are 13.572% of revenue, so every customer-level statement is about identified customers. Dropping them is unavoidable for customer-level modelling because there is no key to link their visits. The honest framing is that this is a study of identified customers, and a production system would either incentivise identification or model the anonymous population separately.
-
-**Q5. Why not use deep learning or gradient boosting for churn?**
-A: With roughly a few thousand customers and a 90-day proxy label, a complex model would add variance and opaque behaviour without a trustworthy gain. We deliberately compare three families that span interpretability versus accuracy, report out-of-time performance, and use feature importance to explain the forest. The rubric rewards justified model choice, not the deepest model; our evidence supports the simpler ensemble.
-
-**Q6. How do we know the agent-assisted analysis is not fabricated?**
-A: Three independent checks. The notebook is re-run from a fresh kernel and its outputs compared with every committed figure and table; headline numbers are recomputed with short, separately written checks; and every agent diff is reviewed before merge for hard-coded numbers or leakage. The per-member trajectories in `agent-logs/` record the prompt, the agent proposal, what the human changed or rejected, and how the result was verified.
-
-**Q7. Can we reproduce your results?**
-A: Yes. The public repository contains the raw-data instructions, `requirements.txt`, the executed notebook and all figures and tables. Running the notebook regenerates every number from the UCI download; seeds and library versions are documented, and the report's reproducibility section lists the exact command. The only manual step is downloading the UCI file into `data/`.
+**Speaker notes (≈33 words):** "Good afternoon. We are Group F. Over the next twenty minutes we will show how one year of a retailer's raw transactions becomes a ranked, budget-bounded action list — and where the analysis stops being reliable. Everything you see is generated by a single notebook, and every number is traceable to results/metrics.json."
 
 ---
 
-## Slide-production notes
+## Slide 2 — The answer first: four linked models, one action list
 
-- Use 16:9, dark-on-light theme, minimum 20 pt body text; show the course code and slide number on every slide.
-- Put one visual per slide; crop tables to five rows and move the full table to backup. Label axes and units on every figure.
-- The churn slide (8) is the densest: one chart pair, three numbers maximum, and speaker notes are timed to 70 seconds.
-- Keep the title and closing slides free of data so the audience knows when the talk starts and ends.
-- Rehearse twice with a timer and once with a non-specialist listener; bring a PDF copy of the slides on a USB stick as backup.
+**Section:** 00 · EXECUTIVE SUMMARY
+**Cumulative timing:** 0:15–1:25 (70 s) · **Speaker:** Member E
+**Layout:** kpi
+
+**On-slide bullets**
+- Who they are: five stable segments (K=5, bootstrap ARI 0.97) that map to five different CRM actions.
+- Who is leaving: 90-day churn model validated out of time (AUC 0.739, top-decile lift 1.69×).
+- What to offer: 593 business-grade cross-sell rules that survive a later holdout period.
+- What to do on Monday: a segment × risk priority list, with assumptions written down and stress-tested.
+
+**KPI:** 541,909 = raw transaction lines, Dec 2010 – Dec 2011 | 4,334 = identified customers in the analysis base | 0.739 = out-of-time ROC-AUC of the selected churn model | GBP 14,803 = conservative net value of the 200-customer pilot
+
+**Takeaway:** The contribution is not one model — it is a defensible chain from raw data to a decision.
+
+**Source:** results/metrics.json; report §1, §9
+
+**Speaker notes (≈154 words):** "Short answer first. Four linked pieces: segmentation tells us who the customers are; a churn model tells us who is leaving; association rules tell us what to offer; and a similarity layer covers customers too new or too sparse to segment. The selected churn model is logistic regression, validated on a later cohort with AUC 0.739 and a top-decile lift of 1.69 times random contact. The pilot campaign targets 200 customers and, under conservative assumptions, returns about fourteen thousand eight hundred pounds net. The rest of the talk is the evidence behind those four numbers, and the limits of what they mean."
+
+---
+
+## Slide 3 — One retailer, one year of transactions: four decisions, not one model
+
+**Section:** 01 · THE QUESTION
+**Cumulative timing:** 1:25–2:25 (60 s) · **Speaker:** Member E
+**Layout:** text
+
+**On-slide bullets**
+- The business question: which customers should we retain, which should we grow, and with which products — under a fixed contact budget?
+- Alternative framings we rejected: RFM-only (static), spend-regression (cannot be validated without campaign data), basket-only (no customer state).
+- Why integrated: each technique answers a different question; the decision layer is what a stakeholder can act on.
+- Scope and constraints: one retailer, one year, no demographics, no campaign-response history, CPU-only reproducibility.
+
+**Takeaway:** A model is only useful here if it ends in a ranked action someone can execute on Monday.
+
+**Source:** report §1.2–§1.3
+
+**Speaker notes (≈132 words):** "We deliberately did not start from a technique. We started from four decisions the business actually makes: who are our customers, who is about to leave, what should we offer them, and whom should we call first. We considered an RFM-only study, a customer-lifetime-value regression, and a basket-only recommendation system, and rejected each as a standalone framing: the first is static, the second cannot be validated without campaign data, the third has no customer state. The integration is the contribution, and the constraints are real — one retailer, one year, and no response data anywhere."
+
+---
+
+## Slide 4 — One in four transaction lines has no customer ID — cleaning decides who can be analysed
+
+**Section:** 02 · DATA
+**Cumulative timing:** 2:25–3:35 (70 s) · **Speaker:** Member A
+**Layout:** wide
+
+**On-slide bullets**
+- 541,909 raw lines → 391,150 clean lines: 72.2% of rows and 81.9% of gross revenue retained.
+- Missing CustomerID: 135,080 lines (24.93%). They cannot be linked across visits, so they cannot enter a customer-level model.
+- That exclusion is a real bias, not housekeeping: anonymous lines are 13.57% of gross revenue; we quantify it and state that conclusions describe identified customers only.
+
+**Visual:** results/figures/f01_data_quality_overview.png
+
+**Takeaway:** Cleaning is not a preamble — it defines the population the whole analysis is about.
+
+**Source:** results/tables/t02_data_quality_issues.csv, t03_cleaning_decisions.csv; report §2
+
+**Speaker notes (≈154 words):** "The dataset is one year of real line items from a UK online giftware retailer: 541,909 rows, with all the mess that implies. The biggest issue is identification: one line in four has no customer ID, which means those rows cannot be linked across visits and cannot enter a customer-level model. We do not hide that — we quantify it: the anonymous lines carry 13.57% of gross revenue. After the audit and cleaning we keep 391,150 lines, 72% of rows and 82% of revenue. The numbers on the right are the issue sizes; the next slide is what we did about each one."
+
+---
+
+## Slide 5 — Every cleaning decision is logged, because each one changes the answer
+
+**Section:** 02 · DATA
+**Cumulative timing:** 3:35–4:35 (60 s) · **Speaker:** Member A
+**Layout:** table
+
+**On-slide bullets**
+- Returns and cancellations are behaviour, not noise: removed from spend, kept as a return-rate feature.
+- Service codes (postage, bank charges, discounts) are excluded from product-level analysis only.
+- The audit counts exceed the funnel removals because one line can violate several rules — both are reported.
+
+**Table:**
+| Issue | Raw lines | Treatment |
+| Missing CustomerID | 135,080 | excluded; bias quantified |
+| Cancellations | 9,288 | removed (8,905 in funnel) |
+| Non-product codes | 2,916 | removed from baskets |
+| Duplicate rows | 5,268 | removed (5,187 in funnel) |
+| Negative quantity | 10,624 | moved to returns ledger |
+
+**Takeaway:** We separate description from prediction: rows that cannot be attributed are audited, not silently dropped.
+
+**Source:** t03_cleaning_decisions.csv; report §2.3–§2.4
+
+**Speaker notes (≈132 words):** "Three principles guided cleaning. First, never silently drop information: every removal is counted and reported, and the anonymous revenue share is quantified. Second, separate description from prediction: we remove rows that cannot be attributed to a customer from the modelling population, but keep them in the audit so the business picture is not understated. Third, returns are real behaviour — a customer who returns goods behaves differently — so they leave the spend calculation but stay as a feature. The table shows the audit counts; the funnel removes slightly fewer because one line can violate several rules at once, and we report both numbers."
+
+---
+
+## Slide 6 — Two snapshots, one rule: never let the label see the future
+
+**Section:** 02 · DATA
+**Cumulative timing:** 4:35–5:45 (70 s) · **Speaker:** Member A
+**Layout:** timeline
+
+**On-slide bullets**
+- T1 (2,716 customers, churn 50.4%) is split 70/15/15 for development; T2 (2,809, churn 39.6%) is opened once, for the out-of-time test.
+- All transforms and feature selection are fitted inside the pipeline on training folds only — no leakage.
+- The 90-day no-purchase label is a lapsing proxy, not contractual cancellation; we say so throughout.
+
+**Timeline:** Features window::T1 2010-12 → 2011-05 · T2 2011-03 → 2011-08 | Cut-off (as-of)::T1 31 May 2011 · T2 31 Aug 2011 | Churn label::next 90 days · T1 Jun–Aug · T2 Sep–Nov
+
+**Takeaway:** The temporal split is the single design choice that makes the reported performance credible.
+
+**Source:** notebook S2; report §4.1, §6.1
+
+**Speaker notes (≈154 words):** "This is the design choice that makes every later number believable. For each cohort we cut the data at an as-of date. Features use only transactions before it; the label uses only the ninety days after it. So the model cannot see the future, by construction. T1 is our development cohort — 2,716 customers, about fifty percent churn — split seventy fifteen fifteen. T2 is the next three-month cohort, 2,809 customers, thirty-nine percent churn, and we open it exactly once, at the end. Every transform, every feature-selection step, is fitted on training folds only. And we call the label what it is: a no-purchase proxy, not a cancellation."
+
+---
+
+## Slide 7 — The system has three layers: prepare, model, decide
+
+**Section:** 03 · METHOD
+**Cumulative timing:** 5:45–6:35 (50 s) · **Speaker:** Member E
+**Layout:** text
+
+**On-slide bullets**
+- Prepare (S0–S4): audit, clean, snapshot, engineer and select 16 → 10 behavioural features.
+- Model (S5–S7): segment customers, predict 90-day churn, mine cross-sell rules, compare similarity metrics.
+- Decide (S8–S9): combine segment × risk × offer into a capacity-bounded target list, with ROI scenarios and a full artefact log.
+
+**Takeaway:** One notebook, ten stages, reproducible in about thirty seconds — the analysis is the artefact.
+
+**Source:** notebook S0–S9; report §3
+
+**Speaker notes (≈110 words):** "The whole system fits in three layers. Prepare takes raw lines to a clean table, builds the two temporal snapshots, and engineers and selects the features. Model runs four techniques on that base: segmentation, churn prediction, association rules and similarity. Decide joins them: each customer gets a segment, a risk score and a recommended offer, and the decision layer ranks them under a contact-capacity budget. Every stage writes an artefact — figures, tables, a metrics file — so the talk you are hearing can be regenerated from the repository in about half a minute."
+
+---
+
+## Slide 8 — From 16 behavioural signals we keep 10 — a small but measurable gain
+
+**Section:** 03 · METHOD
+**Cumulative timing:** 6:35–7:45 (70 s) · **Speaker:** Member B
+**Layout:** kpi
+
+**On-slide bullets**
+- RFM alone is not enough: regularity, returns and revenue momentum separate a loyal low-spend customer from a lapsing high-spend one.
+- Selection is a documented funnel: correlation filter (|r| > 0.9) → mutual information top-12 → RFE top-10.
+- We keep the smaller set because it is cheaper and slightly better on validation; the gain is honest, not dramatic.
+
+**KPI:** 16 → 10 = features retained after correlation filter, mutual information and RFE | 0.6966 → 0.7036 = validation PR-AUC, all features vs selected set | 9 = feature families: RFM, basket, breadth, rhythm, momentum, returns, context | log1p + z = transform applied before any distance-based method
+
+**Takeaway:** Feature work is judged by evidence, not by volume — we report the one number that moved.
+
+**Source:** t05b_feature_evidence.csv; report §4
+
+**Speaker notes (≈154 words):** "RFM features are the starting point, not the answer. We add regularity, returns, momentum and basket structure so that a loyal low-spend customer is distinguishable from a high-spend customer who is lapsing. Spend is heavy-tailed, so everything is log-transformed and scaled before any distance-based method. Selection is a three-stage funnel: correlation removes near-duplicates, mutual information catches non-linear signal, and recursive elimination keeps the final ten. The honest result: validation PR-AUC moves from 0.6966 to 0.7036. Small — but measured, and the smaller model is cheaper to run."
+
+---
+
+## Slide 9 — K=5 is not the silhouette maximum — it is the stable, actionable choice
+
+**Section:** 04 · SEGMENTATION
+**Cumulative timing:** 7:45–8:55 (70 s) · **Speaker:** Member B
+**Layout:** wide
+
+**On-slide bullets**
+- Silhouette peaks at K=2 (0.4223); at K=5 it is 0.3279. We do not claim a maximum we did not find.
+- We pre-registered a rule: among K=4–6, require every segment ≥10% of the base and silhouette ≥0.30, then pick the most stable solution.
+- K=5 wins on bootstrap stability (ARI 0.9699) and gives five actionable tiers; K=4 is less stable, K=2 is too coarse.
+
+**Visual:** results/figures/f04_elbow_silhouette.png
+
+**Takeaway:** Segmentation is a decision tool, not a clustering competition — stability beats a decimal point.
+
+**Source:** t06_cluster_metrics.csv; report §5.2
+
+**Speaker notes (≈154 words):** "We did not stare at the elbow and pick a number. We pre-registered a rule: among four to six clusters, require every segment to hold at least ten percent of the base and silhouette to stay above 0.30, then choose the most stable solution. Silhouette is actually highest at K equals two — and we say so. At K equals five it is 0.3279, but bootstrap stability is 0.9699, and five tiers map onto five distinct CRM actions. A segmentation that changes every time the data refreshes is not usable by a marketing team, so stability is the criterion we optimise."
+
+---
+
+## Slide 10 — Five segments, five different conversations
+
+**Section:** 04 · SEGMENTATION
+**Cumulative timing:** 8:55–10:05 (70 s) · **Speaker:** Member B
+**Layout:** table
+
+**On-slide bullets**
+- Value is concentrated: Champions are 26.9% of customers but carry the highest average spend (GBP 3,293).
+- Risk is concentrated too: Hibernating and At-risk customers churn at 64% and 56% versus 12% for Champions.
+- The segment × risk matrix, not the segment size, is what tells the business where to spend.
+
+**Table:**
+| Segment | n | Share | Avg spend | Churn |
+| Champions | 755 | 26.9% | GBP 3,293 | 12.2% |
+| Loyal | 582 | 20.7% | GBP 901 | 33.5% |
+| Potential | 520 | 18.5% | GBP 480 | 49.6% |
+| At-risk | 535 | 19.1% | GBP 481 | 55.9% |
+| Hibernating | 417 | 14.9% | GBP 143 | 64.0% |
+
+**Takeaway:** Small segments are not automatically unimportant: At-risk is mid-sized, low-spend and high-risk — the classic win-back target.
+
+**Source:** t07_segment_profiles.csv; figure f05
+
+**Speaker notes (≈154 words):** "The profiles are read together, not ranked by size. Champions are a quarter of the base and spend roughly three thousand three hundred pounds on average, with only twelve percent churn. Hibernating are fifteen percent, spend one hundred and forty-three pounds, and churn at sixty-four percent. At-risk is the interesting one: mid-sized, lower spend but still meaningful, and fifty-six percent churn — exactly where a win-back voucher earns its cost. The heat map in the appendix shows the full behavioural profile; the point here is that value and risk are different axes, and the business needs both."
+
+---
+
+## Slide 11 — Three model families; logistic regression wins on validation, not on glamour
+
+**Section:** 05 · PREDICTION
+**Cumulative timing:** 10:05–11:15 (70 s) · **Speaker:** Member C
+**Layout:** table
+
+**On-slide bullets**
+- Selection used validation PR-AUC only (logreg 0.7079, RF 0.6683, DT 0.6642) — never the test set.
+- Churn is the minority class and the action is top-K contact, so we report PR-AUC, lift and Brier rather than accuracy.
+- Class imbalance is handled with balanced weights; trees are deliberately shallow for interpretability.
+
+**Table:**
+| Model | CV AUC | T1 test | T2 OOT | Lift@10% |
+| Logistic regression | 0.759 | 0.723 | 0.739 | 1.69 |
+| Random forest | 0.751 | 0.722 | 0.732 | 1.58 |
+| Decision tree | 0.740 | 0.683 | 0.710 | 1.61 |
+
+**Takeaway:** With near-tied accuracy out of time, we chose the model we can explain to a campaign manager.
+
+**Source:** t08_model_metrics.csv, metrics_extra.json; report §6.2–§6.3
+
+**Speaker notes (≈154 words):** "Three families, increasing flexibility: a regularised logistic regression, a depth-limited decision tree, and a four-hundred-tree random forest. The selection rule was fixed in advance: validation PR-AUC only. Logistic regression wins at 0.7079 against 0.6683 for the forest and 0.6642 for the single tree. On the held-out set the two leading models are effectively tied; out of time the logistic model is slightly ahead. When performance is tied, we prefer the model a campaign manager can read: coefficients, odds, no feature interactions to explain. The forest stays as a non-linear benchmark and as the source of permutation importance."
+
+---
+
+## Slide 12 — The number to quote is the out-of-time one: AUC 0.739 and 1.69× top-decile lift
+
+**Section:** 05 · PREDICTION
+**Cumulative timing:** 11:15–12:35 (80 s) · **Speaker:** Member C
+**Layout:** wide
+
+**On-slide bullets**
+- Three levels of evidence: 5-fold CV (mean ± sd), a held-out slice of T1, and the untouched T2 cohort.
+- At the top decile the model captures 1.69× the churners of random contact; precision at that operating point is 0.669.
+- The F1-optimal threshold is 0.267; the campaign-capacity threshold (top 10%) is 0.738 — both are reported because they answer different questions.
+
+**Visual:** results/figures/f08_roc_test_oot.png
+
+**Takeaway:** Cross-validated numbers are optimistic; the out-of-time number is the one we would quote to a sponsor.
+
+**Source:** f08_roc_test_oot.png, f09_lift_curve.png, t09_lift_deciles.csv; report §6.4–§6.5
+
+**Speaker notes (≈176 words):** "This is the slide that must stay honest. We report three levels of evidence: five-fold cross-validation, a held-out slice of the development cohort, and the out-of-time cohort that was opened once. ROC-AUC is 0.739 out of time; PR-AUC is 0.595, lower than in-sample because the later cohort has a different base rate. The business number is lift: if we contact the top ten percent by predicted risk, we capture 1.69 times as many true churners as random contact. And we show two thresholds — the F1 optimum at 0.267 and the capacity threshold at 0.738 — because a campaign team budgets contacts, not probabilities."
+
+---
+
+## Slide 13 — Where the model fails — and why we accept it
+
+**Section:** 05 · PREDICTION
+**Cumulative timing:** 12:35–13:35 (60 s) · **Speaker:** Member C
+**Layout:** side
+
+**On-slide bullets**
+- False negatives are expensive in lost revenue; false positives are expensive in contact cost — the threshold is a budget decision.
+- The label is a proxy: a customer with no purchase in 90 days may be on holiday, not lost.
+- One out-of-time period cannot tell us how much AUC would vary across future quarters; we say this rather than average it away.
+
+**Visual:** results/figures/f09_confusion_and_threshold.png
+
+**Takeaway:** A model that is accurate on average but wrong for a small high-value segment is dangerous — we checked for that.
+
+**Source:** f09_confusion_and_threshold.png; report §6.6
+
+**Speaker notes (≈132 words):** "No model is right all the time, so we show the failure modes. At the F1 threshold the confusion matrix trades false negatives — customers we should have contacted but missed — against false positives, which are wasted contacts. That trade-off is a budget decision, not a statistical one, which is why we report both thresholds. We also state two honest limits: the label is a ninety-day no-purchase proxy, and a single out-of-time period cannot estimate quarter-to-quarter variance. Being explicit about error is part of the deliverable, not a weakness."
+
+---
+
+## Slide 14 — Cross-sell: 5,441 rules, but only 593 are business-grade
+
+**Section:** 06 · CROSS-SELL
+**Cumulative timing:** 13:35–14:45 (70 s) · **Speaker:** Member D
+**Layout:** wide
+
+**On-slide bullets**
+- FP-Growth on Dec 2010–Jul 2011 baskets; every rule is re-tested on Aug–Dec 2011 data the miner never saw.
+- 5,402 of 5,441 rules were evaluable out of time; median holdout lift is 12.17 and 99.8% keep lift above 1.
+- High lift alone is misleading: many top rules are colour variants with tiny support, so we also rank the 593 rules with support ≥1% and lift ≥2.
+
+**Visual:** results/figures/f10_association_rules.png
+
+**Takeaway:** We report the median, not the mean, because the mean is inflated by rare product variants — and we show the business filter.
+
+**Source:** t10_association_rules.csv, t10b_business_rules.csv; report §7
+
+**Speaker notes (≈154 words):** "Association rules answer the what-to-offer question, but only if they survive a later period. We mine FP-Growth on invoices from December to July and then re-test every rule on August-to-December data the miner never saw. Of 5,441 retained rules, 5,402 were evaluable; the median holdout lift is 12.17 and 99.8% keep a lift above one. But we do not headline the mean — it is inflated by rare colour variants. The honest set is the 593 rules with at least one percent support and lift of at least two: for example, the green Regency teacup predicts the roses version with a holdout lift of 21.6."
+
+---
+
+## Slide 15 — Lookalike customers and substitute products for the sparse and the new
+
+**Section:** 06 · CROSS-SELL
+**Cumulative timing:** 14:45–15:35 (50 s) · **Speaker:** Member D
+**Layout:** side
+
+**On-slide bullets**
+- Cosine distance won on cluster separation: silhouette 0.3283 vs 0.2183 Manhattan and 0.1844 Euclidean.
+- Lookalike customers support prospecting and cold-start; item–item similarity supports substitution and bundle design.
+- Similarity is descriptive: it says who resembles whom, not who will respond — the churn model carries the causal assumption.
+
+**Visual:** results/figures/f11_similarity_lookalikes.png
+
+**Takeaway:** Similarity is the cheapest way to say something useful about a customer with only one or two purchases.
+
+**Source:** t11_similarity_metric_comparison.csv, t04_lookalikes.csv, t05_similar_products.csv
+
+**Speaker notes (≈110 words):** "Similarity and distance are the second course theme, and they earn their place here. We compared three metrics and cosine won on cluster separation: 0.3283 against 0.2183 for Manhattan and 0.1844 for Euclidean. Two uses follow. First, lookalike customers: for a new or sparse customer, find the five nearest established customers and use their segment and offer as a prior. Second, item similarity: products bought by similar customers suggest substitutes and bundle candidates. What similarity does not do is predict response — that is the churn model's job, and we keep the two claims separate."
+
+---
+
+## Slide 16 — Decision layer: value × risk becomes a 200-customer pilot
+
+**Section:** 07 · DECISION
+**Cumulative timing:** 15:35–16:35 (60 s) · **Speaker:** Member E
+**Layout:** side
+
+**On-slide bullets**
+- Priority score = predicted churn probability × monetary value; the pilot contacts the top 200 customers (7.1% of T2).
+- Each segment has a different action: VIP retention, loyalty cross-sell, second-purchase nurture, win-back, low-cost reactivation.
+- The matrix shows where value and risk coincide — that intersection is where the budget earns its return.
+
+**Visual:** results/figures/f12_segment_risk_matrix.png
+
+**Takeaway:** A segmentation nobody acts on is a chart; a segmentation with an action and a contact capacity is a decision.
+
+**Source:** t12_segment_risk_matrix.csv, t13_action_table.csv; report §9
+
+**Speaker notes (≈132 words):** "This is where the four models meet. Each T2 customer gets a segment, a predicted churn probability and a monetary value; the priority score multiplies the last two. The pilot contacts the top two hundred, about seven percent of the cohort. Each segment carries a different action: a VIP retention call for Champions, a cross-sell bundle for Loyal, a second-purchase voucher for Potential, a win-back for At-risk, and a cheap reactivation email for Hibernating — where a discount would destroy margin. The bubble chart shows value against risk; the upper-right corner is where retention spending earns its return."
+
+---
+
+## Slide 17 — Targeted versus random: GBP 14.8k–33.8k net, break-even at a 0.45% save rate
+
+**Section:** 07 · DECISION
+**Cumulative timing:** 16:35–17:55 (80 s) · **Speaker:** Member E
+**Layout:** wide
+
+**On-slide bullets**
+- Base assumptions: GBP 8 contact cost, 10% save rate, 35% margin. Conservative validated net GBP 14,802.58; model-precision bound GBP 33,799.89.
+- Random-200 would net GBP 1,925.76; the model's value is the GBP 31,874.13 uplift, not the absolute ROI.
+- Break-even save rate is 0.452% targeted versus 4.538% random — the campaign is robust to being wrong about the save rate.
+
+**Visual:** results/figures/f13_roi_sensitivity.png
+
+**Takeaway:** ROI here is a scenario analysis, not measured uplift: the dataset contains no campaign history, and we say so.
+
+**Source:** t16_targeting_comparison.csv, f13_roi_sensitivity.png; report §9.4
+
+**Speaker notes (≈176 words):** "The economics are deliberately conservative. Base assumptions: eight pounds per contact, ten percent save rate, thirty-five percent margin. Using the realised churn rate inside the priority list, the pilot nets about fourteen thousand eight hundred pounds; using the model's top-decile precision gives an optimistic bound of thirty-three thousand eight hundred, and we label it that way. Contacting two hundred random customers would net only about one thousand nine hundred, so the model's value is the thirty-one thousand eight hundred uplift. The break-even save rate is under half a percent for the targeted list versus four and a half percent for random contact. And the caveat stays on the slide: no campaign history, so this is a scenario, not measured uplift."
+
+---
+
+## Slide 18 — What we will not claim — and what we would do next
+
+**Section:** 08 · LIMITATIONS
+**Cumulative timing:** 17:55–18:50 (55 s) · **Speaker:** Member A
+**Layout:** text
+
+**On-slide bullets**
+- Anonymity bias: 24.93% of lines and 13.57% of revenue are outside the customer-level model; conclusions describe registered customers only.
+- One retailer, one year, one out-of-time period — the method is general, the numbers are not.
+- Association rules show co-purchase, not causation; similarity is descriptive; the ROI is a scenario, not a measured uplift.
+- Next: campaign-response data for an uplift model, a second retailer for external validation, and drift monitoring in production.
+
+**Takeaway:** The most useful sentence in this project is the one about what the data cannot tell us.
+
+**Source:** report §10
+
+**Speaker notes (≈121 words):** "We would rather state the limits than have them found. One: anonymity bias — a quarter of lines and thirteen point six percent of revenue are outside the customer-level model, so every segment, churn rate and ROI number describes registered customers, not total demand. Two: one retailer, one year, one out-of-time period; the method generalises, the numbers do not. Three: rules show co-purchase, not causation; similarity is descriptive; ROI is a scenario. What we would do next is the natural follow-up: campaign data for a proper uplift model, a second retailer, and drift monitoring if this ever went live."
+
+---
+
+## Slide 19 — Agent-assisted, but human-verified
+
+**Section:** 09 · PROCESS
+**Cumulative timing:** 18:50–19:20 (30 s) · **Speaker:** Member E
+**Layout:** text
+
+**On-slide bullets**
+- Harness: DeepSeek Harness with a deepseek model, used as an accelerator — not as an author of judgement.
+- Loop: human defines → agent proposes → human reviews → agent implements → human verifies → revise.
+- Every member re-ran their module, checked the numbers against metrics.json, and recorded their own trajectory; several agent suggestions were rejected or rewritten.
+
+**Takeaway:** The course asks us to show the workflow, not to pretend we worked without it — each member has a trajectory in the repository.
+
+**Source:** report §12; agent-trajectories/
+
+**Speaker notes (≈66 words):** "The course asks for an agent-assisted project, so we document the workflow rather than hide it. We used DeepSeek Harness as an accelerator under the loop the course recommends: the human defines the problem, the agent proposes, the human reviews, the agent implements, the human verifies. Every member re-ran their module, checked the numbers against the metrics file, and in several cases rejected or rewrote what the agent produced. Each member's trajectory is in the repository — that is the evidence of who did what, which is exactly how the course assesses workload."
+
+---
+
+## Slide 20 — What to remember
+
+**Cumulative timing:** 19:20–19:40 (20 s) · **Speaker:** Member E
+**Layout:** closing
+
+**On-slide bullets**
+- One question, four linked techniques, one ranked action list — not four separate exercises.
+- The evidence that matters is out of time: AUC 0.739, top-decile lift 1.69×, 593 rules that survive a holdout.
+- We wrote down every assumption, every limitation, and every number's source — that is the standard we held ourselves to.
+
+**Speaker notes (≈44 words):** "Three things to take away. First, this is one question answered by four linked techniques, ending in a ranked action list rather than four separate exercises. Second, the evidence that matters is out of time: AUC 0.739, top-decile lift 1.69, and 593 rules that survive a later period. Third, every assumption, limitation and number is written down and traceable to the repository. Thank you — we are happy to take your questions."
+
+---
+
+## Backup slides (prepare if asked)
+
+1. **Feature-selection funnel** — t05b_feature_evidence.csv: 0.6966 → 0.6973 → 0.7032 → 0.7036.
+2. **Full segment profiles** — t07_segment_profiles.csv (all 18 behavioural columns).
+3. **Lift deciles** — t09_lift_deciles.csv: how capture accumulates decile by decile.
+4. **Rule catalogue** — t10_association_rules.csv (all 5,441; first 10 by lift in the report).
+5. **ROI scenarios** — t16_targeting_comparison.csv with pessimistic/base/optimistic.
+6. **Method alternatives** — report §1.3, Table 1 (RFM-only / CLV regression / basket-only).
+
+## Delivery notes
+
+- 20 minutes, no Q&A inside the time; questions follow immediately afterwards.
+- Rehearse with a timer at 5:45, 10:05, 15:35 (three checkpoints) and finish at 19:40 ± 10 s.
+- If running long, shorten slide 13 (error analysis) and slide 18 (limitations) by 20 s each before touching any evidence slide.
+- Do not read the slides; the notes above are written to be spoken, not displayed.

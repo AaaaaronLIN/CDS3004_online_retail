@@ -47,8 +47,12 @@ def parse(md: str) -> list[dict]:
 
 def main() -> int:
     slides = parse(SRC.read_text())
+    total_s = sum(1 for _ in slides)  # placeholder to keep structure
+    last = slides[-1]["timing"] if slides else ""
+    m = re.search(r"(\d+:\d+)\s*$", last.strip())
+    total_txt = m.group(1) if m else "19:40"
     parts = ["# CDS3004 Group F — Speaker Cue Cards\n",
-             "**Group F · CRN 234 · 19 November 2026 · total 9:35**\n",
+             f"**Group F · CRN 234 · 19 November 2026 · total {total_txt} (20-minute talk, Q&A outside)**\n",
              "One page per slide. Upper block = what the audience sees; lower block = what you say.\n"]
     for s in slides:
         timing = s["timing"].split("·")[0].replace("**Cumulative timing:**", "").strip()

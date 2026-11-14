@@ -148,11 +148,13 @@ git add . && git commit -m "…" && git push   # 收工前
 
 | 成员 | 角色 | 负责模块（notebook 章节） | 主要文件 / 产物 | 答辩页 | 今天第一件事 |
 |---|---|---|---|---|---|
-| **A** | 数据与质量负责人 | S1–S2：数据审计、清洗、退货台账、T1/T2 快照 | `t02_data_quality_issues`、`t03_cleaning_decisions`、`t02_cohort_summary`、`f01`；report §2 | 4、5（数据段）、12（数据局限） | 跑 S1–S2，记录 24.93%、135,080、13.57% |
-| **B** | 特征工程与分层负责人 | S4–S5（+S3 距离支撑）：16 特征、相关性/MI/RFE、K-means、分层画像 | `t04`–`t07`、`f02`–`f08`；report §4–§5 | 6、7 | 读 `t05b_feature_evidence.csv`，核对 0.6966→0.7036 |
-| **C** | 流失建模与评估负责人 | S6：三模型、70/15/15、5 折 CV、验证集选型、双阈值、时间外验证、lift | `t08`、`t09_lift_deciles`、`s06_threshold_analysis`、`f07`–`f09`；report §6 | 8 | 核对 CV/T1/T2 三组 AUC 与 lift 1.6916 |
-| **D** | 关联规则与相似度负责人 | S3、S7：距离度量、lookalike、相似商品、FP-Growth、holdout 验证 | `t03`、`t04_lookalikes`、`t05_similar_products`、`t09_top_rules`、`t10_association_rules`、`f10`–`f11`；report §7–§8 | 9、10 | 核对 5,441 / 5,402 / median 12.174 / 593 条 |
-| **E** | 集成、决策与仓库负责人 | S8–S9：T2 打分、segment×risk、优先级、ROI、指标汇总、仓库与提交 | `t10_decision`–`t15`、`f12`–`f13`、README、CONTRIBUTIONS、提交清单；report §1/§3/§9–§10/§13 | 1–3、5、11、13–14 | 复算 ROI 三档 + 盈亏平衡率 |
+| **A** | 数据与质量负责人 | S1–S2：数据审计、清洗、退货台账、T1/T2 快照 | `t02_data_quality_issues`、`t03_cleaning_decisions`、`t02_cohort_summary`、`f01`；report §2 | 4–6、18（局限） | 跑 S1–S2，记录 24.93%、135,080、13.57% |
+| **B** | 特征工程与分层负责人 | S4–S5（+S3 距离支撑）：16 特征、相关性/MI/RFE、K-means、分层画像 | `t04`–`t07`、`f02`–`f08`；report §4–§5 | 8–10 | 读 `t05b_feature_evidence.csv`，核对 0.6966→0.7036 |
+| **C** | 流失建模与评估负责人 | S6：三模型、70/15/15、5 折 CV、验证集选型、双阈值、时间外验证、lift | `t08`、`t09_lift_deciles`、`s06_threshold_analysis`、`f07`–`f09`；report §6 | 11–13 | 核对 CV/T1/T2 三组 AUC 与 lift 1.6916 |
+| **D** | 关联规则与相似度负责人 | S3、S7：距离度量、lookalike、相似商品、FP-Growth、holdout 验证 | `t03`、`t04_lookalikes`、`t05_similar_products`、`t09_top_rules`、`t10_association_rules`、`f10`–`f11`；report §7–§8 | 14–15 | 核对 5,441 / 5,402 / median 12.174 / 593 条 |
+| **E** | 集成、决策与仓库负责人 | S8–S9：T2 打分、segment×risk、优先级、ROI、指标汇总、仓库与提交 | `t10_decision`–`t15`、`f12`–`f13`、README、CONTRIBUTIONS、提交清单；report §1/§3/§9–§10/§13 | 1–3、7、16–17、19–20 | 复算 ROI 三档 + 盈亏平衡率 |
+
+**Host 速成包**：[`HOST-BRIEF.md`](HOST-BRIEF.md)（12 个必背数字、答辩流程）· [`HOST-REPRO.md`](HOST-REPRO.md)（30 分钟复现 + 3 个受控实验）· [`slides/QandA-TABLE.md`](slides/QandA-TABLE.md)（分模块 Q&A 表）。
 
 **Host 速成包**：如果 E 由组长担任，先看 [`HOST-BRIEF.md`](HOST-BRIEF.md)（12 个必背数字、8 个高频追问、30 分钟学习路径、答辩流程与交接模板）。
 
@@ -172,7 +174,7 @@ git add . && git commit -m "…" && git push   # 收工前
   3. 找出 S2 里防止标签泄漏的两行代码
 - **改什么文件**：`notebooks/CDS3004_Project.ipynb`（S1–S2 的 markdown/注释）、`results/tables/t02*`、`t03*`、`data/README.md`、`report/REPORT.md` §2
 - **commit 示例**：`feat(data): document cleaning funnel`, `exp(data): test zero-price retention`
-- **答辩讲**：Slides 4、5（数据段）、12（数据局限）
+- **答辩讲**：Slides 4–6、18（局限）
 - **完成判据**：三个任务填进轨迹；≥3 次 commit；能脱稿讲 1 分钟数据质量
 
 ### Member B — 特征工程与分层
@@ -180,7 +182,7 @@ git add . && git commit -m "…" && git push   # 收工前
 - **本周三个任务**：① 复现特征选择漏斗；② **为 K=5 做辩护**（答辩必问）；③ 比较 cosine/manhattan/euclidean（0.3283/0.2183/0.1844）
 - **改什么文件**：notebook S3–S5、`t04`–`t07`、`f02`–`f08`、`report/REPORT.md` §4–§5
 - **commit 示例**：`feat(seg): document K choice with stability evidence`, `exp(feat): compare selection stages`
-- **答辩讲**：Slides 6、7
+- **答辩讲**：Slides 8–10
 - **完成判据**：能解释“为什么不是 K=2（silhouette 最高）”
 
 ### Member C — 流失建模与评估
@@ -188,7 +190,7 @@ git add . && git commit -m "…" && git push   # 收工前
 - **本周三个任务**：① 复现三组数字并解释为何选 logreg；② 把 top-10% 改成 top-20% 做阈值实验；③ 解释混淆矩阵的 false negative / positive 业务含义
 - **改什么文件**：notebook S6、`t08`、`t09_lift_deciles`、`s06_threshold_analysis`、`f07`–`f09`、`report/REPORT.md` §6
 - **commit 示例**：`exp(eval): threshold at top-20 percent`, `docs(eval): error analysis`
-- **答辩讲**：Slide 8
+- **答辩讲**：Slides 11–13
 - **完成判据**：能回答“为什么不是随机森林”“lift 1.69 什么意思”
 
 ### Member D — 关联规则与相似度
@@ -196,7 +198,7 @@ git add . && git commit -m "…" && git push   # 收工前
 - **本周三个任务**：① 解释为什么不报 mean lift 28.1957；② 手算一条规则的 holdout lift；③ 核对 lookalike 客户与相似商品示例
 - **改什么文件**：notebook S3/S7、`t03`、`t04_lookalikes`、`t05_similar_products`、`t09_top_rules`、`t10_association_rules`、`f10`–`f11`、`report/REPORT.md` §7–§8
 - **commit 示例**：`feat(rules): validate rules on later holdout`, `docs(sim): lookalike examples`
-- **答辩讲**：Slides 9、10
+- **答辩讲**：Slides 14–15
 - **完成判据**：能解释“高 lift 为什么可能是假象”“相似度怎么用于冷启动”
 
 ### Member E — 集成、决策与仓库
@@ -204,26 +206,26 @@ git add . && git commit -m "…" && git push   # 收工前
 - **本周三个任务**：① 重算 ROI 三档并给判断；② 核对 t12/t13 与报告 §9 一致性；③ 走一遍 `SUBMISSION-CHECKLIST.md` 找缺口
 - **改什么文件**：notebook S8–S9、`t10_decision`–`t15`、`f12`–`f13`、`README.md`、`CONTRIBUTIONS.md`、`submission/`
 - **commit 示例**：`feat(decision): churn-conditional campaign value`, `chore(repo): submission checklist gaps`
-- **答辩讲**：Slides 1–3、5、11、13–14
+- **答辩讲**：Slides 1–3、7、16–17、19–20
 - **完成判据**：能解释“为什么 ROI 用保守口径”“为什么随机投放不划算”
 
 ---
 
-## 答辩时间轴（10 分钟，与 slides/SLIDES.md 一致）
+## 答辩时间轴（20 分钟，不含 Q&A，与 slides/SLIDES.md 一致）
 
 | 时间 | 讲者 | 幻灯片 |
 |---|---|---|
-| 0:00–1:50 | E | 1–3 标题/议程/问题框架 |
-| 1:50–2:40 | A | 4 数据与质量 |
-| 2:40–3:25 | E | 5 pipeline |
-| 3:25–5:05 | B | 6–7 特征 + 分层 |
-| 5:05–6:15 | C | 8 流失预测与评估 |
-| 6:15–7:30 | D | 9–10 关联规则 + 相似度 |
-| 7:30–8:30 | E | 11 决策与 ROI |
-| 8:30–9:00 | A | 12 局限 |
-| 9:00–9:35 | E | 13–14 贡献 + 收尾 |
+| 0:00–2:25 | E | 1–3 标题/摘要/问题框架 |
+| 2:25–5:45 | A | 4–6 数据、清洗、时间快照 |
+| 5:45–6:35 | E | 7 pipeline |
+| 6:35–10:05 | B | 8–10 特征、分层、画像 |
+| 10:05–13:35 | C | 11–13 模型、评估、错误分析 |
+| 13:35–15:35 | D | 14–15 关联规则、相似度 |
+| 15:35–17:55 | E | 16–17 决策矩阵、ROI |
+| 17:55–18:50 | A | 18 局限 |
+| 18:50–19:40 | E | 19–20 过程与收尾 |
 
-> 若 TA 给的时长不是 10 分钟，组长告诉我，我按实际时长重排。
+> 时长已确认：**20 分钟，不含 Q&A**。若老师临时调整，组长告诉我，我按实际时长重排。
 
 ---
 
@@ -233,6 +235,6 @@ git add . && git commit -m "…" && git push   # 收工前
 - [ ] 每人 **≥3 次有意义 commit**
 - [ ] 每人把自己的 **3 个验证任务**填进 `agent-trajectories/member-X.md`
 - [ ] 报告/PPT 里的数字与 `results/metrics.json` 一致
-- [ ] 全组完成 **2 次计时排练**（目标 ≤10:00，最好 9:35）
+- [ ] 全组完成 **2 次计时排练**（目标 ≤20:00，最好 19:40）
 - [ ] 5 位成员姓名已填进 CONTRIBUTIONS / REPORT Table 21 / SLIDES
 

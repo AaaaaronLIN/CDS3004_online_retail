@@ -15,7 +15,7 @@
 | Group formation | 11 October 2026, 23:59 | Already completed via the session spreadsheet. |
 | **PPT submission (presentation)** | **Thursday 19 November 2026** — exact upload time/date TBA in the course announcement. Plan to submit by **18 November 2026, 23:59** as a safety margin. | Submit the slide deck in the format the announcement requires (PPTX and PDF backup). Confirm whether the TA wants PPTX, PDF or both. |
 | **Final project materials (ZIP)** | **Sunday 6 December 2026, 23:59** (hard deadline) | One ZIP, uploaded to the course submission channel. Do not rely on a network-share or email copy. |
-| Presentation day | Week 12/13; our group presents Thursday 19 November 2026 | Confirm room, time, presentation order and whether the talk is 10 minutes + Q&A. Arrive 15 minutes early with slides on the room computer and a USB backup. |
+| Presentation day | Week 12/13; our group presents Thursday 19 November 2026 | Confirm room, time and presentation order; the talk is 20 minutes, with Q&A outside the timed talk. Arrive 15 minutes early with slides on the room computer and a USB backup. |
 
 **Time zone:** all deadlines are Hong Kong time (UTC+8). Do not assume the portal uses another time zone.
 
@@ -87,7 +87,7 @@ Do **not** include: `.git/`, virtual environments, caches, raw data copies over 
 | 11 | No secrets or absolute paths | `grep -RIn "sk-\|api[_-]key\|token\|/Users/\|C:\\\\" .` excluding data/figures | Zero hits; notebook paths are relative |
 | 12 | File names ASCII, no spaces | `find . -name "* *"` and inspect non-ASCII names | No spaces or non-ASCII in filenames/paths |
 | 13 | ZIP size manageable | Check the ZIP size before upload | Well under the portal limit (target < 100 MB); note the raw data size if included |
-| 14 | Slides ready | Open the submitted deck and a PDF backup on the room computer | 14 slides; English; 10:00 or less; fonts render; no placeholder token or missing image; timing rehearsed to 9:35–10:00 |
+| 14 | Slides ready | Open the submitted deck and a PDF backup on the room computer | 20 slides; English; 20:00 or less; fonts render; no placeholder token or missing image; timing rehearsed to 19:30–19:50 |
 | 15 | Commits reflect each member | `git shortlog -sne` and `git log --author="<member>" --oneline` | Every member has meaningful commits spread across weeks (not one dump at the end) |
 | 16 | Uploaded copy is the tested copy | Download the uploaded ZIP and re-run tests 1, 2, 4, 7 | The downloaded file is the tested file; checksum matches the manifest |
 | 17 | Backup kept | Copy the final ZIP and the PDF to two members' cloud storage and a USB stick | Two independent copies exist after submission |
@@ -106,7 +106,7 @@ Do **not** include: `.git/`, virtual environments, caches, raw data copies over 
 | 4 | Notebook fails from a fresh kernel on the grader's machine | Medium | High — reproducibility criterion | Owner Member C; pin `requirements.txt`; run on a second machine/venv; keep runtime under 10 min; avoid absolute paths |
 | 5 | Zoomed numbers drift between report and pipeline after a late re-run | Medium | High — credibility and rubric item 9 | Owner Member C; freeze the pipeline 72 h before submission; re-run, then re-fill the report in one pass and re-check test 10 |
 | 6 | PPT deadline is earlier than assumed, or requires PDF rather than PPTX | Medium | High — presentation mark | Confirm with TA/course announcement this week; submit both PPTX and PDF by 18 Nov; owner Member E |
-| 7 | Presentation overruns 10 minutes | Medium | Medium — timing rubric item | Rehearse with a timer (target 9:35); timekeeper cuts slides 9–10 if needed; owner all presenters |
+| 7 | Presentation overruns 20 minutes | Medium | Medium — timing rubric item | Rehearse with a timer (target 19:40); timekeeper shortens slides 13 and 18 first; owner all presenters |
 | 8 | A presenter is ill on the day | Low | High — role rubric item | Every member knows the full deck; a designated backup can present any slide; owner Member E |
 | 9 | ZIP is corrupted, incomplete, or the portal rejects it | Low | High — nothing is graded | Build the ZIP on one machine; checksum manifest; upload early (6 Dec morning) and re-download to verify; keep a second copy |
 | 10 | Secrets or home-directory paths leak into notebooks or logs | Low | High — academic-integrity and privacy issue | Run test 11; redact API keys, tokens, emails and private paths; owner each member, checked by Member E |
