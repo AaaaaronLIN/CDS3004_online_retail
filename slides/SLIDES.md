@@ -451,3 +451,84 @@
 - Rehearse with a timer at 5:45, 10:05, 15:35 (three checkpoints) and finish at 19:40 ± 10 s.
 - If running long, shorten slide 13 (error analysis) and slide 18 (limitations) by 20 s each before touching any evidence slide.
 - Do not read the slides; the notes above are written to be spoken, not displayed.
+
+## Slide 21 — Backup · Feature-selection funnel, stage by stage
+
+**Section:** BACKUP — Q&A ONLY
+**Layout:** table
+
+**On-slide bullets**
+- Sixteen engineered features → correlation filter (|r| > 0.9) → mutual information top-12 → recursive elimination top-10.
+- The gain is small (PR-AUC 0.6966 → 0.7036) but measured on validation only; every step is fitted inside the training pipeline.
+- The smaller set is cheaper to maintain and slightly better on validation, which is why we kept it.
+
+**Table:**
+| Stage | Features | Validation PR-AUC |
+| All engineered features | 16 | 0.6966 |
+| + correlation filter | 15 | 0.6973 |
+| + mutual information (top 12) | 12 | 0.7032 |
+| + recursive elimination (top 10) | 10 | 0.7036 |
+
+**Takeaway:** Feature work is judged by evidence, not by volume.
+
+**Speaker notes (Q&A):** "This is the funnel behind slide 8: from sixteen engineered features down to ten, with the validation PR-AUC at each stage. The gain is modest — 0.6966 to 0.7036 — and we report it honestly; the reason we keep the smaller set is maintenance cost and a slightly better validation result. Every transform and every selection step is fitted inside the pipeline on training folds only."
+
+## Slide 22 — Backup · Where the churners actually sit
+
+**Section:** BACKUP — Q&A ONLY
+**Layout:** table
+
+**On-slide bullets**
+- T2 out-of-time cohort, ranked by predicted churn probability; deciles of about 281 customers each.
+- The top decile captures 187 of 1,111 churners (16.8% of them) and carries 1.69× the churn rate of random contact.
+- Capture drops steadily: by the top five deciles we cover 71.7% of all churners.
+
+**Table:**
+| Decile | Churners captured | Capture rate | Lift |
+| 1 | 187 | 16.8% | 1.69 |
+| 2 | 165 | 14.9% | 1.48 |
+| 3 | 165 | 14.9% | 1.48 |
+| 4 | 147 | 13.2% | 1.32 |
+| 5 | 133 | 12.0% | 1.20 |
+| 6–10 | 412 | 37.1% | 0.54–1.01 |
+
+**Takeaway:** The model is a ranking tool: the value is in the first decile, not the average.
+
+**Speaker notes (Q&A):** "If you want the detail behind the lift number: the T2 cohort is ranked by predicted risk and split into deciles of roughly 281 customers. The top decile contains 187 of the 1,111 churners — 16.8%, which is 1.69 times random contact. The top five deciles cover 71.7% of churners, but the marginal value is concentrated at the top, which is why we budget for the top 200 rather than contacting everyone."
+
+## Slide 23 — Backup · ROI scenarios, validated variant and random baseline
+
+**Section:** BACKUP — Q&A ONLY
+**Layout:** table
+
+**On-slide bullets**
+- All figures are scenario analyses: the dataset contains no campaign history, so this is not measured uplift.
+- Headline: conservative validated net GBP 14,802.58 (realised churn 0.31), with model-precision bound GBP 33,799.89 labelled as optimistic.
+- The decision survives stress: break-even save rate is 0.452% targeted versus 4.538% for random contact.
+
+**Table:**
+| Scenario | Save rate | Cost | Margin | Net (GBP) | ROI |
+| Pessimistic | 5% | 12 | 30% | 12,771 | 532% |
+| Base | 10% | 8 | 35% | 33,800 | 2,113% |
+| Optimistic | 15% | 5 | 35% | 52,100 | 5,210% |
+| Validated (realised churn 0.31) | 10% | 8 | 35% | 14,803 | 925% |
+| Random 200, base assumptions | 10% | 8 | 35% | 1,926 | 120% |
+
+**Takeaway:** We lead with the conservative number and show the optimistic bound separately.
+
+**Speaker notes (Q&A):** "This is the table behind slide 17. The base scenario uses ten percent save rate, eight pounds per contact and a thirty-five percent margin and gives about thirty-three thousand eight hundred. The validated variant uses the realised churn rate inside the priority list — 0.31 rather than the model's 0.669 precision — and gives about fourteen thousand eight hundred, which is the number we lead with. Random contact with the same budget nets under two thousand, so the uplift is about thirty-one thousand nine hundred. Break-even is under half a percent for the targeted list."
+
+## Slide 24 — Backup · Alternative framings we rejected
+
+**Section:** BACKUP — Q&A ONLY
+**Layout:** text
+
+**On-slide bullets**
+- RFM-only segmentation: static picture, no forward-looking signal; retained as a component, not as the whole analysis.
+- Customer-lifetime-value regression: no campaign or response data to validate the target, and heavy right-censoring.
+- Basket-only recommendation: no customer state, cannot allocate a retention budget.
+- Integrated framing kept because it ends in a ranked, capacity-bounded action list; with campaign data we would add an uplift model.
+
+**Takeaway:** The alternatives were rejected for a reason, not for convenience.
+
+**Speaker notes (Q&A):** "We considered three narrower framings. RFM-only segmentation is descriptive: it tells you who customers are but not who is leaving, so we kept it as a component. A spend-regression model would target lifetime value, but we have no campaign or response data to validate it, and the horizon is right-censored. Basket-only recommendation has no customer state and cannot allocate a contact budget. The integrated framing was chosen because it terminates in a ranked action list; if we had campaign data, the next step would be an uplift model."

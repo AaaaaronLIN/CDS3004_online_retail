@@ -42,6 +42,7 @@ def parse(md: str) -> list[dict]:
             cur["notes"] += " " + line.strip()
     for s in slides:
         s["notes"] = re.sub(r"\s+", " ", s["notes"]).strip().strip('"“”')
+    slides = [s for s in slides if not s["title"].lower().startswith("backup")]
     return slides
 
 

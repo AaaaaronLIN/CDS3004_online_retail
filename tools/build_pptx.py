@@ -353,9 +353,13 @@ def title_slide(prs, s, total):
     slide.notes_slide.notes_text_frame.text = s["notes"]
 
 
-def content_slide(prs, s, idx, total):
+def content_slide(prs, s, idx, total, backup=False):
     slide = prs.slides.add_slide(prs.slide_layouts[6])
     header(slide, s)
+    if backup:
+        rect(slide, Inches(10.28), Inches(0.3), Inches(2.42), Inches(0.34), AMBER)
+        tb(slide, Inches(10.28), Inches(0.37), Inches(2.42), Inches(0.22),
+           "BACKUP · Q&A ONLY", 8.5, WHITE, bold=True, align=PP_ALIGN.CENTER)
     fig = find_figure(s["visual"])
     layout = s["layout"]
     bullets_y = 1.78
@@ -443,8 +447,10 @@ def main() -> int:
     for i, s in enumerate(slides, start=1):
         if i == 1:
             title_slide(prs, s, total)
-        elif i == total:
+        elif s.get("layout") == "closing":
             closing_slide(prs, s, total)
+        elif s.get("layout", "").startswith("backup") or s.get("section", "").upper().startswith("BACKUP"):
+            content_slide(prs, s, i, total, backup=True)
         else:
             content_slide(prs, s, i, total)
     out = pathlib.Path(args.out)

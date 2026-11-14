@@ -62,7 +62,7 @@ cds3004-project/
 │   ├── metrics_summary.md            # human-readable headline numbers
 │   └── ARTIFACTS.md                  # authoritative file index
 ├── report/REPORT.md                  # full project report (PDF export)
-├── slides/SLIDES.md                  # 20-slide, 20-minute plan and speaker script
+├── slides/SLIDES.md                  # 20-slide, 20-minute plan + 4 backup slides
 ├── submission/SUBMISSION-CHECKLIST.md# ZIP structure, deadlines, acceptance tests
 └── agent-logs/                       # per-member agent-use trajectories and templates
 ```
