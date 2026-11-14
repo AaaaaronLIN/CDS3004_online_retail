@@ -5,7 +5,7 @@
 **Course:** CDS3004 Data Mining — Group Project (22%) and Group Presentation (8%)
 **Institution:** Lingnan University, School of Data Science, 2026/27 Term 1
 **Instructor:** Prof. Daoyuan Wu
-**Team:** Group F — Member A, Member B, Member C, Member D, Member E
+**Team:** Group F — LIN Xiaotong (4589755), Patten Lai (4001777), Weng Zhi Chao (4589896), Lim Man Tung Marcus (4592996), Huang Hao Lin (4455930)
 **Submission date:** 6 December 2026
 **Repository:** `https://github.com/AaaaaronLIN/CDS3004_online_retail` (public)
 
@@ -458,15 +458,15 @@ The data contains no names, addresses or payment details, and `CustomerID` is a 
 
 Five members delivered the project with clearly separated ownership. Table 21 maps each member to rubric items, code and report areas, and slides. The fuller statement, including commit areas and the requirement of meaningful commits and a personal agent trajectory, is in `CONTRIBUTIONS.md`.
 
-**Table 21.** Individual contributions and rubric ownership. Replace Member A–E with names and student IDs in the final PDF.
+**Table 21.** Individual contributions and rubric ownership. Names and student IDs are listed in the table below.
 
 | Member | Primary role | Rubric items owned (22% rubric) | Code and artifact areas | Report sections | Slides |
 |---|---|---|---|---|---|
-| Member A | Data and quality lead | Collect/load data, handle missing and noisy data (LO5); visualisation | Data audit, cleaning funnel, snapshots; `t02_data_quality_issues`, `t03_cleaning_decisions`, `f01_data_quality_overview` | §2, Appendix A | 4–6, 18 |
-| Member B | Feature engineering and segmentation lead | Feature selection (LO5); feature transformation (LO5); visualisation | 16 features, selection funnel, K-means; `t04_feature_dictionary`, `t05_feature_selection`, `t06_cluster_metrics`, `t07_segment_profiles`, `f02`–`f08` | §4–§5 | 8–10 |
-| Member C | Churn modelling and evaluation lead | Learn models (LO4); evaluate performance (LO6) | Three classifiers, CV, held-out and out-of-time evaluation, thresholds, lift; `t08_model_metrics`, `t09_lift_deciles`, `f07`–`f09` | §6 | 11–13 |
-| Member D | Association rules and similarity lead | Apply different data-mining techniques (LO3) | FP-Growth and holdout validation, metric comparison, lookalikes, similar products; `t03_distance_metrics`, `t04_lookalikes`, `t05_similar_products`, `t09_top_rules`, `t10_association_rules`, `f10`, `f11` | §7–§8 | 14–15 |
-| Member E | Integration, decision framework and repository lead | Problem definition; solution design; interpretation (LO7); deliver models; presentation and repository compliance | Segment × risk matrix, priority list, ROI, README, agent-trajectory templates; `t12`, `t13`, `t11`, `t15`, `f12`, `f13` | §1, §3, §9–§10, §13 | 1–3, 7, 16–17, 19–20 |
+| Patten Lai (4001777) | Data and quality lead | Collect/load data, handle missing and noisy data (LO5); visualisation | Data audit, cleaning funnel, snapshots; `t02_data_quality_issues`, `t03_cleaning_decisions`, `f01_data_quality_overview` | §2, Appendix A | 4–6, 18 |
+| Weng Zhi Chao (4589896) | Feature engineering and segmentation lead | Feature selection (LO5); feature transformation (LO5); visualisation | 16 features, selection funnel, K-means; `t04_feature_dictionary`, `t05_feature_selection`, `t06_cluster_metrics`, `t07_segment_profiles`, `f02`–`f08` | §4–§5 | 8–10 |
+| Lim Man Tung Marcus (4592996) | Churn modelling and evaluation lead | Learn models (LO4); evaluate performance (LO6) | Three classifiers, CV, held-out and out-of-time evaluation, thresholds, lift; `t08_model_metrics`, `t09_lift_deciles`, `f07`–`f09` | §6 | 11–13 |
+| Huang Hao Lin (4455930) | Association rules and similarity lead | Apply different data-mining techniques (LO3) | FP-Growth and holdout validation, metric comparison, lookalikes, similar products; `t03_distance_metrics`, `t04_lookalikes`, `t05_similar_products`, `t09_top_rules`, `t10_association_rules`, `f10`, `f11` | §7–§8 | 14–15 |
+| LIN Xiaotong (4589755) | Integration, decision framework and repository lead | Problem definition; solution design; interpretation (LO7); deliver models; presentation and repository compliance | Segment × risk matrix, priority list, ROI, README, agent-trajectory templates; `t12`, `t13`, `t11`, `t15`, `f12`, `f13` | §1, §3, §9–§10, §13 | 1–3, 7, 16–17, 19–20 |
 
 Each member also writes and verifies their own sections, commits to their own files or branch so the GitHub history reflects the workload, and maintains a personal trajectory under `agent-trajectories/` (§12). Workload is assessed from commits and trajectories, and ownership is structured so every member has substantive, visible work in both.
 
@@ -481,11 +481,11 @@ AI agents were accelerators, not authors. Every interaction followed the workflo
 | Activity | Human-led | Agent-assisted | Human verification |
 |---|---|---|---|
 | Problem framing, method choice | All members | Drafting alternatives | Team review against the rubric |
-| Data audit and cleaning rules | Member A | Profiling code, candidate rules | Rule-by-rule review; counts re-derived |
-| Feature definitions and transforms | Member B | Implementation, plots, checks | Distribution and leakage assertions inspected |
-| Model training and evaluation | Member C | Scaffolding, CV harness, plots | Independent re-run; metrics recomputed |
-| Rules and similarity | Member D | Mining, holdout and neighbour code | Holdout numbers cross-checked against the rule table |
-| Decision layer and ROI | Member E | Scenario table and sensitivity code | Assumption audit; arithmetic checked independently |
+| Data audit and cleaning rules | Patten Lai | Profiling code, candidate rules | Rule-by-rule review; counts re-derived |
+| Feature definitions and transforms | Weng Zhi Chao | Implementation, plots, checks | Distribution and leakage assertions inspected |
+| Model training and evaluation | Lim Man Tung Marcus | Scaffolding, CV harness, plots | Independent re-run; metrics recomputed |
+| Rules and similarity | Huang Hao Lin | Mining, holdout and neighbour code | Holdout numbers cross-checked against the rule table |
+| Decision layer and ROI | LIN Xiaotong | Scenario table and sensitivity code | Assumption audit; arithmetic checked independently |
 | Writing and editing | All members | Drafting and consistency checks | Every number checked against `metrics.json` |
 
 ### 12.2 How agent outputs were verified

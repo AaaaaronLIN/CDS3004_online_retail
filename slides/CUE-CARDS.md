@@ -4,7 +4,7 @@ One page per slide. Upper block = what the audience sees; lower block = what you
 
 <div style="page-break-after: always;"></div>
 ## Slide 1 — From transactions to a customer operating system
-**0:00–0:15 (15 s)** · **Speaker:** Member E
+**0:00–0:15 (15 s)** · **Speaker:** LIN Xiaotong
 
 **On screen**
 
@@ -16,7 +16,7 @@ One page per slide. Upper block = what the audience sees; lower block = what you
 
 <div style="page-break-after: always;"></div>
 ## Slide 2 — The answer first: four linked models, one action list
-**0:15–1:25 (70 s)** · **Speaker:** Member E
+**0:15–1:25 (70 s)** · **Speaker:** LIN Xiaotong
 
 **On screen**
 - Who they are: five stable segments (K=5, bootstrap ARI 0.97) that map to five different CRM actions.
@@ -32,7 +32,7 @@ One page per slide. Upper block = what the audience sees; lower block = what you
 
 <div style="page-break-after: always;"></div>
 ## Slide 3 — One retailer, one year of transactions: four decisions, not one model
-**1:25–2:25 (60 s)** · **Speaker:** Member E
+**1:25–2:25 (60 s)** · **Speaker:** LIN Xiaotong
 
 **On screen**
 - The business question: which customers should we retain, which should we grow, and with which products — under a fixed contact budget?
@@ -48,7 +48,7 @@ One page per slide. Upper block = what the audience sees; lower block = what you
 
 <div style="page-break-after: always;"></div>
 ## Slide 4 — One in four transaction lines has no customer ID — cleaning decides who can be analysed
-**2:25–3:35 (70 s)** · **Speaker:** Member A
+**2:25–3:35 (70 s)** · **Speaker:** Patten Lai
 
 **On screen**
 - 541,909 raw lines → 391,150 clean lines: 72.2% of rows and 81.9% of gross revenue retained.
@@ -65,7 +65,7 @@ One page per slide. Upper block = what the audience sees; lower block = what you
 
 <div style="page-break-after: always;"></div>
 ## Slide 5 — Every cleaning decision is logged, because each one changes the answer
-**3:35–4:35 (60 s)** · **Speaker:** Member A
+**3:35–4:35 (60 s)** · **Speaker:** Patten Lai
 
 **On screen**
 - Returns and cancellations are behaviour, not noise: removed from spend, kept as a return-rate feature.
@@ -80,7 +80,7 @@ One page per slide. Upper block = what the audience sees; lower block = what you
 
 <div style="page-break-after: always;"></div>
 ## Slide 6 — Two snapshots, one rule: never let the label see the future
-**4:35–5:45 (70 s)** · **Speaker:** Member A
+**4:35–5:45 (70 s)** · **Speaker:** Patten Lai
 
 **On screen**
 - T1 (2,716 customers, churn 50.4%) is split 70/15/15 for development; T2 (2,809, churn 39.6%) is opened once, for the out-of-time test.
@@ -95,7 +95,7 @@ One page per slide. Upper block = what the audience sees; lower block = what you
 
 <div style="page-break-after: always;"></div>
 ## Slide 7 — The system has three layers: prepare, model, decide
-**5:45–6:35 (50 s)** · **Speaker:** Member E
+**5:45–6:35 (50 s)** · **Speaker:** LIN Xiaotong
 
 **On screen**
 - Prepare (S0–S4): audit, clean, snapshot, engineer and select 16 → 10 behavioural features.
@@ -110,7 +110,7 @@ One page per slide. Upper block = what the audience sees; lower block = what you
 
 <div style="page-break-after: always;"></div>
 ## Slide 8 — From 16 behavioural signals we keep 10 — a small but measurable gain
-**6:35–7:45 (70 s)** · **Speaker:** Member B
+**6:35–7:45 (70 s)** · **Speaker:** Weng Zhi Chao
 
 **On screen**
 - RFM alone is not enough: regularity, returns and revenue momentum separate a loyal low-spend customer from a lapsing high-spend one.
@@ -125,7 +125,7 @@ One page per slide. Upper block = what the audience sees; lower block = what you
 
 <div style="page-break-after: always;"></div>
 ## Slide 9 — K=5 is not the silhouette maximum — it is the stable, actionable choice
-**7:45–8:55 (70 s)** · **Speaker:** Member B
+**7:45–8:55 (70 s)** · **Speaker:** Weng Zhi Chao
 
 **On screen**
 - Silhouette peaks at K=2 (0.4223); at K=5 it is 0.3279. We do not claim a maximum we did not find.
@@ -142,7 +142,7 @@ One page per slide. Upper block = what the audience sees; lower block = what you
 
 <div style="page-break-after: always;"></div>
 ## Slide 10 — Five segments, five different conversations
-**8:55–10:05 (70 s)** · **Speaker:** Member B
+**8:55–10:05 (70 s)** · **Speaker:** Weng Zhi Chao
 
 **On screen**
 - Value is concentrated: Champions are 26.9% of customers but carry the highest average spend (GBP 3,293).
@@ -157,7 +157,7 @@ One page per slide. Upper block = what the audience sees; lower block = what you
 
 <div style="page-break-after: always;"></div>
 ## Slide 11 — Three model families; logistic regression wins on validation, not on glamour
-**10:05–11:15 (70 s)** · **Speaker:** Member C
+**10:05–11:15 (70 s)** · **Speaker:** Lim Man Tung Marcus
 
 **On screen**
 - Selection used validation PR-AUC only (logreg 0.7079, RF 0.6683, DT 0.6642) — never the test set.
@@ -172,7 +172,7 @@ One page per slide. Upper block = what the audience sees; lower block = what you
 
 <div style="page-break-after: always;"></div>
 ## Slide 12 — The number to quote is the out-of-time one: AUC 0.739 and 1.69× top-decile lift
-**11:15–12:35 (80 s)** · **Speaker:** Member C
+**11:15–12:35 (80 s)** · **Speaker:** Lim Man Tung Marcus
 
 **On screen**
 - Three levels of evidence: 5-fold CV (mean ± sd), a held-out slice of T1, and the untouched T2 cohort.
@@ -189,7 +189,7 @@ One page per slide. Upper block = what the audience sees; lower block = what you
 
 <div style="page-break-after: always;"></div>
 ## Slide 13 — Where the model fails — and why we accept it
-**12:35–13:35 (60 s)** · **Speaker:** Member C
+**12:35–13:35 (60 s)** · **Speaker:** Lim Man Tung Marcus
 
 **On screen**
 - False negatives are expensive in lost revenue; false positives are expensive in contact cost — the threshold is a budget decision.
@@ -206,7 +206,7 @@ One page per slide. Upper block = what the audience sees; lower block = what you
 
 <div style="page-break-after: always;"></div>
 ## Slide 14 — Cross-sell: 5,441 rules, but only 593 are business-grade
-**13:35–14:45 (70 s)** · **Speaker:** Member D
+**13:35–14:45 (70 s)** · **Speaker:** Huang Hao Lin
 
 **On screen**
 - FP-Growth on Dec 2010–Jul 2011 baskets; every rule is re-tested on Aug–Dec 2011 data the miner never saw.
@@ -223,7 +223,7 @@ One page per slide. Upper block = what the audience sees; lower block = what you
 
 <div style="page-break-after: always;"></div>
 ## Slide 15 — Lookalike customers and substitute products for the sparse and the new
-**14:45–15:35 (50 s)** · **Speaker:** Member D
+**14:45–15:35 (50 s)** · **Speaker:** Huang Hao Lin
 
 **On screen**
 - Cosine distance won on cluster separation: silhouette 0.3283 vs 0.2183 Manhattan and 0.1844 Euclidean.
@@ -240,7 +240,7 @@ One page per slide. Upper block = what the audience sees; lower block = what you
 
 <div style="page-break-after: always;"></div>
 ## Slide 16 — Decision layer: value × risk becomes a 200-customer pilot
-**15:35–16:35 (60 s)** · **Speaker:** Member E
+**15:35–16:35 (60 s)** · **Speaker:** LIN Xiaotong
 
 **On screen**
 - Priority score = predicted churn probability × monetary value; the pilot contacts the top 200 customers (7.1% of T2).
@@ -257,7 +257,7 @@ One page per slide. Upper block = what the audience sees; lower block = what you
 
 <div style="page-break-after: always;"></div>
 ## Slide 17 — Targeted versus random: GBP 14.8k–33.8k net, break-even at a 0.45% save rate
-**16:35–17:55 (80 s)** · **Speaker:** Member E
+**16:35–17:55 (80 s)** · **Speaker:** LIN Xiaotong
 
 **On screen**
 - Base assumptions: GBP 8 contact cost, 10% save rate, 35% margin. Conservative validated net GBP 14,802.58; model-precision bound GBP 33,799.89.
@@ -274,7 +274,7 @@ One page per slide. Upper block = what the audience sees; lower block = what you
 
 <div style="page-break-after: always;"></div>
 ## Slide 18 — What we will not claim — and what we would do next
-**17:55–18:50 (55 s)** · **Speaker:** Member A
+**17:55–18:50 (55 s)** · **Speaker:** Patten Lai
 
 **On screen**
 - Anonymity bias: 24.93% of lines and 13.57% of revenue are outside the customer-level model; conclusions describe registered customers only.
@@ -290,7 +290,7 @@ One page per slide. Upper block = what the audience sees; lower block = what you
 
 <div style="page-break-after: always;"></div>
 ## Slide 19 — Agent-assisted, but human-verified
-**18:50–19:20 (30 s)** · **Speaker:** Member E
+**18:50–19:20 (30 s)** · **Speaker:** LIN Xiaotong
 
 **On screen**
 - Harness: DeepSeek Harness with a deepseek model, used as an accelerator — not as an author of judgement.
@@ -305,7 +305,7 @@ One page per slide. Upper block = what the audience sees; lower block = what you
 
 <div style="page-break-after: always;"></div>
 ## Slide 20 — What to remember
-**19:20–19:40 (20 s)** · **Speaker:** Member E
+**19:20–19:40 (20 s)** · **Speaker:** LIN Xiaotong
 
 **On screen**
 - One question, four linked techniques, one ranked action list — not four separate exercises.

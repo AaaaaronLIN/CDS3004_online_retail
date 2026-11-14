@@ -1,4 +1,4 @@
-# Agent-use trajectory — Member A  (name: ____)
+# Agent-use trajectory — Member A  — Patten Lai (4001777)
 
 **Group:** F · **CRN:** 234 · **Course:** CDS3004 Data Mining, Lingnan University, 2026/27 Term 1
 **Role:** Data and quality lead

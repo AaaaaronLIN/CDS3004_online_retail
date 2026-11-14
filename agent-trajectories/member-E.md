@@ -1,4 +1,4 @@
-# Agent-use trajectory — Member E  (name: ____)
+# Agent-use trajectory — Member E  — LIN Xiaotong (4589755)
 
 **Group:** F · **CRN:** 234 · **Course:** CDS3004 Data Mining, Lingnan University, 2026/27 Term 1
 **Role:** Integration, decision framework and repository lead

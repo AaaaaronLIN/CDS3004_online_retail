@@ -1,4 +1,4 @@
-# Agent-use trajectory — Member D  (name: ____)
+# Agent-use trajectory — Member D  — Huang Hao Lin (4455930)
 
 **Group:** F · **CRN:** 234 · **Course:** CDS3004 Data Mining, Lingnan University, 2026/27 Term 1
 **Role:** Association rules and similarity lead

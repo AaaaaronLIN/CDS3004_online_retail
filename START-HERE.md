@@ -53,9 +53,9 @@ git push -u origin main
 |---|---|---|
 | `code/notebooks/CDS3004_Project.ipynb` | Executed analysis pipeline (52 cells, 17 inline figures, ~30 s) | done |
 | `code/results/` | 23 figures, 29 tables, `metrics.json`, `metrics_extra.json`, `ARTIFACTS.md` | done |
-| `report/CDS3004_GroupF_CRN234_Report.pdf` | 19-page submission report | done (names pending) |
+| `report/CDS3004_GroupF_CRN234_Report.pdf` | 19-page submission report (names + student IDs included) | done |
 | `report/REPORT.md` | Markdown source, regenerate with `code/tools/build_pdf.py` | done |
-| `slides/CDS3004_GroupF_CRN234_Slides.pptx` | 20-slide deck, 19:40, notes on every slide | done (names pending) |
+| `slides/CDS3004_GroupF_CRN234_Slides.pptx` | 20-slide deck, 19:40, notes on every slide | done |
 | `slides/SLIDES.md` | 20-minute slide plan, speaker script, timings | done |
 | `slides/CDS3004_GroupF_CRN234_CueCards.pdf` | One-page-per-slide speaker cards | done |
 | `slides/QandA-TABLE.md` | Per-section Q&A table (27 likely questions + hostile questions) | done |

@@ -1,4 +1,4 @@
-# Agent-use trajectory — Member C  (name: ____)
+# Agent-use trajectory — Member C  — Lim Man Tung Marcus (4592996)
 
 **Group:** F · **CRN:** 234 · **Course:** CDS3004 Data Mining, Lingnan University, 2026/27 Term 1
 **Role:** Churn modelling and evaluation lead

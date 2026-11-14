@@ -3,7 +3,7 @@
 > Use this for rehearsal. Each answer is 20–40 seconds. The "Owner" column decides who speaks first; others can add one sentence.
 > Rule: if nobody knows, the Host says *"We did not test that; we will follow up after the session"* — never improvise a number.
 
-## A. Data (owner: Member A)
+## A. Data (owner: Patten Lai)
 
 | # | Likely question | Answer points | Evidence |
 |---|---|---|---|
@@ -14,7 +14,7 @@
 | A5 | Is 2,716 / 2,809 customers enough? | For customer-level tabular models, yes: CV AUC standard deviations are ~0.02, so larger differences are meaningful. We also report one out-of-time period and say it cannot estimate quarter-to-quarter variance. | metrics_extra models_cv |
 | A6 | What is the single biggest weakness of the data? | No campaign-response history, so we cannot measure uplift, only rank risk; and the anonymity share means the customer view under-represents guest demand. | report §10 |
 
-## B. Features and segmentation (owner: Member B)
+## B. Features and segmentation (owner: Weng Zhi Chao)
 
 | # | Likely question | Answer points | Evidence |
 |---|---|---|---|
@@ -25,7 +25,7 @@
 | B5 | Why was recency dropped by RFE? | It is largely redundant with distinct_months and avg_gap_days in this feature set; RFE with logistic regression removed it while validation PR-AUC improved. | report §4.4 |
 | B6 | Why cosine for clustering? | Silhouette 0.3283 vs 0.2183 Manhattan and 0.1844 Euclidean, with near-tied kNN agreement. Cosine suits sparse, high-dimensional behaviour vectors. | t11_similarity_metric_comparison |
 
-## C. Churn model and evaluation (owner: Member C)
+## C. Churn model and evaluation (owner: Lim Man Tung Marcus)
 
 | # | Likely question | Answer points | Evidence |
 |---|---|---|---|
@@ -37,7 +37,7 @@
 | C6 | What does out-of-time change? | It removes the optimism of same-period CV: T2 churn base rate differs (39.6% vs 50.4%) and AUC still holds at 0.739 — the number we quote to a sponsor. | report §6.4 |
 | C7 | What about false negatives? | At the F1 threshold the model trades missed churners against wasted contacts; the threshold is a budget decision, and we show the trade-off curve. | f09 |
 
-## D. Association rules and similarity (owner: Member D)
+## D. Association rules and similarity (owner: Huang Hao Lin)
 
 | # | Likely question | Answer points | Evidence |
 |---|---|---|---|
@@ -47,7 +47,7 @@
 | D4 | Why cosine for similarity? | Best cluster separation (0.3283) and natural for sparse behaviour vectors; used for lookalike customers and item–item similarity. | t11 |
 | D5 | What is similarity actually used for? | Cold-start and sparse customers (nearest established customers' segment/offer as a prior) and substitution/bundle candidates for products. | t04_lookalikes, t05_similar_products |
 
-## E. Decision layer, ROI and business value (owner: Member E)
+## E. Decision layer, ROI and business value (owner: LIN Xiaotong)
 
 | # | Likely question | Answer points | Evidence |
 |---|---|---|---|
@@ -82,8 +82,8 @@
 
 | Member | Must-be-able-to-answer |
 |---|---|
-| A | A1, A3, A4 |
-| B | B1, B4, B5 |
-| C | C1, C2, C5 |
-| D | D1, D2, D3 |
-| E (Host) | E2, E4, F1, F3 — plus all of A–D at summary level |
+| Patten Lai | A1, A3, A4 |
+| Weng Zhi Chao | B1, B4, B5 |
+| Lim Man Tung Marcus | C1, C2, C5 |
+| Huang Hao Lin | D1, D2, D3 |
+| LIN Xiaotong (Host) | E2, E4, F1, F3 — plus all of A–D at summary level |

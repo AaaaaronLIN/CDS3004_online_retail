@@ -1,4 +1,4 @@
-# Agent-use trajectory — Member B  (name: ____)
+# Agent-use trajectory — Member B  — Weng Zhi Chao (4589896)
 
 **Group:** F · **CRN:** 234 · **Course:** CDS3004 Data Mining, Lingnan University, 2026/27 Term 1
 **Role:** Feature engineering and segmentation lead
