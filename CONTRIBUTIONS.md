@@ -4,16 +4,16 @@
 **Team:** Group F — LIN Xiaotong (4589755), Patten Lai (4001777), Weng Zhi Chao (4589896), Lim Man Tung Marcus (4592996), Huang Hao Lin (4455930)
 **Purpose of this file:** record each member's role, the rubric items they own, the code and report areas they are responsible for, the slides they present and the commit areas the workload evidence should show. It also lists the per-member evidence the course expects: **meaningful GitHub commits plus a personal agent-use trajectory**.
 
-**Status:** names and student IDs are filled in. Add each member's GitHub username and contact once the accounts are confirmed (only LIN Xiaotong's is known: `AaaaaronLIN`). The course assesses workload roughly from GitHub commits and agent trajectories, so the repository commits must be authored by the real members.
+**Status:** names, student IDs and GitHub usernames are filled in. Contact details can be added later (optional). Invite the four collaborators (`yourmomzaho`, `wengzhichao49-debug`, `marcussmart-36`, `Ez4p1xEL`) from **Settings → Collaborators**. The course assesses workload roughly from GitHub commits and agent trajectories, so the repository commits must be authored by the real members.
 
 ## 1. Member labels, names and accounts
 
 | Label | Full name | Student ID | GitHub username | Preferred contact |
 |---|---|---|---|---|
-| A | Patten Lai | 4001777 | — | — |
-| B | Weng Zhi Chao | 4589896 | — | — |
-| C | Lim Man Tung Marcus | 4592996 | — | — |
-| D | Huang Hao Lin | 4455930 | — | — |
+| A | Patten Lai | 4001777 | yourmomzaho | — |
+| B | Weng Zhi Chao | 4589896 | wengzhichao49-debug | — |
+| C | Lim Man Tung Marcus | 4592996 | marcussmart-36 | — |
+| D | Huang Hao Lin | 4455930 | Ez4p1xEL | — |
 | E (Host) | LIN Xiaotong | 4589755 | AaaaaronLIN | — |
 
 ## 2. Ownership table
