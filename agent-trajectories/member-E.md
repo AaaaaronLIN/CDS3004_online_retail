@@ -17,7 +17,7 @@
 |---|---|---|---|---|---|---|---|
 | 0 | 2026-11-11 | Group scaffold: reproducible pipeline + report + deck | "Design and implement the full CDS3004 pipeline on UCI Online Retail and verify it runs top-to-bottom" | Agent produced notebook, 23 figures, 29 tables, metrics JSON, report draft, 20-slide deck | **Group decision:** accepted as scaffold, not final work; each member must verify their module (tasks below) | Notebook executed twice from a clean kernel: 0 errors, identical metrics.json (only runtime_sec differs) | scaffold commit |
 | 1 | 2026-11-14 | Reproduce the pipeline end-to-end; ROI-assumption sensitivity experiment | "Run the notebook; change base to save_rate 5%, contact cost GBP 12, margin 30%; re-run S8 and report the change" | Agent explained where to edit and what to expect | Accepted as a controlled experiment, repository restored afterwards | PIPELINE COMPLETE in 28.1s; T2 OOT AUC 0.7392; net GBP 33,799.89 -> 12,771.38 (ROI 532.1%); `git restore notebooks results` | commit |
-| 2 | | | | | | | |
+| 2 | 2026-11-14 | Controlled model-swap experiment: random forest vs the selected logistic regression in the decision layer | "Force BEST_MODEL='random_forest' in S8.1, re-run the decision layer, and compare the priority list and net campaign value with the logreg baseline" | Agent showed the one-line override and predicted lower top-decile precision | Accepted as a controlled experiment; change removed afterwards | logreg: p_churn_targeted 0.669, value/saved GBP 2,645.58, net GBP 33,799.89. RF: 0.6263, GBP 1,910.75, net GBP 22,335.40 - precision and targeted value both fall, confirming the logreg choice; restored with `git restore notebooks results code/pipeline_notes.md` | commit |
 | 3 | | | | | | | |
 
 ## 你的三个验证任务（做完把结果填进上表）
