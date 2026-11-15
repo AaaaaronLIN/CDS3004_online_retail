@@ -82,3 +82,5 @@ By signing, each member confirms that the contribution descriptions above are ac
 | Lim Man Tung Marcus | | |
 | Huang Hao Lin | | |
 | LIN Xiaotong | | |
+
+- **Member B Sign-off (`wengzhichao49-debug`)**: Verified S3–S5 feature engineering, distance metric analysis, K=5 segmentation notes in `notebooks/CDS3004_Project.ipynb`, report takeaways in `report/REPORT.md`, and session log in `agent-trajectories/member-B.md`.
