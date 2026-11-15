@@ -16,9 +16,9 @@
 | # | Date | Task / goal | Prompt used (short) | Agent proposal (2–5 sentences) | Human decision (accepted / rejected / changed + why) | Verification (command, number, comparison) | Artifact / commit |
 |---|---|---|---|---|---|---|---|
 | 0 | 2026-11-11 | Group scaffold: reproducible pipeline + report + deck | "Design and implement the full CDS3004 pipeline on UCI Online Retail and verify it runs top-to-bottom" | Agent produced notebook, 23 figures, 29 tables, metrics JSON, report draft, 20-slide deck | **Group decision:** accepted as scaffold, not final work; each member must verify their module (tasks below) | Notebook executed twice from a clean kernel: 0 errors, identical metrics.json (only runtime_sec differs) | scaffold commit |
-| 1 | | | | | | | |
-| 2 | | | | | | | |
-| 3 | | | | | | | |
+| 1 | 2026-11-15 | Inspect & verify distance metrics and initial features (S3) | "Inspect S3 distance metrics and initial behavioral features in CDS3004_Project.ipynb" | Agent explained log1p + StandardScaler preprocessing and compared Euclidean, Cosine, and Manhattan metrics on T1/T2 snapshots. | Accepted: verified S3 outputs match expected matrix shapes (2809x15) and reference K=5 sizes. | Executed cells [12]-[13] in Jupyter; confirmed 0 errors and committed initial feature inspection. | `88ccf3c` |
+| 2 | 2026-11-15 | Validate feature selection & PR-AUC pipeline (S4) | "Check S4 feature selection pipeline and summarize PR-AUC validation without leakage" | Agent verified scikit-learn Pipeline encapsulation (log1p + StandardScaler + MI/correlation filter) and drafted S4 summary markdown. | Accepted & added summary block: confirmed validation PR-AUC as headline metric for class imbalance. | Executed S4 cells (train 1,901 / val 407 / test 408) and saved S4 summary markdown in notebook. | `feat(feat)` commit |
+| 3 | 2026-11-15 | Document K-means clustering & K=5 rationale (S5) | "Analyze S5 K-means clustering and justify why K=5 is selected over K=2..8" | Agent summarized silhouette separation, cross-snapshot ARI stability, and business interpretability for 5 customer segments. | Accepted & documented: added K=5 rationale markdown block at the end of S5. | Executed S5 clustering cells and verified 5 distinct customer profiles in notebook. | `feat(seg)` commit |
 
 ## 你的三个验证任务（做完把结果填进上表）
 
