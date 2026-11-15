@@ -47,3 +47,5 @@
 - 至少有一条记录里，你**否决或修改**了 agent 的建议。
 - 每条都能指向一个 artifact：表格某行、某张图、某个 commit、某条命令输出。
 - 不编造；没做的任务直接删掉，不要留假记录。
+| 4 | 2026-11-16 | Synthesize B module key takeaways & retention plan in report | "Draft concise key takeaways on leakage-free feature engineering, K=5 segmentation, and retention actions for REPORT.md" | Agent drafted structured takeaways covering Pipeline leakage prevention, K=5 stability, and segment-specific retention actions. | Accepted & integrated: added takeaways and action plan into report/REPORT.md. | Verified markdown rendering and pushed commit to origin/main. | `docs(report)` commit |
+| 5 | 2026-11-16 | Refine S3 distance metric & S4 correlation filter documentation | "Document Euclidean vs Cosine trade-offs in S3 and multicollinearity pruning in S4.2" | Agent provided technical notes explaining why standardized Euclidean distance and correlation filtering stabilize downstream models. | Accepted & added to notebook: inserted explanatory markdown cells in S3 and S4.2. | Verified clean notebook state and pushed documentation commits to origin/main. | `docs(feat)` commits |
