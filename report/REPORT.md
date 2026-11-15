@@ -244,9 +244,9 @@ Because the models live in a high-dimensional space, we visualise the segmentati
 
 The segmentation is commercially meaningful in three ways. First, segments differ by *orders of magnitude* in monetary value, so a small number of customers carries a large share of revenue — visible in the revenue-share column of Table 11 and the reason the decision layer weights customers by value. Second, segments differ in actual churn rate: Champions churn least, while At-risk and Hibernating churn most, which is the bridge to §6 and makes the segment × risk matrix in §9.1 more informative than either dimension alone. Third, the smallest segments are not necessarily the least important: the At-risk segment is modest in size but combines high value with high risk, which is exactly where retention spending earns the most. Segment names and profiles must be read together, not as a ranking of size.
 
-#### Key Takeaways on Feature Engineering & Customer Segmentation (Member B)
-- **Leakage-Free Feature Pipeline**: Applying `log1p` transformation and `StandardScaler` strictly inside cross-validation folds prevents data leakage while stabilizing skewed behavioral metrics (recency, frequency, monetary value, and basket diversity).
-- **Actionable $K=5$ Segmentation**: Selecting $K=5$ provides stable, non-overlapping customer personas across snapshots, enabling targeted retention campaigns for at-risk high-value buyers rather than blanket discounting.
+#### Summary: feature engineering and segmentation
+- **Leakage-free feature pipeline:** `log1p` and `StandardScaler` are fitted inside the scikit-learn pipelines on training folds only, keeping skewed behavioural metrics comparable without leakage.
+- **Actionable K=5 segmentation:** K=5 gives five stable, interpretable segments within the T2 decision cohort (bootstrap ARI 0.97), enabling targeted retention of at-risk high-value customers rather than blanket discounting.
 
 ---
 
