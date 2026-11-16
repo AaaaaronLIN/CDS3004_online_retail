@@ -55,6 +55,12 @@
 - `t15_priority_list_summary.csv` — Priority deciles with expected value, cost and net. [OK]
 - `s06_permutation_importance.csv` — Supplementary: RF permutation importance values. [OK]
 - `s06_threshold_analysis.csv` — Supplementary: F1-optimal and top-10% capacity threshold metrics. [OK]
+- `s07_rule_headline.csv` — Supplementary: independent reproduction of every S7 headline number (44 checks, all matching). [OK]
+- `s07_holdout_lift_quantiles.csv` — Supplementary: holdout-lift quantiles, trimmed and support-weighted means. [OK]
+- `s07_mean_lift_tail.csv` — Supplementary: extreme-tail diagnostics behind the mean-vs-median gap. [OK]
+- `s07_variant_duplicates.csv` — Supplementary: holdout lift for same-product-family vs different-product rules. [OK]
+- `s07_hand_lift_22697_22699.csv` — Supplementary: hand recomputation of the top business rule's holdout lift. [OK]
+- `s07_similarity_check.csv` — Supplementary: recomputed vs committed item-item cosine neighbourhoods. [OK]
 
 ## Other outputs
 - `results/metrics.json` — Headline metrics in the agreed schema (+ report block).

@@ -1,0 +1,18 @@
+scope,statistic,value
+all evaluated rules,mean,28.1957
+all evaluated rules,median,12.174
+all evaluated rules,p10,5.5752
+all evaluated rules,p25,8.5947
+all evaluated rules,p50,12.174
+all evaluated rules,p75,22.5493
+all evaluated rules,p90,56.822
+all evaluated rules,p95,103.2273
+all evaluated rules,p99,217.5216
+all evaluated rules,max,4163.5
+trimmed mean (drop top 1%),mean,24.6395
+trimmed mean (drop top 5%),mean,18.5065
+trimmed mean (drop top 10%),mean,15.4565
+support-weighted mean,mean,19.1751
+one direction per pair,n,3830.0
+one direction per pair,mean,22.7614
+one direction per pair,median,11.1043

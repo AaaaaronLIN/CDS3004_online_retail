@@ -1,0 +1,45 @@
+item,notebook_value,recomputed_value,match
+clean rows (t03 last step),391150,391150,True
+rows retained (%),72.18,72.18,True
+revenue retained (%),81.9114,81.9114,True
+raw duplicate rows,5268,5268,True
+frequent itemsets,3792,3792,True
+raw rules,8884,8884,True
+pruned rules kept,5441,5441,True
+max training lift,128.4608,128.4608,True
+rules evaluated on holdout,5402,5402,True
+excluded: antecedent absent,27,27,True
+excluded: consequent absent,12,12,True
+mean holdout lift,28.1957,28.1957,True
+median holdout lift,12.174,12.174,True
+share holdout lift > 1,0.9978,0.9978,True
+share holdout lift > 2,0.9941,0.9941,True
+median holdout support,0.00588,0.006,True
+business rules,593,593,True
+top business rule antecedent,22697,22697,True
+top business rule consequent,22699,22699,True
+top business rule holdout lift,21.5569,21.5569,True
+t10 holdout_confidence for 22697->22699,0.7663,0.7663,True
+t10 holdout_consequent_support,0.03555,0.03555,True
+t10 holdout_lift,21.5569,21.5569,True
+t10 training support,0.03385,0.03385,True
+t10 training confidence,0.793,0.793,True
+t10 training lift,16.406,16.406,True
+T2 cohort size,2809,2809,True
+T2 churn rate,0.3955,0.3955,True
+silhouette (cosine),0.3283,0.3283,True
+kNN agreement (cosine),0.9359,0.9359,True
+silhouette (manhattan),0.2183,0.2183,True
+kNN agreement (manhattan),0.9442,0.9442,True
+silhouette (euclidean),0.1844,0.1844,True
+kNN agreement (euclidean),0.9419,0.9419,True
+selected metric,cosine,cosine,True
+lookalike example IDs (3),"[12415, 14646, 18102]","[12415, 14646, 18102]",True
+lookalike customer IDs (all 15),"[14156, 17511, 13098, 13694, 17450, 17450, 16684, 14156, 14646, 15838, 17511, 14680, 14088, 14646, 17404]","[14156, 17511, 13098, 13694, 17450, 17450, 16684, 14156, 14646, 15838, 17511, 14680, 14088, 14646, 17404]",True
+lookalike max |sim| difference,0.0,0.0,True
+similar products for 85123A (top-5 order),"['21733', '22804', '82482', '22470', '82494L']","['21733', '22804', '82482', '22470', '82494L']",True
+similar products for 22423 (top-5 order),"['22699', '22697', '22698', '23173', '23245']","['22699', '22697', '22698', '23173', '23245']",True
+similar products for 85099B (top-5 order),"['22386', '85099F', '21931', '23203', '85099C']","['22386', '85099F', '21931', '23203', '85099C']",True
+similar products for 47566 (top-5 order),"['23298', '47566B', '47590B', '85123A', '47590A']","['23298', '47566B', '47590B', '85123A', '47590A']",True
+similar products for 84879 (top-5 order),"['21136', '85123A', '22294', '22178', '22423']","['21136', '85123A', '22294', '22178', '22423']",True
+similar products max |cosine| difference,0.0,0.0,True

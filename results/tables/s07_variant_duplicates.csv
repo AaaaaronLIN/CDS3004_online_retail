@@ -1,0 +1,7 @@
+group,n_rules,share_of_evaluated,mean_holdout_lift,median_holdout_lift,share_lift_gt2
+all evaluated rules,5402,1.0,28.1957,12.174,0.9941
+same-product family,596,0.1103,46.121,29.2514,1.0
+different products,4806,0.8897,25.9727,11.6352,0.9933
+support < 1% (rare),4325,0.8006,24.6886,12.3119,0.9938
+support >= 1%,1077,0.1994,42.2792,11.5712,0.9954
+same family AND rare,341,0.0631,47.0485,34.5801,1.0

@@ -1,0 +1,7 @@
+quantity,value
+rules with holdout lift > 100,282.0
+share of all evaluated rules,0.0522
+median support of those rules,0.01132
+share whose pair also appears in the other direction,1.0
+share of the mean explained by those rules,0.3845
+mean holdout lift of the remaining rules,18.3117

@@ -1,0 +1,10 @@
+quantity,value
+holdout invoices (N_HOLD),8327.0
+a: baskets containing 22697,261.0
+b: baskets containing 22697 and 22699,200.0
+c: baskets containing 22699,296.0
+P(22699 | 22697) = b/a,0.7663
+P(22699) = c/N_HOLD,0.03555
+holdout lift = P(con|ant)/P(con),21.5569
+t10 holdout_lift (committed table),21.5569
+absolute difference,2e-06
