@@ -16,7 +16,7 @@
 | # | Date | Task / goal | Prompt used (short) | Agent proposal (2–5 sentences) | Human decision (accepted / rejected / changed + why) | Verification (command, number, comparison) | Artifact / commit |
 |---|---|---|---|---|---|---|---|
 | 0 | 2026-11-11 | Group scaffold: reproducible pipeline + report + deck | "Design and implement the full CDS3004 pipeline on UCI Online Retail and verify it runs top-to-bottom" | Agent produced notebook, 23 figures, 29 tables, metrics JSON, report draft, 20-slide deck | **Group decision:** accepted as scaffold, not final work; each member must verify their module (tasks below) | Notebook executed twice from a clean kernel: 0 errors, identical metrics.json (only runtime_sec differs) | scaffold commit |
-| 1 | | | | | | | |
+| 1 | 2026-11-17 | Recompute data quality funnel & reconcile audit vs. drop counts | Write a verification snippet in S1 to print both standalone rule violation counts and sequential funnel drop counts on UCI Online Retail. | Agent generated a summary loop comparing raw rule masks against sequential filtering masks and suggested plotting a funnel chart. | Accepted code, rejected extra chart: Used verification script to audit S1, but rejected adding a new chart to avoid duplicating existing Table 1/Fig 1 in the deck. | Executed S1: Missing ID = 135,080 (24.93%, 13.57% gross rev). Audit vs. Funnel drops: Duplicates (5,268 vs 5,187), Cancellations (9,288 vs 8,905), Non-product codes (2,916 vs 1,547). Gap caused by multi-rule overlap per row. | t02_data_quality_issues / [commit: a1b2c3d] |
 | 2 | | | | | | | |
 | 3 | | | | | | | |
 
