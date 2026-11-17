@@ -316,7 +316,11 @@
 
 **Source:** t10_association_rules.csv, t10b_business_rules.csv; report §7
 
-**Speaker notes (≈154 words):** "Association rules answer the what-to-offer question, but only if they survive a later period. We mine FP-Growth on invoices from December to July and then re-test every rule on August-to-December data the miner never saw. Of 5,441 retained rules, 5,402 were evaluable; the median holdout lift is 12.17 and 99.8% keep a lift above one. But we do not headline the mean — it is inflated by rare colour variants. The honest set is the 593 rules with at least one percent support and lift of at least two: for example, the green Regency teacup predicts the roses version with a holdout lift of 21.6."
+**Speaker notes (≈116 words):** "Association rules answer one question: what to offer next. The catch is that a rule only counts if it survives a later period.
+We mine FP-Growth on invoices from December 2010 to July 2011, then re-test every rule on August to December 2011 — data the miner never saw.
+We kept 5,441 rules. 5,402 could be evaluated. Median holdout lift is twelve point one seven, and 99.8 percent stay above one.
+We do not quote the mean, because rare colour variants inflate it.
+The honest set is the 593 rules with support of at least one percent and lift of at least two. Example: the green Regency teacup predicts the roses version, at twenty-one point six."
 
 ---
 
@@ -337,7 +341,11 @@
 
 **Source:** t11_similarity_metric_comparison.csv, t04_lookalikes.csv, t05_similar_products.csv
 
-**Speaker notes (≈110 words):** "Similarity and distance are the second course theme, and they earn their place here. We compared three metrics and cosine won on cluster separation: 0.3283 against 0.2183 for Manhattan and 0.1844 for Euclidean. Two uses follow. First, lookalike customers: for a new or sparse customer, find the five nearest established customers and use their segment and offer as a prior. Second, item similarity: products bought by similar customers suggest substitutes and bundle candidates. What similarity does not do is predict response — that is the churn model's job, and we keep the two claims separate."
+**Speaker notes (≈107 words):** "Similarity and distance form the second course theme, and they earn their place here.
+We compared three metrics. Cosine won on cluster separation: zero point three two eight three, against zero point two one eight three for Manhattan and zero point one eight four four for Euclidean.
+Two uses follow. First, lookalike customers: for a new or sparse customer, find the five nearest established customers and borrow their segment as a prior.
+Second, item similarity: products that keep appearing in the same baskets are substitute or bundle candidates.
+Similarity does not predict response — that is the churn model's job, and we keep the two claims separate."
 
 ---
 
@@ -358,7 +366,11 @@
 
 **Source:** t12_segment_risk_matrix.csv, t13_action_table.csv; report §9
 
-**Speaker notes (≈132 words):** "This is where the four models meet. Each T2 customer gets a segment, a predicted churn probability and a monetary value; the priority score multiplies the last two. The pilot contacts the top two hundred, about seven percent of the cohort. Each segment carries a different action: a VIP retention call for Champions, a cross-sell bundle for Loyal, a second-purchase voucher for Potential, a win-back for At-risk, and a cheap reactivation email for Hibernating — where a discount would destroy margin. The bubble chart shows value against risk; the upper-right corner is where retention spending earns its return."
+**Speaker notes (≈94 words):** "This is where the four models meet.
+Every T2 customer gets a segment, a predicted churn probability, and a monetary value. The priority score multiplies the last two.
+The pilot contacts the top two hundred — about seven percent of the cohort.
+Each segment gets its own action. Champions: a VIP retention call. Loyal: a cross-sell bundle. Potential: a second-purchase voucher. At-risk: a win-back. Hibernating: a cheap reactivation email — for them a discount would destroy margin.
+The bubble chart plots value against risk. The upper-right corner is where retention spending earns its return."
 
 ---
 
@@ -379,7 +391,13 @@
 
 **Source:** t16_targeting_comparison.csv, f13_roi_sensitivity.png; report §9.4
 
-**Speaker notes (≈176 words):** "The economics are deliberately conservative. Base assumptions: eight pounds per contact, ten percent save rate, thirty-five percent margin. Using the realised churn rate inside the priority list, the pilot nets about fourteen thousand eight hundred pounds; using the model's top-decile precision gives an optimistic bound of thirty-three thousand eight hundred, and we label it that way. Contacting two hundred random customers would net only about one thousand nine hundred, so the model's value is the thirty-one thousand eight hundred uplift. The break-even save rate is under half a percent for the targeted list versus four and a half percent for random contact. And the caveat stays on the slide: no campaign history, so this is a scenario, not measured uplift."
+**Speaker notes (≈126 words):** "The economics are deliberately conservative.
+Base assumptions are eight pounds per contact, a ten percent save rate, and a thirty-five percent margin.
+Using the realised churn rate inside the priority list, we estimate the pilot nets about fourteen thousand eight hundred pounds.
+Using the model's top-decile precision gives an optimistic bound: thirty-three thousand eight hundred. We label it that way.
+Two hundred random contacts would net only about one thousand nine hundred. So the model's value is the uplift: thirty-one thousand eight hundred pounds.
+The break-even save rate is under half a percent for the targeted list. For random contact, it is four and a half percent.
+One caveat stays on the slide: we have no campaign history, so this is a scenario, not measured uplift."
 
 ---
 

@@ -47,7 +47,7 @@ def parse(md: str) -> list[dict]:
 
 
 def main() -> int:
-    slides = parse(SRC.read_text())
+    slides = parse(SRC.read_text(encoding="utf-8"))
     total_s = sum(1 for _ in slides)  # placeholder to keep structure
     last = slides[-1]["timing"] if slides else ""
     m = re.search(r"(\d+:\d+)\s*$", last.strip())
@@ -67,7 +67,7 @@ def main() -> int:
             parts.append(f"\n**Visual:** {s['visual']}\n")
         parts.append(f"\n**Say (verbatim from the plan):**\n\n> {s['notes']}\n")
         parts.append("\n**Do:** look up at the audience here; do not read the slide.\n")
-    OUT.write_text("".join(parts))
+    OUT.write_text("".join(parts), encoding="utf-8")
     print(f"wrote {OUT} ({len(slides)} cards)")
     return 0
 

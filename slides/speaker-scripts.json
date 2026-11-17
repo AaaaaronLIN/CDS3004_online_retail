@@ -1,0 +1,17 @@
+{
+  "huang-hao-lin": {
+    "speaker": "Huang Hao Lin",
+    "title": "Speaker Script — Huang Hao Lin",
+    "role_line": "Member D — rules, similarity & decision",
+    "preamble": "Read only the Say blocks: one paragraph per breath, and pause at the end of each paragraph. The numbers in words are the ones to say out loud; the digits on screen are for the eye, not the voice.",
+    "handoff": "Handoff — next is Patten Lai (slide 18). Say: “Before the recommendation, the limits — Patten.”",
+    "qa": [
+      "D1 — “Isn't a lift above a hundred just colour variants of the same product?” (lift 规则是不是同款变体)",
+      "D2 — “How do you know a rule still holds in a later period?” (规则如何做 holdout 验证)",
+      "E2/E4 — “Where do the fourteen and thirty-three thousand come from, and why only two hundred customers?” (ROI 与定向价值，与 Host 配合)"
+    ],
+    "qa_footer": "Full answer points: slides/QandA-TABLE.md (and QandA-Table.pdf).",
+    "footer": "Huang Hao Lin · Member D · CDS3004 Group F",
+    "out": "presentation/scripts/huang-hao-lin.pdf"
+  }
+}
