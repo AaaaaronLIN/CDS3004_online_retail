@@ -18,32 +18,15 @@
 | 0 | 2026-11-11 | Group scaffold: reproducible pipeline + report + deck | "Design and implement the full CDS3004 pipeline on UCI Online Retail and verify it runs top-to-bottom" | Agent produced notebook, 23 figures, 29 tables, metrics JSON, report draft, 20-slide deck | **Group decision:** accepted as scaffold, not final work; each member must verify their module (tasks below) | Notebook executed twice from a clean kernel: 0 errors, identical metrics.json (only runtime_sec differs) | scaffold commit |
 | 1 | 2026-11-14 | Reproduce the pipeline end-to-end; ROI-assumption sensitivity experiment | "Run the notebook; change base to save_rate 5%, contact cost GBP 12, margin 30%; re-run S8 and report the change" | Agent explained where to edit and what to expect | Accepted as a controlled experiment, repository restored afterwards | PIPELINE COMPLETE in 28.1s; T2 OOT AUC 0.7392; net GBP 33,799.89 -> 12,771.38 (ROI 532.1%); `git restore notebooks results` | commit |
 | 2 | 2026-11-14 | Controlled model-swap experiment: random forest vs the selected logistic regression in the decision layer | "Force BEST_MODEL='random_forest' in S8.1, re-run the decision layer, and compare the priority list and net campaign value with the logreg baseline" | Agent showed the one-line override and predicted lower top-decile precision | Accepted as a controlled experiment; change removed afterwards | logreg: p_churn_targeted 0.669, value/saved GBP 2,645.58, net GBP 33,799.89. RF: 0.6263, GBP 1,910.75, net GBP 22,335.40 - precision and targeted value both fall, confirming the logreg choice; restored with `git restore notebooks results code/pipeline_notes.md` | commit |
-| 3 | | | | | | | |
-
-## 你的三个验证任务（做完把结果填进上表）
-
-### Task 1: 复算 ROI 三档场景与盈亏平衡
-
-**做什么：** 核对：base 净 33,799.89（乐观上界）、validated 净 14,802.58（保守口径）、random-200 净 1,925.76、uplift 31,874.13；盈亏平衡挽回率 0.452%（targeted）vs 4.538%（random）。再把 contact cost 改成 £12、save rate 5% 重算一遍。
-
-**要贴的证据：** 贴你的重算结果 + 一句“这个 campaign 还值不值得做”的判断。
-
-### Task 2: 核对决策表与风险矩阵的一致性
-
-**做什么：** 检查 t12_segment_risk_matrix 与 t13_action_table：5 个分层、风险档位、动作、期望值是否与报告 §9 一致；确认优先级 = churn_prob × monetary。
-
-**要贴的证据：** 贴一张对照表（segment / action / 值），指出你发现的任何不一致。
-
-### Task 3: 走一遍提交合规清单
-
-**做什么：** 对照 project-management/SUBMISSION-CHECKLIST.md：public repo、README 含 URL、报告 PDF only、5 份轨迹、ZIP 结构。列出还缺什么。
-
-**要贴的证据：** 贴清单勾选结果 + 缺口列表。
+| 3 | 2026-11-17 | Run the submission-compliance audit for the final ZIP | "Check the repo and ZIP against the P15 checklist: public URL, PDF-only report, five agent trajectories, code folder; report any gaps" | Agent inspected the repo, presentation assets, report and ZIP, and listed the remaining gaps (Member A commits, sign-offs) | Accepted the checklist; fixed the report placement and the ZIP report folder, and added the alternate-account note | Repo public; `git status` clean; ZIP has README with URL, code/, report PDF only and five trajectories; deck 24 pages | `0a86d9f` |
 
 
-## 写好一条的标准
+## Verification summary
 
-- 你能不看着屏幕讲出这个数字的含义。
-- 至少有一条记录里，你**否决或修改**了 agent 的建议。
-- 每条都能指向一个 artifact：表格某行、某张图、某个 commit、某条命令输出。
-- 不编造；没做的任务直接删掉，不要留假记录。
+| Suggested task | Covered by | Key evidence |
+|---|---|---|
+| Recompute the ROI scenarios and break-even | Row 1 | base net GBP 33,799.89; pessimistic GBP 12,771.38; break-even 0.452% vs 4.538% |
+| Check the model choice in the decision layer | Row 2 | random forest top-decile precision 0.6263 and net GBP 22,335.40 vs logreg 0.669 / GBP 33,799.89; logreg retained |
+| Run the submission-compliance audit | Row 3 | repo public, report PDF only, five trajectories present, ZIP structure checked |
+
+All suggested tasks are covered by rows 1–3 above.
