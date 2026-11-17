@@ -101,7 +101,7 @@ After cleaning, 72.18% of lines and 81.9114% of revenue are retained for the cus
 
 The customer-level analysis population is the set of customers with at least one valid purchase and a known identifier: 2716 customers in T1 and 2809 in T2. Anonymous transactions are **not** part of it, because they cannot be linked across visits, so no feature, label or segment can be defined for them.
 
-This creates a bias we state rather than hide. Anonymous lines represent 13.572% of gross revenue, so the customer-level view under-represents guest purchasing, and the dropped population may differ systematically (one-off buyers, other markets, customers who later register). Every segment share, churn rate and ROI claim below therefore describes *identified customers only*, and the revenue share is the scale of the blind spot.
+This creates a bias we state rather than hide. Anonymous lines represent 13.572% of gross revenue, so the customer-level view under-represents guest purchasing, and the dropped population may differ systematically (one-off buyers, other markets, customers who later register). Every segment share, churn rate and ROI claim below therefore describes *identified customers only*, and the revenue share is the scale of the blind spot. To guarantee zero target leakage across snapshots, the S2 pipeline enforces strict temporal boundary assertions (InvoiceDate <= as_offor features andas_of < InvoiceDate <= as_of + 90 days for churn labels), yielding 2,716 customers in T1 (50.44% churn) and 2,809 in T2 (39.55% churn).
 
 ---
 
