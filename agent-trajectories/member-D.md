@@ -11,6 +11,13 @@
 > 课件 P9 用 commits + agent 轨迹估每人工作量；只写你真正做过的事，不要复制别人的。
 > 表格里已有一行“脚手架”记录（2026-11-11 全组共同完成），其余由你填写。
 
+> **GitHub identity.** Primary account: **`Ez4p1xEL`** (GitHub user id `30528394`).
+> **`AnotherEz4p1xEL` is an alternate account of the same person** (same email,
+> `ez4p1xel@gmail.com`) — it was the local `git user.name` on this machine until 2026-11-17.
+> The four commits dated 2026-11-16 were therefore authored and pushed from the alternate
+> account; this note is committed from the primary account so the work is attributed to
+> `Ez4p1xEL`.
+
 ## Session log
 
 | # | Date | Task / goal | Prompt used (short) | Agent proposal (2–5 sentences) | Human decision (accepted / rejected / changed + why) | Verification (command, number, comparison) | Artifact / commit |
