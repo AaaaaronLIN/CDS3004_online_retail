@@ -75,7 +75,7 @@ T2 was chosen to leave a buffer before the dataset ends: with 31 August 2011 as 
 
 ### 2.3 Data-quality issues
 
-The raw extract is realistic rather than clean. Table 3 lists the issue classes with their raw size and the action taken; Figure 1 summarises them. The audit counts overlap — one line can violate several rules — so the cleaning funnel in Table 4 removes fewer lines than the sum of the audit counts; both views are reported so that neither is mistaken for the other.
+The raw extract is realistic rather than clean. Table 3 lists the issue classes with their raw size and the action taken; Figure 1 summarises them. The audit counts overlap — one line can violate several rules — so the cleaning funnel in Table 4 removes fewer lines than the sum of the audit counts; both views are reported so that neither is mistaken for the other. (e.g., duplicates drop from 5,268 audited to 5,187 removed; cancellations from 9,288 to 8,905)
 
 **Table 3.** Data-quality audit: issue, affected rows or share, and treatment.
 
