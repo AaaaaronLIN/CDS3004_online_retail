@@ -83,4 +83,4 @@ By signing, each member confirms that the contribution descriptions above are ac
 | Weng Zhi Chao | | |
 | Lim Man Tung Marcus | | |
 | Huang Hao Lin | | |
-| LIN Xiaotong | | |
+| LIN Xiaotong | LIN Xiaotong | 2026-11-17 |
