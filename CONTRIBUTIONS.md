@@ -79,8 +79,8 @@ By signing, each member confirms that the contribution descriptions above are ac
 
 | Member | Signature / confirmation (name) | Date |
 |---|---|---|
-| Patten Lai | | |
+| Patten Lai | Patten Lai | 2026-11-17 |
 | Weng Zhi Chao | Weng Zhi Chao | 2026-11-17 |
-| Lim Man Tung Marcus | | |
+| Lim Man Tung Marcus | Marcus | 2026-11-17 |
 | Huang Hao Lin | | |
 | LIN Xiaotong | LIN Xiaotong | 2026-11-17 |
