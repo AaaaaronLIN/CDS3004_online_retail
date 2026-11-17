@@ -16,6 +16,8 @@
 | D | Huang Hao Lin | 4455930 | Ez4p1xEL | — |
 | E (Host) | LIN Xiaotong | 4589755 | AaaaaronLIN | — |
 
+> **Note on Member D account:** four commits dated 2026-11-16 were pushed under the alternate GitHub account `AnotherEz4p1xEL`; the member's primary account is `Ez4p1xEL`. Both belong to Huang Hao Lin (4455930).
+
 ## 2. Ownership table
 
 | Member | Role | Rubric items owned (22% rubric) | Code / notebook / artifact areas | Slides | Expected commit areas |
@@ -82,5 +84,3 @@ By signing, each member confirms that the contribution descriptions above are ac
 | Lim Man Tung Marcus | | |
 | Huang Hao Lin | | |
 | LIN Xiaotong | | |
-
-- **Member B Sign-off (`wengzhichao49-debug`)**: Verified S3–S5 feature engineering, distance metric analysis, K=5 segmentation notes in `notebooks/CDS3004_Project.ipynb`, report takeaways in `report/REPORT.md`, and session log in `agent-trajectories/member-B.md`.
