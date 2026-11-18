@@ -508,7 +508,7 @@ One caveat stays on the slide: we have no campaign history, so this is a scenari
 | 3 | 165 | 14.9% | 1.48 |
 | 4 | 147 | 13.2% | 1.32 |
 | 5 | 133 | 12.0% | 1.20 |
-| 6–10 | 412 | 37.1% | 0.54–1.01 |
+| 6–10 | 314 | 28.3% | 0.06–1.01 |
 
 **Takeaway:** The model is a ranking tool: the value is in the first decile, not the average.
 
