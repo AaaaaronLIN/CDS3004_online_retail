@@ -87,3 +87,10 @@
 | Lim Man Tung Marcus | C1, C2, C5 |
 | Huang Hao Lin | D1, D2, D3 — plus E2, E4 (presents slides 16–17 with the Host) |
 | LIN Xiaotong (Host) | E1, E3, E5, E6, F1–F5 — plus all of A–D at summary level |
+
+## H. Post-presentation Q&A (actual, 19 November 2026)
+
+| # | Question asked | Answer given | Evidence |
+|---|---|---|---|
+| H1 | "How was the data collected?" | Not collected by the team: it is the UCI Online Retail dataset — the retailer's own order/POS transaction log, donated to UCI and downloaded as a public spreadsheet. 541,909 line items, 1 Dec 2010 – 9 Dec 2011, anonymised (no names, addresses, payment details or campaign response); `CustomerID` is a pseudonymous internal ID and is missing on 24.93% of lines. No scraping or survey. | report §2.1, §10.5; slide 4 |
+

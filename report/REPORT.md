@@ -466,6 +466,10 @@ The data contains no names, addresses or payment details, and `CustomerID` is a 
 
 (i) **Longer history and survival analysis** would model time-to-churn with censoring instead of a fixed 90-day label, giving a warning lead time. (ii) **Campaign data and uplift modelling** would replace the assumed response rate with an estimated incremental effect, turning the ROI scenario into a forecast. (iii) **Richer features** — product hierarchy, promotions, delivery experience, service contacts — would separate "left because of price" from "left because of a bad experience". (iv) **Graph or embedding representations** of customer–product interactions would improve cold-start similarity. With a longer horizon we would monitor drift, retrain on a rolling window, and test the priority list in a randomised holdout.
 
+### 10.5 Post-presentation Q&A
+
+The only question after the presentation was: *"How was the data collected?"* The answer: the data was not collected by the team. It is the UCI Online Retail dataset — the retailer's own order and point-of-sale transaction log, donated to the UCI Machine Learning Repository and downloaded as a public spreadsheet. It contains 541,909 line items from 1 December 2010 to 9 December 2011 and is anonymised: no names, addresses, payment details or campaign-response data; `CustomerID` is a pseudonymous internal identifier and is missing on 24.93% of lines. No scraping, survey or primary data collection was involved. This is the same provenance stated in §2.1 and on slide 4.
+
 ---
 
 ## 11. Contribution Statement
